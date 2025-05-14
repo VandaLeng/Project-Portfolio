@@ -4,41 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="#">
+    <title>Web Design & Front End Dev - Vanda Leng</title>
     <link rel="stylesheet" href="/css/Main.css">
+    <link rel="stylesheet" href="/Theme/Main_theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header class="header-container">
-        <img src="#" alt="Logo Icon" class="logo-image">
-        <nav class="navigation-bar">
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">Experience</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">About Me</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">Contact Me</a>
-                </li>
+    <header>
+        <div class="logo">VL</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact Me</a></li>
             </ul>
         </nav>
-        <label for="language-select">Languages</label>
-        <select id="language-select">
-            <option value="khmer">Khmer</option>
-            <option value="english">English</option>
-        </select>
-        <label for="theme-select">Theme</label>
-        <select id="theme-select">
-            <option value="dark-moon">Dark Moon</option>
-            <option value="light-moon">Light Moon</option>
-        </select>
+        <div class="language-toggle">
+            <select id="language">
+                <option value="en">English</option>
+                <option value="kh">Khmer</option>
+            </select>
+            <div class="toggle">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle"></label>
+            </div>
+        </div>
     </header>
+
+
 </body>
 
 </html>
