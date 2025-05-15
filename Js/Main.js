@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Particle background animation
-    createParticleBackground();
+    // Cyber grid background animation
+    createCyberGridBackground();
 
     // Typewriter animation for hero title
     typewriterAnimation();
@@ -11,18 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Theme Toggle Functionality
     setupThemeToggle();
 
-    // Language Toggle
-    setupLanguageToggle();
-
     // Mobile Menu Toggle
     setupMobileMenu();
 
     // Set active navigation link
     setActiveNavLink();
+
+    // Initialize skills cards
+    initializeSkillsCards();
+
+    // Setup button animation replay
+    setupButtonAnimationReplay();
 });
 
-// Particle background animation with bullet-like blue dots, filling the body
-function createParticleBackground() {
+// Cyber grid background animation with network nodes and lines in blue
+function createCyberGridBackground() {
     const canvas = document.createElement("canvas");
     canvas.style.position = "fixed";
     canvas.style.top = "0";
@@ -36,94 +39,113 @@ function createParticleBackground() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const particles = [];
-    const particleCount = 150; // Increased for fuller coverage
-    const colors = ["#00d1ff"];
-
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 0.5;
-            this.speedX = Math.random() * 1.2 - 0.6; // Fast motion
-            this.speedY = Math.random() * 1.2 - 0.6;
-            this.color = colors[Math.floor(Math.random() * colors.length)];
-            this.opacity = Math.random() * 0.5 + 0.3;
-            this.rotation = Math.random() * 360;
-            this.rotationSpeed = Math.random() * 0.6 - 0.3; // Fast rotation
-            this.pulseSpeed = 0.02 + Math.random() * 0.01; // Fast pulsing
-            this.pulseDirection = 1;
-            this.originalSize = this.size;
-        }
-
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            this.rotation += this.rotationSpeed;
-
-            // Bounce off edges
-            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-
-            // Pulsing size effect
-            if (this.pulseDirection === 1) {
-                this.size += this.pulseSpeed;
-                if (this.size > this.originalSize * 1.2) this.pulseDirection = -1;
-            } else {
-                this.size -= this.pulseSpeed;
-                if (this.size < this.originalSize * 0.6) this.pulseDirection = 1;
-            }
-
-            // Regenerate if needed
-            if (Math.random() < 0.0005) {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-            }
-        }
-
-        draw() {
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate((this.rotation * Math.PI) / 180);
-
-            // No shadow effect
-            ctx.globalAlpha = this.opacity;
-            ctx.fillStyle = this.color;
-
-            // Draw as a circle (bullet-like dot)
-            ctx.beginPath();
-            ctx.arc(0, 0, this.size, 0, Math.PI * 2);
-            ctx.fill();
-
-            ctx.restore();
-        }
+    const nodeCount = 50;
+    const nodes = [];
+    for (let i = 0; i < nodeCount; i++) {
+        nodes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 2,
+            vy: (Math.random() - 0.5) * 2,
+            radius: Math.random() * 3 + 2,
+        });
     }
 
-    // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
+    let time = 0;
 
-    // Animation loop
-    function animateParticles() {
-        ctx.fillStyle = document.body.classList.contains("light-theme") ? "rgba(244, 244, 244, 0.05)" : "rgba(26, 26, 26, 0.05)";
+    // Add overlay for push effect
+    const overlay = document.createElement("div");
+    overlay.className = "cyber-grid-overlay";
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.zIndex = "0";
+    overlay.style.pointerEvents = "none";
+    document.body.appendChild(overlay);
+
+    function drawGrid() {
+        // Background fill with subtle grid
+        ctx.fillStyle = document.body.classList.contains("light-theme") ?
+            "rgba(244, 244, 244, 0.95)" :
+            "rgba(0, 0, 50, 0.95)"; // Dark blue background
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        particles.forEach((particle) => {
-            particle.update();
-            particle.draw();
+        // Draw faint grid
+        ctx.strokeStyle = "rgba(0, 209, 255, 0.1)";
+        ctx.lineWidth = 0.5;
+        for (let x = 0; x < canvas.width; x += 50) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, canvas.height);
+            ctx.stroke();
+        }
+        for (let y = 0; y < canvas.height; y += 50) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvas.width, y);
+            ctx.stroke();
+        }
+
+        // Update and draw nodes
+        ctx.shadowBlur = 15;
+        nodes.forEach(node => {
+            // Update position with bounce
+            node.x += node.vx;
+            node.y += node.vy;
+            if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+            if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+
+            // Blue color for nodes
+            const blueIntensity = Math.sin(time + node.x * 0.01) * 100 + 155;
+            ctx.fillStyle = `rgba(0, 209, ${blueIntensity}, 0.8)`;
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Blue glow effect
+            const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * 5);
+            gradient.addColorStop(0, `rgba(0, 209, ${blueIntensity}, 0.5)`);
+            gradient.addColorStop(1, `rgba(0, 209, ${blueIntensity}, 0)`);
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.radius * 5, 0, Math.PI * 2);
+            ctx.fill();
         });
 
-        requestAnimationFrame(animateParticles);
+        // Draw connecting lines
+        ctx.shadowBlur = 10;
+        for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+                const dx = nodes[i].x - nodes[j].x;
+                const dy = nodes[i].y - nodes[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < 150) {
+                    ctx.strokeStyle = `rgba(0, 209, 255, ${1 - distance / 150})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[i].x, nodes[i].y);
+                    ctx.lineTo(nodes[j].x, nodes[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        time += 0.05;
+        requestAnimationFrame(drawGrid);
     }
 
-    animateParticles();
+    drawGrid();
 
     // Handle window resize
     window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        nodes.forEach(node => {
+            if (node.x > canvas.width) node.x = canvas.width;
+            if (node.y > canvas.height) node.y = canvas.height;
+        });
     });
 }
 
@@ -239,7 +261,7 @@ function setupThemeToggle() {
 
 function applyLightTheme(themeLabel) {
     document.body.style.backgroundColor = "#f4f4f4";
-    document.querySelectorAll(".hero-content h1, .hero-content h2 span, .btn.primary, .social-icons a").forEach((el) => {
+    document.querySelectorAll(".hero-content h1, .hero-content h2 span, .social-icons a").forEach((el) => {
         el.style.color = "#09317d";
     });
 
@@ -250,13 +272,12 @@ function applyLightTheme(themeLabel) {
 
     if (themeLabel) {
         themeLabel.style.backgroundColor = "#ffffff";
-        themeLabel.style.boxShadow = "0 0 8px rgba(9, 49, 125, 0.4)";
     }
 }
 
 function applyDarkTheme(themeLabel) {
     document.body.style.backgroundColor = "#1a1a1a";
-    document.querySelectorAll(".hero-content h1, .hero-content h2 span, .btn.primary, .social-icons a").forEach((el) => {
+    document.querySelectorAll(".hero-content h1, .hero-content h2 span, .social-icons a").forEach((el) => {
         el.style.color = "#00d1ff";
     });
 
@@ -267,27 +288,7 @@ function applyDarkTheme(themeLabel) {
 
     if (themeLabel) {
         themeLabel.style.backgroundColor = "transparent";
-        themeLabel.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.2)";
     }
-}
-
-function setupLanguageToggle() {
-    const languageSelect = document.querySelector("#language");
-    if (!languageSelect) return;
-
-    const savedLanguage = localStorage.getItem("language") || "en";
-    languageSelect.value = savedLanguage;
-    updateLanguage(savedLanguage);
-
-    languageSelect.addEventListener("change", (e) => {
-        const lang = e.target.value;
-        updateLanguage(lang);
-        localStorage.setItem("language", lang);
-    });
-}
-
-function updateLanguage(lang) {
-    console.log(`Language updated to: ${lang}`);
 }
 
 function setupMobileMenu() {
@@ -306,11 +307,9 @@ function setupMobileMenu() {
 
             if (typeof gsap !== "undefined") {
                 gsap.fromTo(".nav-menu", { x: -300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
-
                 gsap.fromTo(
                     ".language-toggle", { x: -300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out", delay: 0.1 }
                 );
-
                 gsap.fromTo(
                     ".nav-links li", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, stagger: 0.1, delay: 0.2 }
                 );
@@ -359,5 +358,47 @@ function setActiveNavLink() {
         if (linkPathname === "index.html" && (currentPage === "/" || currentPage.endsWith("/index.html"))) {
             link.classList.add("active");
         }
+    });
+}
+
+// Initialize skills cards with animation
+function initializeSkillsCards() {
+    const skillsSection = document.querySelector(".skills-section");
+    if (!skillsSection) return;
+
+    const originalCards = document.querySelectorAll(".skill-card");
+    const skillsContainer = document.createElement("div");
+    skillsContainer.className = "skills-container";
+
+    originalCards.forEach((card) => {
+        skillsContainer.appendChild(card);
+    });
+
+    originalCards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        skillsContainer.appendChild(clone);
+    });
+
+    skillsSection.innerHTML = "";
+    skillsSection.appendChild(skillsContainer);
+}
+
+// Setup button animation replay
+function setupButtonAnimationReplay() {
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => {
+        button.addEventListener("mouseenter", () => {
+            button.style.animation = "none";
+            setTimeout(() => {
+                button.style.animation = "pulseButton 2s infinite";
+            }, 10);
+        });
+
+        button.addEventListener("click", () => {
+            button.style.animation = "none";
+            setTimeout(() => {
+                button.style.animation = "pulseButton 2s infinite";
+            }, 10);
+        });
     });
 }
