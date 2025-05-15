@@ -39,3 +39,33 @@ body.light-theme .btn.secondary:hover {
 body.light-theme .social-icons a {
     color: #00d1ff;
 }
+
+.light-theme {
+    background-color: #f4f4f4;
+    color: #252525;
+}
+
+.light-theme header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme nav ul li a {
+    color: #252525;
+}
+
+.light-theme nav ul li a:hover,
+.light-theme nav ul li a.active {
+    color: #09317d;
+}
+
+.light-theme nav ul li a.active::after {
+    background-color: #09317d;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
