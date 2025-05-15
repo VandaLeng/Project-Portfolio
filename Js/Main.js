@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // GSAP for Profile Image Animation (Slow Vertical Movement 10px)
-    gsap.registerPlugin();
+    gsap.registerPlugin(Draggable);
     const profileImage = document.querySelector('.hero-image img');
     gsap.fromTo(
         profileImage, { y: -10, opacity: 0 }, {
@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power1.inOut',
     });
 
-    // Add Technology Icons (Languages)
-    const techIcons = [
+    // Add Draggable Programming Language Cards with Continuous Animation
+    const languages = [
         { name: 'HTML', icon: 'fab fa-html5', color: '#e34c26' },
         { name: 'CSS', icon: 'fab fa-css3-alt', color: '#264de4' },
         { name: 'JavaScript', icon: 'fab fa-js', color: '#f0db4f' },
@@ -101,6 +101,59 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Bootstrap', icon: 'fab fa-bootstrap', color: '#563d7c' },
     ];
 
+    languages.forEach((lang, index) => {
+        const card = document.createElement('div');
+        card.className = 'language-card';
+        card.innerHTML = `
+            <i class="${lang.icon}" style="color: ${lang.color};"></i>
+            <span>${lang.name}</span>
+        `;
+        document.body.appendChild(card);
+
+        // Initial position (random, avoiding header)
+        const maxX = window.innerWidth - 60;
+        const maxY = window.innerHeight - 60;
+        const minY = 80;
+        const x = Math.random() * maxX;
+        const y = Math.random() * (maxY - minY) + minY;
+        card.style.left = `${x}px`;
+        card.style.top = `${y}px`;
+
+        // Continuous wandering animation
+        function wander() {
+            gsap.to(card, {
+                x: `+=${Math.random() * 100 - 50}`, // Random movement left/right
+                y: `+=${Math.random() * 100 - 50}`, // Random movement up/down
+                duration: 3 + Math.random() * 2,
+                ease: 'power1.inOut',
+                onComplete: wander,
+                onUpdate: function() {
+                    // Keep card within bounds
+                    const rect = card.getBoundingClientRect();
+                    if (rect.left < 0) gsap.set(card, { x: 0 });
+                    if (rect.right > window.innerWidth) gsap.set(card, { x: window.innerWidth - rect.width });
+                    if (rect.top < minY) gsap.set(card, { y: minY });
+                    if (rect.bottom > window.innerHeight) gsap.set(card, { y: window.innerHeight - rect.height });
+                }
+            });
+        }
+        wander();
+
+        // Make cards draggable
+        Draggable.create(card, {
+            bounds: 'body',
+            onDragStart: function() {
+                gsap.to(this.target, { scale: 1.1, boxShadow: '0 0 15px rgba(0, 209, 255, 0.6)', duration: 0.3 });
+                gsap.killTweensOf(this.target); // Pause wandering while dragging
+            },
+            onDragEnd: function() {
+                gsap.to(this.target, { scale: 1, boxShadow: '0 4px 10px rgba(0, 209, 255, 0.3)', duration: 0.3 });
+                wander(); // Resume wandering after dragging
+            },
+        });
+    });
+
+    // Add Tech Icons in Hero Section (Static)
     const techContainer = document.createElement('div');
     techContainer.className = 'tech-icons';
     techContainer.style.display = 'flex';
@@ -108,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     techContainer.style.marginTop = '20px';
     techContainer.style.flexWrap = 'wrap';
 
-    techIcons.forEach((tech, index) => {
+    languages.forEach((tech, index) => {
         const icon = document.createElement('i');
         icon.className = tech.icon;
         icon.style.fontSize = '24px';
@@ -117,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.title = tech.name;
         techContainer.appendChild(icon);
 
-        // Animate Icons with GSAP
         gsap.from(icon, {
             y: 50,
             opacity: 0,
@@ -135,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.hero-content').appendChild(techContainer);
 
-    // Enhanced Theme Toggle Functionality
+    // Theme Toggle Functionality
     const themeToggle = document.querySelector('#theme-toggle');
     const themeLabel = themeToggle.nextElementSibling;
     themeToggle.addEventListener('change', () => {
@@ -159,13 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Language Toggle (Placeholder)
+    // Language Toggle
     const languageSelect = document.querySelector('#language');
     languageSelect.addEventListener('change', (e) => {
         const lang = e.target.value;
-        console.log(`Language changed to: ${lang}`);
-        // Add translation logic here if needed
+        updateLanguage(lang);
     });
+
+    // Initialize language
+    updateLanguage('en');
 
     // Smooth Scroll for Navigation Links
     document.querySelectorAll('nav a').forEach(anchor => {

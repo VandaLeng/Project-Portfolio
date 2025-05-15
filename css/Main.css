@@ -49,6 +49,11 @@ body {
     background-color: var(--background-dark);
     color: var(--white-color);
     overflow-x: hidden;
+    position: relative;
+}
+
+body.khmer {
+    font-family: 'Noto Sans Khmer', sans-serif;
 }
 
 header {
@@ -256,14 +261,14 @@ nav ul li a.active::after {
     animation: fadeIn 2.5s ease-out;
 }
 
-.btn.primary {
-    background-color: #00d1ff;
-    color: #1a1a1a;
+.btn_primary {
+    background-color: #000000;
+    color: #00d1ff;
     border: none;
 }
 
 .btn.primary:hover {
-    background-color: #000000;
+    background-color: #00d1ff;
 }
 
 .btn.secondary {
@@ -314,27 +319,36 @@ nav ul li a.active::after {
     flex-wrap: wrap;
 }
 
-.light-theme {
-    background-color: #f4f4f4;
-    color: #252525;
+.language-card {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #1a1a1a, #333);
+    border: 2px solid var(--accent-cyan);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-ease);
+    cursor: move;
+    z-index: 10;
 }
 
-.light-theme header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.language-card i {
+    font-size: 24px;
 }
 
-.light-theme nav ul li a {
-    color: #252525;
+.language-card span {
+    font-size: 10px;
+    color: var(--white-color);
+    margin-top: 5px;
 }
 
-.light-theme nav ul li a:hover,
-.light-theme nav ul li a.active {
-    color: #09317d;
-}
-
-.light-theme nav ul li a.active::after {
-    background-color: #09317d;
+.language-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 209, 255, 0.6);
 }
 
 @keyframes slideInLeft {
