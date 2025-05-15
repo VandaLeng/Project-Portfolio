@@ -1,5 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Particle Background
+    // Tech stack particles background
+    createTechParticles();
+
+    // Typewriter animation for hero title
+    typewriterAnimation();
+
+    // GSAP for Profile Image Animation
+    animateProfileImage();
+
+    // Theme Toggle Functionality
+    setupThemeToggle();
+
+    // Language Toggle
+    setupLanguageToggle();
+
+    // Mobile Menu Toggle
+    setupMobileMenu();
+});
+
+// Create tech stack particles
+function createTechParticles() {
     const canvas = document.createElement('canvas');
     canvas.style.position = 'fixed';
     canvas.style.top = '0';
@@ -14,205 +34,206 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const particleCount = 100;
+    const particleCount = 30; // Reduced for performance
+    const techIcons = [
+        { name: 'HTML', color: '#e34c26' },
+        { name: 'CSS', color: '#264de4' },
+        { name: 'JavaScript', color: '#f0db4f' },
+        { name: 'Bootstrap', color: '#563d7c' },
+        { name: 'PHP', color: '#777bb4' },
+        { name: 'Database', color: '#00ced1' },
+        { name: 'Node.js', color: '#68a063' },
+        { name: 'TypeScript', color: '#007acc' },
+        { name: 'OOP', color: '#ff4500' },
+        { name: 'Laravel', color: '#ff2d20' },
+        { name: 'Vue.js', color: '#41b883' }
+    ];
 
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 3 + 1;
-            this.speedX = Math.random() * 2 - 1;
-            this.speedY = Math.random() * 2 - 1;
+            this.size = Math.random() * 5 + 2;
+            this.speedX = Math.random() * 0.3 - 0.15; // Slower speed
+            this.speedY = Math.random() * 0.3 - 0.15; // Slower speed
+            this.tech = techIcons[Math.floor(Math.random() * techIcons.length)];
+            this.color = this.tech.color;
+            this.opacity = Math.random() * 0.5 + 0.3; // Varying opacity
+            this.rotation = Math.random() * 360; // Random rotation
         }
 
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
+            this.rotation += 0.1; // Slow rotation
 
-            if (this.size > 0.2) this.size -= 0.02;
-
+            // Bounce off edges
             if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
             if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+
+            // Regenerate if too small
+            if (this.size > 0.5) this.size -= 0.005; // Slower shrink
+            if (this.size <= 0.5) {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 5 + 2;
+                this.tech = techIcons[Math.floor(Math.random() * techIcons.length)];
+                this.color = this.tech.color;
+            }
         }
 
         draw() {
-            ctx.fillStyle = 'rgba(0, 209, 255, 0.5)';
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.rotation * Math.PI / 180);
+
+            // Draw tech name with glow effect
+            ctx.globalAlpha = this.opacity;
+            ctx.fillStyle = this.color;
+            ctx.font = `${this.size * 2}px Poppins`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = this.color;
+            ctx.shadowBlur = 10;
+            ctx.fillText(this.tech.name, 0, 0);
+            ctx.shadowBlur = 0;
+
+            ctx.restore();
         }
     }
 
-    function initParticles() {
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
+    // Initialize particles
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
     }
 
+    // Animation loop
     function animateParticles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
         particles.forEach((particle, index) => {
             particle.update();
             particle.draw();
-
-            if (particle.size <= 0.2) {
-                particles.splice(index, 1);
-                particles.push(new Particle());
-            }
         });
+
         requestAnimationFrame(animateParticles);
     }
 
-    initParticles();
     animateParticles();
 
+    // Handle window resize
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     });
+}
 
-    // GSAP for Profile Image Animation (Slow Vertical Movement 10px)
-    gsap.registerPlugin(Draggable);
-    const profileImage = document.querySelector('.hero-image img');
-    gsap.fromTo(
-        profileImage, { y: -10, opacity: 0 }, {
-            y: 0,
-            opacity: 1,
-            duration: 2.5,
-            ease: 'power1.out',
-            delay: 0.5,
+// Typewriter animation for hero title
+function typewriterAnimation() {
+    const heroTitle = document.querySelector('.hero-content h1');
+    const text = "WEB DESIGN / WEB DEVELOPMENT / VANDA LENG / FRONT_END DEV";
+    heroTitle.textContent = "";
+
+    let charIndex = 0;
+    let isDeleting = false;
+    let currentText = "";
+    let typingSpeed = 100;
+
+    function type() {
+        // Current section being typed
+        const sections = ["WEB DESIGN", "WEB DEVELOPMENT", "VANDA LENG", "FRONT_END DEV"];
+        const currentSection = Math.floor(charIndex / 15) % sections.length;
+
+        if (!isDeleting) {
+            // Typing
+            currentText = sections[currentSection].substring(0, currentText.length + 1);
+            typingSpeed = 100;
+
+            if (currentText === sections[currentSection]) {
+                // Pause at end of word
+                typingSpeed = 1000;
+                isDeleting = true;
+            }
+        } else {
+            // Deleting
+            currentText = sections[currentSection].substring(0, currentText.length - 1);
+            typingSpeed = 50;
+
+            if (currentText === "") {
+                isDeleting = false;
+                charIndex += 15; // Move to next section
+            }
         }
-    );
-    gsap.to(profileImage, {
-        y: 10,
-        yoyo: true,
-        repeat: -1,
-        duration: 4,
-        ease: 'power1.inOut',
-    });
 
-    // Add Draggable Programming Language Cards with Continuous Animation
-    const languages = [
-        { name: 'HTML', icon: 'fab fa-html5', color: '#e34c26' },
-        { name: 'CSS', icon: 'fab fa-css3-alt', color: '#264de4' },
-        { name: 'JavaScript', icon: 'fab fa-js', color: '#f0db4f' },
-        { name: 'PHP', icon: 'fab fa-php', color: '#777bb4' },
-        { name: 'Git', icon: 'fab fa-git-alt', color: '#f05032' },
-        { name: 'Bootstrap', icon: 'fab fa-bootstrap', color: '#563d7c' },
-    ];
+        heroTitle.textContent = currentText;
+        heroTitle.classList.add('typing');
 
-    languages.forEach((lang, index) => {
-        const card = document.createElement('div');
-        card.className = 'language-card';
-        card.innerHTML = `
-            <i class="${lang.icon}" style="color: ${lang.color};"></i>
-            <span>${lang.name}</span>
-        `;
-        document.body.appendChild(card);
+        setTimeout(type, typingSpeed);
+    }
 
-        // Initial position (random, avoiding header)
-        const maxX = window.innerWidth - 60;
-        const maxY = window.innerHeight - 60;
-        const minY = 80;
-        const x = Math.random() * maxX;
-        const y = Math.random() * (maxY - minY) + minY;
-        card.style.left = `${x}px`;
-        card.style.top = `${y}px`;
+    // Start typing
+    setTimeout(type, 1000);
+}
 
-        // Continuous wandering animation
-        function wander() {
-            gsap.to(card, {
-                x: `+=${Math.random() * 100 - 50}`, // Random movement left/right
-                y: `+=${Math.random() * 100 - 50}`, // Random movement up/down
-                duration: 3 + Math.random() * 2,
-                ease: 'power1.inOut',
-                onComplete: wander,
-                onUpdate: function() {
-                    // Keep card within bounds
-                    const rect = card.getBoundingClientRect();
-                    if (rect.left < 0) gsap.set(card, { x: 0 });
-                    if (rect.right > window.innerWidth) gsap.set(card, { x: window.innerWidth - rect.width });
-                    if (rect.top < minY) gsap.set(card, { y: minY });
-                    if (rect.bottom > window.innerHeight) gsap.set(card, { y: window.innerHeight - rect.height });
-                }
-            });
-        }
-        wander();
+// GSAP animation for profile image
+function animateProfileImage() {
+    if (typeof gsap !== 'undefined') {
+        const profileImage = document.querySelector('.hero-image img');
 
-        // Make cards draggable
-        Draggable.create(card, {
-            bounds: 'body',
-            onDragStart: function() {
-                gsap.to(this.target, { scale: 1.1, boxShadow: '0 0 15px rgba(0, 209, 255, 0.6)', duration: 0.3 });
-                gsap.killTweensOf(this.target); // Pause wandering while dragging
-            },
-            onDragEnd: function() {
-                gsap.to(this.target, { scale: 1, boxShadow: '0 4px 10px rgba(0, 209, 255, 0.3)', duration: 0.3 });
-                wander(); // Resume wandering after dragging
-            },
+        gsap.fromTo(
+            profileImage, { y: -10, opacity: 0 }, {
+                y: 0,
+                opacity: 1,
+                duration: 2.5,
+                ease: 'power1.out',
+                delay: 0.5,
+            }
+        );
+
+        gsap.to(profileImage, {
+            y: 10,
+            yoyo: true,
+            repeat: -1,
+            duration: 4,
+            ease: 'power1.inOut',
         });
-    });
+    }
+}
 
-    // Add Tech Icons in Hero Section (Static)
-    const techContainer = document.createElement('div');
-    techContainer.className = 'tech-icons';
-    techContainer.style.display = 'flex';
-    techContainer.style.gap = '20px';
-    techContainer.style.marginTop = '20px';
-    techContainer.style.flexWrap = 'wrap';
-
-    languages.forEach((tech, index) => {
-        const icon = document.createElement('i');
-        icon.className = tech.icon;
-        icon.style.fontSize = '24px';
-        icon.style.color = tech.color;
-        icon.style.cursor = 'pointer';
-        icon.title = tech.name;
-        techContainer.appendChild(icon);
-
-        gsap.from(icon, {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            delay: index * 0.2 + 1,
-            ease: 'power2.out',
-        });
-        icon.addEventListener('mouseenter', () => {
-            gsap.to(icon, { scale: 1.3, duration: 0.3, ease: 'power2.out' });
-        });
-        icon.addEventListener('mouseleave', () => {
-            gsap.to(icon, { scale: 1, duration: 0.3, ease: 'power2.out' });
-        });
-    });
-
-    document.querySelector('.hero-content').appendChild(techContainer);
-
-    // Theme Toggle Functionality
+// Theme toggle functionality
+function setupThemeToggle() {
     const themeToggle = document.querySelector('#theme-toggle');
     const themeLabel = themeToggle.nextElementSibling;
+
     themeToggle.addEventListener('change', () => {
         document.body.classList.toggle('light-theme');
+
         if (document.body.classList.contains('light-theme')) {
             document.body.style.backgroundColor = '#f4f4f4';
-            document.querySelectorAll('.hero-content h1, .hero-content h2 span, .btn.primary, .social-icons a, .hero-image img').forEach(el => {
+            document.querySelectorAll('.hero-content h1, .hero-content h2 span, .btn.primary, .social-icons a').forEach(el => {
                 el.style.color = '#09317d';
-                if (el.tagName === 'IMG') el.style.borderColor = '#09317d';
             });
+
+            document.querySelector('.hero-image img').style.borderColor = '#09317d';
             themeLabel.style.backgroundColor = '#ffffff';
             themeLabel.style.boxShadow = '0 0 8px rgba(9, 49, 125, 0.4)';
         } else {
             document.body.style.backgroundColor = '#1a1a1a';
-            document.querySelectorAll('.hero-content h1, .hero-content h2 span, .btn.primary, .social-icons a, .hero-image img').forEach(el => {
+            document.querySelectorAll('.hero-content h1, .hero-content h2 span, .btn.primary, .social-icons a').forEach(el => {
                 el.style.color = '#00d1ff';
-                if (el.tagName === 'IMG') el.style.borderColor = '#00d1ff';
             });
+
+            document.querySelector('.hero-image img').style.borderColor = '#00d1ff';
             themeLabel.style.backgroundColor = 'transparent';
             themeLabel.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.2)';
         }
     });
+}
 
-    // Language Toggle
+// Language toggle functionality
+function setupLanguageToggle() {
     const languageSelect = document.querySelector('#language');
+
     languageSelect.addEventListener('change', (e) => {
         const lang = e.target.value;
         updateLanguage(lang);
@@ -220,19 +241,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize language
     updateLanguage('en');
+}
 
-    // Smooth Scroll for Navigation Links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth'
-                });
+// Mobile menu toggle
+function setupMobileMenu() {
+    const menuToggle = document.querySelector('#menu-toggle');
+    const menuOpenIcon = document.querySelector('.menu-open-icon');
+    const menuCloseIcon = document.querySelector('.menu-close-icon');
+
+    menuToggle.addEventListener('click', () => {
+        document.body.classList.toggle('show-mobile-menu');
+
+        if (document.body.classList.contains('show-mobile-menu')) {
+            menuOpenIcon.style.display = 'none';
+            menuCloseIcon.style.display = 'block';
+
+            // Animate menu items
+            if (typeof gsap !== 'undefined') {
+                gsap.fromTo('.nav-menu', { x: -300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: 'power2.out' });
+
+                gsap.fromTo('.language-toggle', { x: -300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: 'power2.out', delay: 0.1 });
+
+                // Animate each nav item with staggered delay
+                gsap.fromTo('.nav-links li', { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, stagger: 0.1, delay: 0.2 });
+            }
+        } else {
+            menuOpenIcon.style.display = 'block';
+            menuCloseIcon.style.display = 'none';
+
+            // Animate menu out
+            if (typeof gsap !== 'undefined') {
+                gsap.to('.nav-menu', { x: -300, opacity: 0, duration: 0.3, ease: 'power2.in' });
+                gsap.to('.language-toggle', { x: -300, opacity: 0, duration: 0.3, ease: 'power2.in' });
+            }
+        }
+    });
+
+    // Close menu when clicking on links (for mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                document.body.classList.remove('show-mobile-menu');
+                menuOpenIcon.style.display = 'block';
+                menuCloseIcon.style.display = 'none';
+
+                if (typeof gsap !== 'undefined') {
+                    gsap.to('.nav-menu', { x: -300, opacity: 0, duration: 0.3 });
+                    gsap.to('.language-toggle', { x: -300, opacity: 0, duration: 0.3 });
+                }
             }
         });
     });
-});
+}
+
+function updateLanguage(lang) {
+    // This function would handle the language update logic
+    // For now, let's just log the selected language
+    console.log(`Language selected: ${lang}`);
+}

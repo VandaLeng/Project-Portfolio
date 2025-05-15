@@ -32,16 +32,15 @@ const translations = {
 function updateLanguage(lang) {
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
-        if (key === 'hero-subtitle') {
-            // Handle HTML content with <span> and <br>
-            const text = translations[lang][key];
-            element.innerHTML = text;
-        } else {
-            element.textContent = translations[lang][key];
+        if (translations[lang] && translations[lang][key]) {
+            if (key === 'hero-subtitle') {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
         }
     });
 
-    // Update document language and font
     document.documentElement.lang = lang;
     document.body.classList.remove('en', 'khmer');
     document.body.classList.add(lang === 'kh' ? 'khmer' : 'en');
