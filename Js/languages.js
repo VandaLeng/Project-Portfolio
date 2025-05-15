@@ -10,8 +10,8 @@ const translations = {
         "hero-title": "WEB DESIGN / WEB DEVELOPMENT / VANDA LENG / FRONT_END DEV",
         "hero-subtitle": "Build Your Future Smarter With <span>Our Modern <br> Web Designs By Vanda Leng</span>",
         "hero-description": "Passionate Web Developer Focused on Crafting Beautiful, Functional Websites That Provide Great User Experiences. I Turn Ideas into Interactive Digital Solutions.",
-        "btn-download": "Download CV",
-        "btn-hire": "Hire Me",
+        "btn-download": "DOWNLOAD CV",
+        "btn-hire": "HIRE ME",
         "skill-html": "HTML",
         "skill-css": "CSS",
         "skill-js": "JavaScript",
@@ -34,7 +34,7 @@ const translations = {
         "language-label": "ភាសា:",
         "lang-en": "អង់គ្លេស",
         "lang-kh": "ខ្មែរ",
-        "hero-title": "ការរចនាវែ��សាយ / ការអភិវឌ្ឍន៍វែបសាយ / វណ្ណដា ឡេង / អ្នកអភិវឌ្ឍន៍ផ្នែកខាងមុខ",
+        "hero-title": "ការរចនាវែបសាយ / ការអភិវឌ្ឍន៍វែបសាយ / វណ្ណដា ឡេង / អ្នកអភិវឌ្ឍន៍ផ្នែកខាងមុខ",
         "hero-subtitle": "សាងសង់អនាគតរបស់អ្នកឱ្យកាន់តែឆ្លាតវៃជាមួយ <span>ការរចនាវែបសាយទំនើបរបស់យើងដោយ វណ្ណដា ឡេង</span>",
         "hero-description": "អ្នកអភិវឌ្ឍន៍វែបសាយដែលមានចំណង់ចំណូលចិត្តផ្តោតលើការបង្កើតវែបសាយដ៏ស្រស់ស្អាត និងមានមុខងារដែលផ្តល់នូវបទពិសោធន៍អ្នកប្រើប្រាស់ដ៏អស្ចារ្យ។ ខ្ញុំប្រែក្លាយគំនិតទៅជាដំណោះស្រាយឌីជីថលអន្តរកម្ម។",
         "btn-download": "ទាញយក CV",
@@ -93,6 +93,25 @@ function updateLanguage(lang) {
 
     // Save language preference
     localStorage.setItem("language", lang)
+
+    // Apply theme-specific text colors
+    if (document.body.classList.contains("light-theme")) {
+        document.querySelectorAll(".skill-card").forEach((card) => {
+            card.style.color = "#1a1a1a"
+        })
+
+        document.querySelectorAll(".skill-card span").forEach((span) => {
+            span.style.color = "#1a1a1a"
+        })
+    } else {
+        document.querySelectorAll(".skill-card").forEach((card) => {
+            card.style.color = "#ffffff"
+        })
+
+        document.querySelectorAll(".skill-card span").forEach((span) => {
+            span.style.color = "#ffffff"
+        })
+    }
 }
 
 // Load saved language or default to English on page load
