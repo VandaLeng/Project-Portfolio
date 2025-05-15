@@ -24,7 +24,8 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     /* Border Radius */
-    --border-radius-s: 8px;
+    --border-radius-xs: 86px;
+    --border-radius-s: 16px;
     --border-radius-m: 30px;
     --border-radius-circle: 50px;
     /* Site Max Width */
@@ -64,7 +65,7 @@ header {
 }
 
 .logo {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
     color: var(--accent-cyan);
     text-shadow: var(--shadow-small);
@@ -127,11 +128,12 @@ nav ul li a.active::after {
     color: var(--white-color);
     border: 1px solid var(--accent-cyan);
     padding: 8px 30px 8px 12px;
-    border-radius: var(--border-radius-m);
+    border-radius: var(--border-radius-s);
     cursor: pointer;
     font-size: var(--font-size-s);
     transition: var(--transition-ease);
     box-shadow: var(--shadow-small);
+    width: 120px;
 }
 
 .language-wrapper select:hover {
