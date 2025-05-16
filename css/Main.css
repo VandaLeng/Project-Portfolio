@@ -357,7 +357,21 @@ header {
 .btn {
     padding: 12px 35px;
     border: 2px solid var(--accent-cyan);
-    border-radius: var(--border-radius-m);
+    font-size: var(--font-size-n);
+    cursor: pointer;
+    transition: var(--transition-ease);
+    background: transparent;
+    color: var(--accent-cyan);
+    font-weight: var(--font-weight-semibold);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    animation: pulseButton 2s infinite;
+}
+
+.btn1 {
+    padding: 12px 35px;
+    border: 2px solid var(--accent-cyan);
     font-size: var(--font-size-n);
     cursor: pointer;
     transition: var(--transition-ease);
