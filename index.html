@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/Main.css">
     <link rel="stylesheet" href="/Theme/Main_theme.css">
+
 </head>
 
 <body>
@@ -27,7 +28,7 @@
             </ul>
         </nav>
         <div class="language-toggle">
-            <div class="language-wrapper">
+            <div class="language-wrapper en">
                 <label for="language" style="color: white; margin-right: 5px;" data-lang="language-label">Language:</label>
                 <select id="language">
                     <option value="en" selected data-lang="lang-en">English</option>
@@ -37,14 +38,14 @@
             <div class="theme-toggle">
                 <input type="checkbox" id="theme-toggle">
                 <label for="theme-toggle">
-                    <i class="fas fa-sun"></i>
                     <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
                 </label>
             </div>
         </div>
         <button id="menu-toggle" class="menu-toggle">
             <i class="fas fa-bars menu-open-icon"></i>
-            <i class="fas fa-times menu-close-icon" style="display: none;"></i>
+            <i class="fas fa-times menu-close-icon"></i>
         </button>
     </header>
     <main>
@@ -62,10 +63,10 @@
                     </a>
                 </div>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/share/1L7AmyZgQU/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:vanda.leng@student.passerellesnumeriques.org"><i class="fab fa-google"></i></a>
+                    <a href="https://www.linkedin.com/in/vanda-leng-5bb8b5344" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="hero-image">
@@ -125,6 +126,33 @@
             <div class="skill-card" data-skill="vuejs">
                 <i class="fab fa-vuejs"></i>
                 <span data-lang="skill-vuejs">Vue.js</span>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 data-lang="about-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/Vanda.jpg" alt="Vanda Leng">
+                </div>
+                <div class="about-text">
+                    <h3 class="fs-1" data-lang="about-experience">One Year Experienced Programming</h3>
+
+                    <p data-lang="about-description">
+                        My name is Vanda Leng, Cambodian. I am a passionate student who study at Passerelles Numeriques Cambodia (PNC). I study only one year in PNC but I have many experiences in Programming such as HTML, CSS, JavaScript, Node.js, Laravel, Vue.js and many more.
+                        For my passionate in coding and learning in new technology, I always try my best to learn new things everyday.
+                    </p>
+                    <div class="about-details">
+                        <div class="paragraph_text">
+                            <p><strong data-lang="about-name-label">Name:</strong> <span data-lang="about-name">Vanda Leng</span></p>
+                            <p><strong data-lang="about-age-label">Age:</strong> <span data-lang="about-age">20 Years Old</span></p>
+                        </div>
+                        <div class="paragraph_texts">
+                            <p><strong data-lang="about-email-label">Email:</strong> <a href="mailto:vanda.leng@student.passerellesnumeriques.org">vanda.leng@student.passerellesnumeriques.org</a></p>
+                            <p><strong data-lang="about-address-label">Address:</strong> <span data-lang="about-address">Phnom Penh, Cambodia</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

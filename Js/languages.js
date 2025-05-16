@@ -25,6 +25,16 @@ const translations = {
         "skill-oop": "OOP",
         "skill-laravel": "Laravel",
         "skill-vuejs": "Vue.js",
+        "about-title": "About Me",
+        "about-experience": "One Year Experienced Programming",
+        "about-description": "My name is Vanda Leng, Cambodian. I am a passionate student who study at Passerelles Numeriques Cambodia (PNC). I study only one year in PNC but I have many experiences in Programming such as HTML, CSS, JavaScript, Node.js, Laravel, Vue.js and many more. For my passionate in coding and learning in new technology, I always try my best to learn new things everyday.",
+        "about-name-label": "Name:",
+        "about-name": "Vanda Leng",
+        "about-age-label": "Age:",
+        "about-age": "20 Years Old",
+        "about-email-label": "Email:",
+        "about-address-label": "Address:",
+        "about-address": "Phnom Penh, Cambodia"
     },
     kh: {
         "nav-home": "ទំព័រដើម",
@@ -52,78 +62,50 @@ const translations = {
         "skill-oop": "OOP",
         "skill-laravel": "Laravel",
         "skill-vuejs": "Vue.js",
-    },
-}
+        "about-title": "អំពីខ្ញុំ",
+        "about-experience": "បទពិសោធន៍សរសេរកម្មវិធីមួយឆ្នាំ",
+        "about-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង ជនជាតិខ្មែរ។ ខ្ញុំជានិស្សិតដែលមានចំណង់ចំណូលចិត្ត ដែលកំពុងសិក្សានៅ Passerelles Numeriques Cambodia (PNC)។ ខ្ញុំសិក្សាតែមួយឆ្នាំនៅ PNC ប៉ុន្តែខ្ញុំមានបទពិសោធន៍ច្រើនក្នុងការសរសេរកម្មវិធីដូចជា HTML, CSS, JavaScript, Node.js, Laravel, Vue.js និងច្រើនទៀត។ ដោយសារតែចំណង់ចំណូលចិត្តរបស់ខ្ញុំក្នុងការសរសេរកូដ និងការសិក្សាបច្ចេកវិទ្យាថ្មីៗ ខ្ញុំតែងតែព្យាយាមឱ្យអស់ពីសមត្ថភាពដើម្បីរៀនរបស់ថ្មីជារៀងរាល់ថ្ងៃ។",
+        "about-name-label": "ឈ្មោះ:",
+        "about-name": "វណ្ណដា ឡេង",
+        "about-age-label": "អាយុ:",
+        "about-age": "២០ ឆ្នាំ",
+        "about-email-label": "អ៊ីមែល:",
+        "about-address-label": "អាសយដ្ឋាន:",
+        "about-address": "ភ្នំពេញ, កម្ពុជា"
+    }
+};
 
-// Function to update all text content based on selected language
 function updateLanguage(lang) {
-    // Update text content for elements with data-lang attributes
-    document.querySelectorAll("[data-lang]").forEach((element) => {
-        const key = element.getAttribute("data-lang")
+    document.querySelectorAll("[data-lang]").forEach(element => {
+        const key = element.getAttribute("data-lang");
         if (translations[lang] && translations[lang][key]) {
             if (key === "hero-subtitle" || key.includes("skill-")) {
-                element.innerHTML = translations[lang][key] // Preserve HTML tags
+                element.innerHTML = translations[lang][key];
             } else {
-                element.textContent = translations[lang][key] // Plain text
+                element.textContent = translations[lang][key];
             }
         }
-    })
+    });
 
-    // Update skill cards
-    document.querySelectorAll(".skill-card span").forEach((element) => {
-        const skillType = element.parentElement.getAttribute("data-skill")
-        const translationKey = `skill-${skillType}`
-        if (translations[lang] && translations[lang][translationKey]) {
-            element.textContent = translations[lang][translationKey]
-        }
-    })
+    document.documentElement.lang = lang;
+    document.body.classList.remove("en", "khmer");
+    document.body.classList.add(lang);
 
-    // Update document language
-    document.documentElement.lang = lang
+    const languageWrapper = document.querySelector(".language-wrapper");
+    languageWrapper.classList.remove("en", "kh");
+    languageWrapper.classList.add(lang);
 
-    // Update body class for font styling
-    document.body.classList.remove("en", "khmer")
-    document.body.classList.add(lang === "kh" ? "khmer" : "en")
-
-    // Update select element to reflect current language
-    const languageSelect = document.getElementById("language")
-    if (languageSelect) {
-        languageSelect.value = lang
-    }
-
-    // Save language preference
-    localStorage.setItem("language", lang)
-
-    // Apply theme-specific text colors
-    if (document.body.classList.contains("light-theme")) {
-        document.querySelectorAll(".skill-card").forEach((card) => {
-            card.style.color = "#1a1a1a"
-        })
-
-        document.querySelectorAll(".skill-card span").forEach((span) => {
-            span.style.color = "#1a1a1a"
-        })
-    } else {
-        document.querySelectorAll(".skill-card").forEach((card) => {
-            card.style.color = "#ffffff"
-        })
-
-        document.querySelectorAll(".skill-card span").forEach((span) => {
-            span.style.color = "#ffffff"
-        })
-    }
+    localStorage.setItem("language", lang);
 }
 
-// Load saved language or default to English on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("language") || "en"
-    updateLanguage(savedLang)
+    const savedLang = localStorage.getItem("language") || "en";
+    updateLanguage(savedLang);
 
-    // Add event listener for language change
-    const languageSelect = document.getElementById("language")
+    const languageSelect = document.getElementById("language");
     if (languageSelect) {
         languageSelect.addEventListener("change", (event) => {
-            updateLanguage(event.target.value)
-        })
+            updateLanguage(event.target.value);
+        });
     }
-})
+});
