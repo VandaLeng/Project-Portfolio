@@ -8,221 +8,308 @@
     <!-- Animation card -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <!-- Fonts and Icons -->
     <link rel="icon" href="images/Icon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Sans+Khmer:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/css/Main.css">
-    <link rel="stylesheet" href="/Theme/Main_theme.css">
-
+    <link rel="stylesheet" href="css/Main.css">
+    <link rel="stylesheet" href="Theme/Main_theme.css">
 </head>
 
-
 <body>
-    <header>
-        <div class="logo">VL</div>
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="index.html" id="home-link" data-lang="nav-home">Home</a></li>
-                <li><a href="/pages/experience.html" id="experience-link" data-lang="nav-experience">Experience</a></li>
-                <li><a href="/pages/about_me.html" id="about-link" data-lang="nav-about">About Me</a></li>
-                <li><a href="/pages/Contact_me.html" id="contact-link" data-lang="nav-contact">Contact Me</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <div class="language-wrapper en">
-                <label for="language" style="color: white; margin-right: 5px;" data-lang="language-label">Language:</label>
-                <select id="language">
-                    <option value="en" selected data-lang="lang-en">English</option>
-                    <option value="kh" data-lang="lang-kh">Khmer</option>
-                </select>
-            </div>
-            <div class="theme-toggle">
-                <input type="checkbox" id="theme-toggle">
-                <label for="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </label>
-            </div>
-        </div>
-        <button id="menu-toggle" class="menu-toggle">
-            <i class="fas fa-bars menu-open-icon"></i>
-            <i class="fas fa-times menu-close-icon"></i>
-        </button>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="animated-text" data-lang="hero-title">WEB DESIGN / WEB DEVELOPMENT / VANDA LENG / FRONT_END DEV</h1>
-                <h2 data-lang="hero-subtitle">Build Your Future Smarter With <span>Our Modern <br> Web Designs By Vanda Leng</span></h2>
-                <p data-lang="hero-description">Passionate Web Developer Focused on Crafting Beautiful, Functional Websites That Provide Great User Experiences. I Turn Ideas into Interactive Digital Solutions.</p>
-                <div class="btn-link">
-                    <a href="images/Vanda_Leng_CV.pdf">
-                        <button class="btn download-btn" data-lang="btn-download">DOWNLOAD CV</button>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vanda-leng-5bb8b5344" target="_blank">
-                        <button class="btn hire-btn" data-lang="btn-hire">HIRE ME</button>
-                    </a>
+    <div class="page-wrapper">
+        <header>
+            <div class="logo">VL</div>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" id="home-link" data-lang="nav-home">Home</a></li>
+                    <li><a href="/pages/experience.html" id="experience-link" data-lang="nav-experience">Experience</a></li>
+                    <li><a href="/pages/about_me.html" id="about-link" data-lang="nav-about">About Me</a></li>
+                    <li><a href="/pages/Contact_me.html" id="contact-link" data-lang="nav-contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <div class="language-wrapper en">
+                    <label for="language" style="color: white; margin-right: 5px;" data-lang="language-label">Language:</label>
+                    <select id="language">
+                        <option value="en" selected data-lang="lang-en">English</option>
+                        <option value="kh" data-lang="lang-kh">Khmer</option>
+                    </select>
                 </div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1L7AmyZgQU/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:vanda.leng@student.passerellesnumeriques.org"><i class="fab fa-google"></i></a>
-                    <a href="https://www.linkedin.com/in/vanda-leng-5bb8b5344" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/Vanda Professional.png" alt="Vanda Leng">
-            </div>
-        </section>
-
-        <section class="skills-section">
-            <div class="skill-card" data-skill="html">
-                <i class="fab fa-html5"></i>
-                <span data-lang="skill-html">HTML</span>
-            </div>
-            <div class="skill-card" data-skill="css">
-                <i class="fab fa-css3-alt"></i>
-                <span data-lang="skill-css">CSS</span>
-            </div>
-            <div class="skill-card" data-skill="js">
-                <i class="fab fa-js"></i>
-                <span data-lang="skill-js">JavaScript</span>
-            </div>
-            <div class="skill-card" data-skill="vscode">
-                <i class="fab fa-microsoft"></i>
-                <span data-lang="skill-vscode">VS Code</span>
-            </div>
-            <div class="skill-card" data-skill="bootstrap">
-                <i class="fab fa-bootstrap"></i>
-                <span data-lang="skill-bootstrap">Bootstrap</span>
-            </div>
-            <div class="skill-card" data-skill="php">
-                <i class="fab fa-php"></i>
-                <span data-lang="skill-php">PHP</span>
-            </div>
-            <div class="skill-card" data-skill="database">
-                <i class="fas fa-database"></i>
-                <span data-lang="skill-database">Database</span>
-            </div>
-            <div class="skill-card" data-skill="nodejs">
-                <i class="fab fa-node-js"></i>
-                <span data-lang="skill-nodejs">Node.js</span>
-            </div>
-            <div class="skill-card" data-skill="github">
-                <i class="fab fa-github"></i>
-                <span data-lang="skill-github">GitHub</span>
-            </div>
-            <div class="skill-card" data-skill="jira">
-                <i class="fab fa-jira"></i>
-                <span data-lang="skill-jira">Jira</span>
-            </div>
-            <div class="skill-card" data-skill="oop">
-                <i class="fas fa-code"></i>
-                <span data-lang="skill-oop">OOP</span>
-            </div>
-            <div class="skill-card" data-skill="laravel">
-                <i class="fab fa-laravel"></i>
-                <span data-lang="skill-laravel">Laravel</span>
-            </div>
-            <div class="skill-card" data-skill="vuejs">
-                <i class="fab fa-vuejs"></i>
-                <span data-lang="skill-vuejs">Vue.js</span>
-            </div>
-        </section>
-
-        <section class="about-section">
-            <h2 data-lang="about-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/Vanda.jpg" alt="Vanda Leng">
-                </div>
-                <div class="about-text">
-                    <h3 class="fs-1" data-lang="about-experience">One Year Experienced Programming</h3>
-
-                    <p data-lang="about-description">
-                        My name is Vanda Leng, Cambodian. I am a passionate student who study at Passerelles Numeriques Cambodia (PNC). I study only one year in PNC but I have many experiences in Programming such as HTML, CSS, JavaScript, Node.js, Laravel, Vue.js and many more.
-                        For my passionate in coding and learning in new technology, I always try my best to learn new things everyday.
-                    </p>
-                    <div class="about-details">
-                        <div class="paragraph_text">
-                            <p><strong data-lang="about-name-label">Name:</strong> <span data-lang="about-name">Vanda Leng</span></p>
-                            <p><strong data-lang="about-age-label">Age:</strong> <span data-lang="about-age">20 Years Old</span></p>
-                        </div>
-                        <div class="paragraph_texts">
-                            <p><strong data-lang="about-email-label">Email:</strong> <a href="mailto:vanda.leng@student.passerellesnumeriques.org">vanda.leng@student.passerellesnumeriques.org</a></p>
-                            <p><strong data-lang="about-address-label">Address:</strong> <span data-lang="about-address">Phnom Penh, Cambodia</span></p>
-                        </div>
-
+            <button id="menu-toggle" class="menu-toggle">
+                <i class="fas fa-bars menu-open-icon"></i>
+                <i class="fas fa-times menu-close-icon"></i>
+            </button>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="animated-text" data-lang="hero-title">WEB DESIGN / WEB DEVELOPMENT / VANDA LENG / FRONT_END DEV</h1>
+                    <h2 data-lang="hero-subtitle">Build Your Future Smarter With <span>Our Modern <br> Web Designs By Vanda Leng</span></h2>
+                    <p data-lang="hero-description">Passionate Web Developer Focused on Crafting Beautiful, Functional Websites That Provide Great User Experiences. I Turn Ideas into Interactive Digital Solutions.</p>
+                    <div class="btn-link">
+                        <a href="images/Vanda_Leng_CV.pdf">
+                            <button class="btn download-btn" data-lang="btn-download">DOWNLOAD CV</button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vanda-leng-5bb8b5344" target="_blank">
+                            <button class="btn hire-btn" data-lang="btn-hire">HIRE ME</button>
+                        </a>
                     </div>
-                    <a href="images/Vanda_Leng_CV.pdf">
-                        <button class="btn1 download-btn" data-lang="btn-download">DOWNLOAD CV</button>
-                    </a>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1L7AmyZgQU/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:vanda.leng@student.passerellesnumeriques.org"><i class="fab fa-google"></i></a>
+                        <a href="https://www.linkedin.com/in/vanda-leng-5bb8b5344" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <div class="container skill-section">
-        <!-- Left Section -->
-        <div class="left-section">
-            <h2 class="highlight">SKILLSET</h2>
-            <h3 class="fw-bold fs-3 text-white-create">Create and Professional Skills Experience on Few Area</h3>
-            <p class="text-white mt-3">
-                My name is Vanda Leng. Currently, I am a student who studied at
-                <span class="highlight_PNC">Passerellesnumeriques Cambodia (PNC)</span>. Moreover, I study with the information technology department that focus on Web development. For my passionate is coding and learning.
-            </p>
-            <button class="btn btn-custom mt-3">Get Any Project</button>
-        </div>
+                <div class="hero-image">
+                    <img src="images/Vanda Professional.png" alt="Vanda Leng">
+                </div>
+            </section>
 
-        <!-- Right Section -->
-        <div class="right-section">
-            <div class="mb-4">
-                <div class="skill-label">
-                    <span>Product Design & Development</span>
-                    <span>65%</span>
+            <section class="skills-section">
+                <div class="skill-card" data-skill="html">
+                    <i class="fab fa-html5"></i>
+                    <span data-lang="skill-html">HTML</span>
                 </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 65%;"></div>
+                <div class="skill-card" data-skill="css">
+                    <i class="fab fa-css3-alt"></i>
+                    <span data-lang="skill-css">CSS</span>
+                </div>
+                <div class="skill-card" data-skill="js">
+                    <i class="fab fa-js"></i>
+                    <span data-lang="skill-js">JavaScript</span>
+                </div>
+                <div class="skill-card" data-skill="vscode">
+                    <i class="fab fa-microsoft"></i>
+                    <span data-lang="skill-vscode">VS Code</span>
+                </div>
+                <div class="skill-card" data-skill="bootstrap">
+                    <i class="fab fa-bootstrap"></i>
+                    <span data-lang="skill-bootstrap">Bootstrap</span>
+                </div>
+                <div class="skill-card" data-skill="php">
+                    <i class="fab fa-php"></i>
+                    <span data-lang="skill-php">PHP</span>
+                </div>
+                <div class="skill-card" data-skill="database">
+                    <i class="fas fa-database"></i>
+                    <span data-lang="skill-database">Database</span>
+                </div>
+                <div class="skill-card" data-skill="nodejs">
+                    <i class="fab fa-node-js"></i>
+                    <span data-lang="skill-nodejs">Node.js</span>
+                </div>
+                <div class="skill-card" data-skill="github">
+                    <i class="fab fa-github"></i>
+                    <span data-lang="skill-github">GitHub</span>
+                </div>
+                <div class="skill-card" data-skill="jira">
+                    <i class="fab fa-jira"></i>
+                    <span data-lang="skill-jira">Jira</span>
+                </div>
+                <div class="skill-card" data-skill="oop">
+                    <i class="fas fa-code"></i>
+                    <span data-lang="skill-oop">OOP</span>
+                </div>
+                <div class="skill-card" data-skill="laravel">
+                    <i class="fab fa-laravel"></i>
+                    <span data-lang="skill-laravel">Laravel</span>
+                </div>
+                <div class="skill-card" data-skill="vuejs">
+                    <i class="fab fa-vuejs"></i>
+                    <span data-lang="skill-vuejs">Vue.js</span>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2 data-lang="about-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/Vanda.jpg" alt="Vanda Leng">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="fs-1" data-lang="about-experience">One Year Experienced Programming</h3>
+
+                        <p data-lang="about-description">
+                            My name is Vanda Leng, Cambodian. I am a passionate student who study at Passerelles Numeriques Cambodia (PNC). I study only one year in PNC but I have many experiences in Programming such as HTML, CSS, JavaScript, Node.js, Laravel, Vue.js and many more.
+                            For my passionate in coding and learning in new technology, I always try my best to learn new things everyday.
+                        </p>
+                        <div class="about-details">
+                            <div class="paragraph_text">
+                                <p><strong data-lang="about-name-label">Name:</strong> <span data-lang="about-name">Vanda Leng</span></p>
+                                <p><strong data-lang="about-age-label">Age:</strong> <span data-lang="about-age">20 Years Old</span></p>
+                            </div>
+                            <div class="paragraph_texts">
+                                <p><strong data-lang="about-email-label">Email:</strong> <a href="mailto:vanda.leng@student.passerellesnumeriques.org">vanda.leng@student.passerellesnumeriques.org</a></p>
+                                <p><strong data-lang="about-address-label">Address:</strong> <span data-lang="about-address">Phnom Penh, Cambodia</span></p>
+                            </div>
+
+                        </div>
+                        <a href="images/Vanda_Leng_CV.pdf">
+                            <button class="btn1 download-btn" data-lang="btn-download">DOWNLOAD CV</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="container skill-section">
+                <!-- Left Section -->
+                <div class="left-section">
+                    <h2 class="highlight">SKILLSET</h2>
+                    <h3 class="fw-bold fs-3 text-white-create">Create and Professional Skills Experience on Few Area</h3>
+                    <p class="text-white mt-3">
+                        My name is Vanda Leng. Currently, I am a student who studied at
+                        <span class="highlight_PNC">Passerellesnumeriques Cambodia (PNC)</span>. Moreover, I study with the information technology department that focus on Web development. For my passionate is coding and learning.
+                    </p>
+                    <button class="btn btn-custom mt-3">Get Any Project</button>
+                </div>
+
+                <!-- Right Section -->
+                <div class="right-section">
+                    <div class="mb-4">
+                        <div class="skill-label">
+                            <span>Product Design & Development</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="skill-label">
+                            <span>Web Development</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="skill-label">
+                            <span>Front-End Development</span>
+                            <span>58%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 58%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="skill-label">
+                            <span>UI Design & UX Development</span>
+                            <span>67%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 67%;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="mb-4">
-                <div class="skill-label">
-                    <span>Web Development</span>
-                    <span>85%</span>
+            <section class="trainer-section" id="trainer">
+                <div class="section-title">
+                    <h2>Trainer</h2>
+                    <div class="title-underline"></div>
                 </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 85%;"></div>
-                </div>
-            </div>
 
-            <div class="mb-4">
-                <div class="skill-label">
-                    <span>Front-End Development</span>
-                    <span>58%</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 58%;"></div>
-                </div>
-            </div>
+                <div class="trainer-container">
+                    <button class="trainer-nav trainer-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
 
-            <div class="mb-4">
-                <div class="skill-label">
-                    <span>UI Design & UX Development</span>
-                    <span>67%</span>
+                    <div class="trainer-slider">
+                        <div class="trainer-profiles">
+                            <!-- Trainer 1 -->
+                            <div class="trainer-profile">
+                                <div class="trainer-image">
+                                    <img src="/image/Teacher-Rady.jpg" alt="Rady Y" />
+                                </div>
+                                <h3 class="trainer-name">Rady Y</h3>
+                                <p class="trainer-position">Position: Web Coordinator</p>
+                            </div>
+
+                            <!-- Trainer 2 -->
+                            <div class="trainer-profile">
+                                <div class="trainer-image">
+                                    <img src="/image/Teacher-HIm.jpg" alt="HIM HEY" />
+                                </div>
+                                <h3 class="trainer-name">HIM HEY</h3>
+                                <p class="trainer-position">Position: Web Trainer</p>
+                            </div>
+
+                            <!-- Trainer 3 -->
+                            <div class="trainer-profile">
+                                <div class="trainer-image">
+                                    <img src="/image/Teacher-Yen.jpg" alt="YEN VON" />
+                                </div>
+                                <h3 class="trainer-name">YEN VON</h3>
+                                <p class="trainer-position">Position: Web Coordinator</p>
+                            </div>
+
+                            <!-- Trainer 4 -->
+                            <div class="trainer-profile">
+                                <div class="trainer-image">
+                                    <img src="/image/Teacher-YON.jpg" alt="Savoeurn Chorch" />
+                                </div>
+                                <h3 class="trainer-name">Savoeurn Chorch</h3>
+                                <p class="trainer-position">Position: Network Specialist</p>
+                            </div>
+
+                            <!-- Clone first two for looping -->
+                            <div class="trainer-profile">
+                                <div class="trainer-image">
+                                    <img src="/image/Teacher-Rady.jpg" alt="Rady Y" />
+                                </div>
+                                <h3 class="trainer-name">Rady Y</h3>
+                                <p class="trainer-position">Position: Web Coordinator</p>
+                            </div>
+                            <div class="trainer-profile">
+                                <div class="trainer-image">
+                                    <img src="/image/Teacher-HIm.jpg" alt="HIM HEY" />
+                                </div>
+                                <h3 class="trainer-name">HIM HEY</h3>
+                                <p class="trainer-position">Position: Web Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="trainer-nav trainer-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 67%;"></div>
+
+                <!-- Only icon trainer dots here brother -->
+                <div class="trainer-dots">
+                    <i class="fas fa-circle trainer-dot active"></i>
+                    <i class="fas fa-circle trainer-dot"></i>
+                    <i class="fas fa-circle trainer-dot"></i>
+                    <i class="fas fa-circle trainer-dot"></i>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
 
+    <!-- Animated Background -->
+    <div id="animated-bg"></div>
 
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
-    <script src="/Js/languages.js"></script>
-    <script src="/Js/Main.js"></script>
+    <script src="Js/languages.js"></script>
+    <script src="Js/Main.js"></script>
     <script>
         AOS.init();
     </script>

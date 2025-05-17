@@ -34,7 +34,9 @@ const translations = {
         "about-age": "20 Years Old",
         "about-email-label": "Email:",
         "about-address-label": "Address:",
-        "about-address": "Phnom Penh, Cambodia"
+        "about-address": "Phnom Penh, Cambodia",
+        "trainer-title": "Trainer",
+        "contact-title": "Contact Me",
     },
     kh: {
         "nav-home": "ទំព័រដើម",
@@ -71,41 +73,45 @@ const translations = {
         "about-age": "២០ ឆ្នាំ",
         "about-email-label": "អ៊ីមែល:",
         "about-address-label": "អាសយដ្ឋាន:",
-        "about-address": "ភ្នំពេញ, កម្ពុជា"
-    }
-};
+        "about-address": "ភ្នំពេញ, កម្ពុជា",
+        "trainer-title": "គ្រូបង្វឹក",
+        "contact-title": "ទំនាក់ទំនងមកខ្ញុំ",
+    },
+}
 
 function updateLanguage(lang) {
-    document.querySelectorAll("[data-lang]").forEach(element => {
-        const key = element.getAttribute("data-lang");
+    document.querySelectorAll("[data-lang]").forEach((element) => {
+        const key = element.getAttribute("data-lang")
         if (translations[lang] && translations[lang][key]) {
             if (key === "hero-subtitle" || key.includes("skill-")) {
-                element.innerHTML = translations[lang][key];
+                element.innerHTML = translations[lang][key]
             } else {
-                element.textContent = translations[lang][key];
+                element.textContent = translations[lang][key]
             }
         }
-    });
+    })
 
-    document.documentElement.lang = lang;
-    document.body.classList.remove("en", "khmer");
-    document.body.classList.add(lang);
+    document.documentElement.lang = lang
+    document.body.classList.remove("en", "khmer")
+    document.body.classList.add(lang)
 
-    const languageWrapper = document.querySelector(".language-wrapper");
-    languageWrapper.classList.remove("en", "kh");
-    languageWrapper.classList.add(lang);
+    const languageWrapper = document.querySelector(".language-wrapper")
+    if (languageWrapper) {
+        languageWrapper.classList.remove("en", "kh")
+        languageWrapper.classList.add(lang)
+    }
 
-    localStorage.setItem("language", lang);
+    localStorage.setItem("language", lang)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("language") || "en";
-    updateLanguage(savedLang);
+    const savedLang = localStorage.getItem("language") || "en"
+    updateLanguage(savedLang)
 
-    const languageSelect = document.getElementById("language");
+    const languageSelect = document.getElementById("language")
     if (languageSelect) {
         languageSelect.addEventListener("change", (event) => {
-            updateLanguage(event.target.value);
-        });
+            updateLanguage(event.target.value)
+        })
     }
-});
+})
