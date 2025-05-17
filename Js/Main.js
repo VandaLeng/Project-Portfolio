@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function createAnimatedBackground() {
     const animatedBg = document.getElementById("animated-bg")
+    if (!animatedBg) return
 
     // Create particles
     for (let i = 0; i < 50; i++) {
@@ -77,6 +78,7 @@ function typewriterAnimation() {
     const heroTitle = document.querySelector(".hero-content h1")
     if (!heroTitle) return
 
+    const originalText = heroTitle.textContent
     heroTitle.textContent = ""
     heroTitle.style.minHeight = "3.5rem"
 
@@ -86,7 +88,7 @@ function typewriterAnimation() {
     let typingSpeed = 100
 
     function type() {
-        const sections = ["WEB DESIGN", "WEB DEVELOPMENT", "VANDA LENG", "FRONT_END DEV"]
+        const sections = originalText.split(" / ")
         const currentSection = Math.floor(charIndex / 15) % sections.length
 
         if (!isDeleting) {
@@ -167,12 +169,52 @@ function setupThemeToggle() {
             document.body.classList.add("light-theme")
             applyLightTheme()
             localStorage.setItem("theme", "light")
+
+            // Animate theme change
+            animateThemeChange(true)
         } else {
             document.body.classList.remove("light-theme")
             applyDarkTheme()
             localStorage.setItem("theme", "dark")
+
+            // Animate theme change
+            animateThemeChange(false)
         }
     })
+}
+
+function animateThemeChange(isLight) {
+    const gsap = window.gsap
+    if (typeof gsap !== "undefined") {
+        // Create a flash effect
+        const flash = document.createElement("div")
+        flash.style.position = "fixed"
+        flash.style.top = "0"
+        flash.style.left = "0"
+        flash.style.width = "100%"
+        flash.style.height = "100%"
+        flash.style.backgroundColor = isLight ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 0.3)"
+        flash.style.zIndex = "9999"
+        flash.style.pointerEvents = "none"
+        document.body.appendChild(flash)
+
+        gsap.to(flash, {
+            opacity: 0,
+            duration: 0.8,
+            onComplete: () => {
+                document.body.removeChild(flash)
+            },
+        })
+
+        // Animate elements
+        gsap.fromTo(".logo", { scale: 0.8, opacity: 0.5 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out" })
+
+        gsap.fromTo(".nav-links li a", { y: -10, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 0.5 })
+
+        gsap.fromTo(
+            ".hero-content h1, .hero-content h2, .hero-content p", { opacity: 0.5 }, { opacity: 1, stagger: 0.2, duration: 0.8 },
+        )
+    }
 }
 
 function applyLightTheme() {
@@ -336,7 +378,7 @@ function initializeSkillsCards() {
 }
 
 function setupButtonAnimationReplay() {
-    const buttons = document.querySelectorAll(".btn")
+    const buttons = document.querySelectorAll(".btn, .btn1")
     buttons.forEach((button) => {
         button.addEventListener("mouseenter", () => {
             button.style.animation = "none"
@@ -354,61 +396,95 @@ function setupButtonAnimationReplay() {
     })
 }
 
-const trainerProfiles = document.querySelector(".trainer-profiles");
-const trainerCards = document.querySelectorAll(".trainer-profile");
-const prevBtn = document.querySelector(".trainer-prev");
-const nextBtn = document.querySelector(".trainer-next");
-const dots = document.querySelectorAll(".trainer-dot");
-const visibleCards = 3;
-const cardWidth = trainerCards[0].offsetWidth + 20;
-let currentIndex = 0;
+function initializeTrainerCarousel() {
+    const trainerProfiles = document.querySelector(".trainer-profiles")
+    const trainerCards = document.querySelectorAll(".trainer-profile")
+    const prevBtn = document.querySelector(".trainer-prev")
+    const nextBtn = document.querySelector(".trainer-next")
+    const dots = document.querySelectorAll(".trainer-dot")
 
-// Update slider position
-function updateSlider() {
-    trainerProfiles.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    updateDots();
-}
+    if (!trainerProfiles || !trainerCards.length || !prevBtn || !nextBtn) return
 
-// Update active dot
-function updateDots() {
+    const visibleCards = window.innerWidth > 768 ? 3 : window.innerWidth > 480 ? 2 : 1
+    const cardWidth = trainerCards[0].offsetWidth + 20
+    let currentIndex = 0
+
+    // Update slider position
+    function updateSlider() {
+        trainerProfiles.style.transform = `translateX(-${currentIndex * cardWidth}px)`
+        updateDots()
+    }
+
+    // Update active dot
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex)
+        })
+    }
+
+    // Next button click
+    nextBtn.addEventListener("click", () => {
+        currentIndex++
+        if (currentIndex > trainerCards.length - visibleCards) {
+            currentIndex = 0
+        }
+        updateSlider()
+    })
+
+    // Previous button click
+    prevBtn.addEventListener("click", () => {
+        currentIndex--
+        if (currentIndex < 0) {
+            currentIndex = trainerCards.length - visibleCards
+        }
+        updateSlider()
+    })
+
+    // Dot click
     dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentIndex);
-    });
+        dot.addEventListener("click", () => {
+            currentIndex = index
+            updateSlider()
+        })
+    })
+
+    // Auto slide
+    let autoSlideInterval = setInterval(() => {
+        currentIndex++
+        if (currentIndex > trainerCards.length - visibleCards) {
+            currentIndex = 0
+        }
+        updateSlider()
+    }, 5000)
+
+    // Pause auto slide on hover
+    trainerProfiles.addEventListener("mouseenter", () => {
+        clearInterval(autoSlideInterval)
+    })
+
+    // Resume auto slide on mouse leave
+    trainerProfiles.addEventListener("mouseleave", () => {
+        autoSlideInterval = setInterval(() => {
+            currentIndex++
+            if (currentIndex > trainerCards.length - visibleCards) {
+                currentIndex = 0
+            }
+            updateSlider()
+        }, 5000)
+    })
+
+    // Handle window resize
+    window.addEventListener("resize", () => {
+        const newVisibleCards = window.innerWidth > 768 ? 3 : window.innerWidth > 480 ? 2 : 1
+        if (currentIndex > trainerCards.length - newVisibleCards) {
+            currentIndex = 0
+        }
+        updateSlider()
+    })
+
+    // Initial setup
+    updateSlider()
 }
-
-// Next button click
-nextBtn.addEventListener("click", () => {
-    currentIndex++;
-    if (currentIndex > trainerCards.length - visibleCards) {
-        currentIndex = 0;
-    }
-    updateSlider();
-});
-
-// Previous button click
-prevBtn.addEventListener("click", () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = trainerCards.length - visibleCards;
-    }
-    updateSlider();
-});
-
-// Dot click
-dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        currentIndex = index;
-        updateSlider();
-    });
-});
-
-// Handle window resize
-window.addEventListener("resize", () => {
-    updateSlider();
-});
-
-// Initial setup
-updateSlider();
 
 function initializeGoogleMap() {
     // This function will be called by the Google Maps API callback

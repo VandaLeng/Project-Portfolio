@@ -60,7 +60,11 @@ body {
     z-index: 1;
 }
 
-body.khmer {
+body.en {
+    font-family: "Poppins", sans-serif;
+}
+
+body.kh {
     font-family: "Noto Sans Khmer", sans-serif;
 }
 
@@ -73,14 +77,35 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.9);
+    background: transparent;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     height: 80px;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid rgba(0, 209, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInHeader 1s ease-out;
+}
+
+header:hover {
+    background: rgba(0, 209, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 209, 255, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 209, 255, 0.2);
+}
+
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo {
@@ -88,10 +113,20 @@ header {
     font-weight: var(--font-weight-semibold);
     color: var(--accent-cyan);
     transition: transform var(--transition-ease);
+    animation: pulseLogo 2s infinite alternate;
+}
+
+@keyframes pulseLogo {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 209, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(0, 209, 255, 0.9);
+    }
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
     color: var(--focus-cyan);
 }
 
@@ -106,6 +141,24 @@ header {
 
 .nav-links li {
     margin: 0 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links li::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.nav-links li:hover::before {
+    transform: translateX(0);
 }
 
 .nav-links li a {
@@ -116,11 +169,13 @@ header {
     transition: var(--transition-ease);
     position: relative;
     padding: 5px 0;
+    display: inline-block;
 }
 
 .nav-links li a:hover {
     color: var(--accent-cyan);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 8px rgba(0, 209, 255, 0.5);
 }
 
 .nav-links li a.active {
@@ -161,13 +216,38 @@ header {
     position: relative;
     display: flex;
     align-items: center;
+    background: rgba(0, 209, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: var(--border-radius-s);
+    transition: all 0.3s ease;
+}
+
+.language-wrapper:hover {
+    background: rgba(0, 209, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 209, 255, 0.3);
+}
+
+.language-wrapper label {
+    color: var(--white-color);
+    margin-right: 8px;
+    font-size: var(--font-size-s);
+    transition: all 0.3s ease;
+}
+
+.language-wrapper.en label {
+    font-family: "Poppins", sans-serif;
+}
+
+.language-wrapper.kh label {
+    font-family: "Noto Sans Khmer", sans-serif;
 }
 
 .language-wrapper select {
     appearance: none;
-    background: linear-gradient(45deg, var(--white-color));
-    color: var(--dark-color);
-    border: 1px solid var(--accent-cyan);
+    background: transparent;
+    color: var(--white-color);
+    border: 1px solid rgba(0, 209, 255, 0.3);
     padding: 6px 25px 6px 10px;
     border-radius: var(--border-radius-s);
     cursor: pointer;
@@ -176,16 +256,37 @@ header {
     width: 100px;
 }
 
+.language-wrapper.en select {
+    font-family: "Poppins", sans-serif;
+}
+
+.language-wrapper.kh select {
+    font-family: "Noto Sans Khmer", sans-serif;
+}
+
 .language-wrapper select:hover {
-    background: linear-gradient(45deg, #444, #555);
+    background: rgba(0, 209, 255, 0.1);
     transform: translateY(-2px);
     border-color: var(--focus-cyan);
-    color: var(--accent-cyan);
 }
 
 .language-wrapper select:focus {
     outline: none;
     border-color: var(--focus-cyan);
+    box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+}
+
+.language-wrapper select option {
+    background-color: var(--background-dark);
+    color: var(--white-color);
+}
+
+.language-wrapper.en select option[value="en"] {
+    font-family: "Poppins", sans-serif;
+}
+
+.language-wrapper.kh select option[value="kh"] {
+    font-family: "Noto Sans Khmer", sans-serif;
 }
 
 .language-wrapper::after {
@@ -198,6 +299,12 @@ header {
     transform: translateY(-50%);
     color: var(--accent-cyan);
     pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.language-wrapper:hover::after {
+    color: var(--focus-cyan);
+    transform: translateY(-50%) scale(1.2);
 }
 
 .theme-toggle {
@@ -213,7 +320,7 @@ header {
 .theme-toggle label {
     width: 40px;
     height: 40px;
-    background: transparent;
+    background: rgba(0, 209, 255, 0.1);
     border-radius: var(--border-radius-circle);
     cursor: pointer;
     display: flex;
@@ -221,46 +328,65 @@ header {
     justify-content: center;
     transition: var(--transition-ease);
     position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle label::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 209, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle label:hover::before {
+    transform: scale(1.5);
 }
 
 .theme-toggle .fa-sun {
-    color: #00b7ff;
+    color: #ffcc00;
     font-size: 20px;
-    display: block;
-    transition: opacity 0.3s ease;
+    display: none;
+    transition: all 0.5s ease;
+    transform: rotate(0deg) scale(1);
 }
 
 .theme-toggle .fa-moon {
     color: #87ceeb;
     font-size: 20px;
-    display: none;
-    transition: opacity 0.3s ease;
+    display: block;
+    transition: all 0.5s ease;
+    transform: rotate(0deg) scale(1);
 }
 
 .theme-toggle input:checked+label .fa-sun {
-    display: none;
+    display: block;
+    transform: rotate(360deg) scale(1.2);
 }
 
 .theme-toggle input:checked+label .fa-moon {
-    display: block;
+    display: none;
 }
 
 .theme-toggle label:hover {
     transform: scale(1.1);
-    background: rgba(0, 209, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
 }
 
 .theme-toggle input:checked+label {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 204, 0.2);
     animation: glowTheme 1.5s infinite alternate;
 }
 
 @keyframes glowTheme {
     0% {
-        box-shadow: 0 0 5px rgba(0, 209, 255, 0.3);
+        box-shadow: 0 0 5px rgba(255, 204, 0, 0.3);
     }
     100% {
-        box-shadow: 0 0 15px rgba(0, 209, 255, 0.8);
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
     }
 }
 
@@ -1466,69 +1592,9 @@ header {
 }
 
 
-/* Light Theme Adjustments */
-
-body.light-theme .trainer-section {
-    background-color: #f5f5f5;
-}
-
-body.light-theme .trainer-profile .trainer-name {
-    color: var(--dark-color);
-}
-
-body.light-theme .trainer-profile .trainer-position {
-    color: var(--accent-cyan);
-}
-
-body.light-theme .contact-section {
-    background-color: #f5f5f5;
-}
-
-body.light-theme .contact-heading {
-    color: var(--dark-color);
-}
-
-body.light-theme .contact-description {
-    color: #666;
-}
-
-body.light-theme .contact-value {
-    color: var(--dark-color);
-}
-
-body.light-theme .contact-value a {
-    color: var(--dark-color);
-}
-
-body.light-theme .footer-section {
-    background-color: #f0f0f0;
-}
-
-body.light-theme .footer-title {
-    color: var(--dark-color);
-}
-
-body.light-theme .footer-description {
-    color: #666;
-}
-
-body.light-theme .footer-menu li a {
-    color: #666;
-}
-
-body.light-theme .footer-bottom {
-    background-color: #e0e0e0;
-    color: #666;
-}
-
-body.light-theme #animated-bg {
-    background: #f5f5f5;
-}
-
-
 /* Responsive Design */
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     header {
         padding: 10px 20px;
     }
@@ -1552,6 +1618,17 @@ body.light-theme #animated-bg {
         background: rgba(26, 26, 26, 0.95);
         padding: 20px;
         z-index: 99;
+        animation: slideInMenu 0.3s ease-out;
+    }
+    @keyframes slideInMenu {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     body.light-theme.show-mobile-menu .nav-menu,
     body.light-theme.show-mobile-menu .language-toggle {

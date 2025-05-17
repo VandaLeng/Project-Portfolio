@@ -91,16 +91,21 @@ function updateLanguage(lang) {
         }
     })
 
+    // Update HTML lang attribute
     document.documentElement.lang = lang
-    document.body.classList.remove("en", "khmer")
+
+    // Update body class for font changes
+    document.body.classList.remove("en", "kh")
     document.body.classList.add(lang)
 
+    // Update language wrapper class
     const languageWrapper = document.querySelector(".language-wrapper")
     if (languageWrapper) {
         languageWrapper.classList.remove("en", "kh")
         languageWrapper.classList.add(lang)
     }
 
+    // Save language preference
     localStorage.setItem("language", lang)
 }
 
@@ -110,6 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const languageSelect = document.getElementById("language")
     if (languageSelect) {
+        // Set the initial value based on saved language
+        languageSelect.value = savedLang
+
         languageSelect.addEventListener("change", (event) => {
             updateLanguage(event.target.value)
         })

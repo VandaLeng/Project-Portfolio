@@ -1,11 +1,28 @@
+/* Light Theme Styles */
+
 body.light-theme {
     background: #ffffff;
-    /* Pure white background */
     color: #1a1a1a;
 }
 
 body.light-theme header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 209, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme header:hover {
+    background: rgba(0, 209, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 209, 255, 0.3);
+}
+
+body.light-theme .logo {
+    color: #09317d;
+}
+
+body.light-theme .logo:hover {
+    color: #00d1ff;
 }
 
 body.light-theme nav ul li a {
@@ -14,10 +31,58 @@ body.light-theme nav ul li a {
 
 body.light-theme nav ul li a:hover {
     color: #00d1ff;
+    text-shadow: 0 0 8px rgba(0, 209, 255, 0.3);
+}
+
+body.light-theme nav ul li a.active {
+    color: #00d1ff;
+}
+
+body.light-theme nav ul li a.active::after {
+    background-color: #00d1ff;
+}
+
+body.light-theme .language-wrapper {
+    background: rgba(0, 209, 255, 0.05);
+}
+
+body.light-theme .language-wrapper:hover {
+    background: rgba(0, 209, 255, 0.1);
+}
+
+body.light-theme .language-wrapper label {
+    color: #1a1a1a;
+}
+
+body.light-theme .language-wrapper select {
+    color: #1a1a1a;
+    border-color: rgba(0, 209, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+body.light-theme .language-wrapper select:hover {
+    background: rgba(0, 209, 255, 0.1);
+}
+
+body.light-theme .language-wrapper select option {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+body.light-theme .language-wrapper::after {
+    color: #09317d;
+}
+
+body.light-theme .theme-toggle label {
+    background: rgba(255, 204, 0, 0.1);
+}
+
+body.light-theme .theme-toggle label:hover {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
 }
 
 body.light-theme .hero-content h1 {
-    color: #00d1ff;
+    color: #09317d;
 }
 
 body.light-theme .hero-content h2 span {
@@ -41,52 +106,40 @@ body.light-theme .social-icons a {
     color: #00d1ff;
 }
 
-.light-theme {
-    background-color: #ffffff;
-    /* Pure white */
-    color: #252525;
-}
-
-.light-theme header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.light-theme nav ul li a {
-    color: #252525;
-}
-
-.light-theme nav ul li a:hover,
-.light-theme nav ul li a.active {
-    color: #09317d;
-}
-
-.light-theme nav ul li a.active::after {
-    background-color: #09317d;
-}
-
-.light-theme .language-card {
-    background: linear-gradient(45deg, #ffffff, #f0f0f0);
-    /* White to very light white for contrast */
-    border-color: #09317d;
-    box-shadow: 0 4px 10px rgba(9, 49, 125, 0.3);
-}
-
-.light-theme .language-card:hover {
-    box-shadow: 0 0 15px rgba(9, 49, 125, 0.5);
-}
-
-.light-theme .language-card span {
+body.light-theme .skill-card {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 209, 255, 0.3);
     color: #1a1a1a;
 }
 
-.light-theme .nav-menu {
-    background: #ffffff;
-    /* Pure white */
+body.light-theme .skill-card:hover {
+    background: rgba(0, 209, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 209, 255, 0.2);
 }
 
+body.light-theme .about-section h2 {
+    color: #09317d;
+}
 
-/* Light theme adjustments */
+body.light-theme .about-section h2::after {
+    background-color: #00d1ff;
+}
+
+body.light-theme .about-text h3 {
+    color: #1a1a1a;
+}
+
+body.light-theme .about-text p {
+    color: #666;
+}
+
+body.light-theme .about-details p {
+    color: #666;
+}
+
+body.light-theme .about-details strong {
+    color: #1a1a1a;
+}
 
 body.light-theme .trainer-section {
     background-color: #f5f5f5;
@@ -103,22 +156,19 @@ body.light-theme .trainer-card:hover {
 }
 
 body.light-theme .trainer-name {
-    color: var(--dark-color);
+    color: #1a1a1a;
 }
 
 body.light-theme .trainer-description {
     color: #666;
 }
 
-
-/* Light theme adjustments */
-
 body.light-theme .contact-section {
     background-color: #f5f5f5;
 }
 
 body.light-theme .contact-heading {
-    color: var(--dark-color);
+    color: #1a1a1a;
 }
 
 body.light-theme .contact-description {
@@ -126,11 +176,11 @@ body.light-theme .contact-description {
 }
 
 body.light-theme .contact-value {
-    color: var(--dark-color);
+    color: #1a1a1a;
 }
 
 body.light-theme .contact-value a {
-    color: var(--dark-color);
+    color: #1a1a1a;
 }
 
 body.light-theme #animated-bg {
@@ -147,7 +197,7 @@ body.light-theme .bg-particle {
 
 @media (max-width: 768px) {
     body.light-theme.show-mobile-menu .nav-menu {
-        background: #ffffff;
-        /* Pure white */
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 }
