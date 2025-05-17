@@ -37,6 +37,19 @@ const translations = {
         "about-address": "Phnom Penh, Cambodia",
         "trainer-title": "Trainer",
         "contact-title": "Contact Me",
+        "contact-description": "Get in touch with me anytime! You can use the contact form, send me an email, or even give me a phone call if that's more convenient. I'm always happy to hear from you. Whether you have a question, a project idea, or just want to say hello, don't hesitate to reach out!",
+        "contact-address-label": "Address:",
+        "contact-address-value": "Street 371, Borey Sorla, Phnom Penh, Cambodia",
+        "contact-email-label": "Email:",
+        "contact-email-value": "vanda.leng@student.passerellesnumeriques.org",
+        "contact-phone-label": "Phone:",
+        "contact-phone-value": "+855 69-699-696",
+        "footer-description": "Follow my Facebook channel named Vanda_Leng to see more of such projects and other posts. Also Like and share these posts. Also follow me on GitHub and LinkedIn. I hope you will like my content.",
+        "footer-quick-links": "Quick Links",
+        "footer-services": "Services",
+        "footer-newsletter": "Newsletter",
+        "footer-newsletter-placeholder": "Enter your email",
+        "footer-copyright": "©2025 | Made with Vanda Dev by Vanda Dev. All Rights Reserved."
     },
     kh: {
         "nav-home": "ទំព័រដើម",
@@ -76,50 +89,100 @@ const translations = {
         "about-address": "ភ្នំពេញ, កម្ពុជា",
         "trainer-title": "គ្រូបង្វឹក",
         "contact-title": "ទំនាក់ទំនងមកខ្ញុំ",
-    },
-}
+        "contact-description": "ទាក់ទងមកខ្ញុំបានគ្រប់ពេល! អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែលមកខ្ញុំ ឬហៅទូរស័ព្ទប្រសិនបើវាកាន់តែងាយស្រួល។ ខ្ញុំតែងតែរីករាយក្នុងការទទួលស្តាប់ពីអ្នក។ មិនថាអ្នកមានសំណួរ គំនិតគម្រោង ឬគ្រាន់តែចង់ជំរាបសួរ កុំស្ទាក់ស្ទើកក្នុងការទាក់ទង!",
+        "contact-address-label": "អាសយដ្ឋាន:",
+        "contact-address-value": "ផ្លូវ ៣៧១, បុរីសូឡា, ភ្នំពេញ, កម្ពុជា",
+        "contact-email-label": "អ៊ីមែល:",
+        "contact-email-value": "vanda.leng@student.passerellesnumeriques.org",
+        "contact-phone-label": "ទូរស័ព្ទ:",
+        "contact-phone-value": "+៨៥៥ ៦៩-៦៩៩-៦៩៦",
+        "footer-description": "តាមដានឆានែល Facebook របស់ខ្ញុំឈ្មោះ Vanda_Leng ដើម្បីមើលគម្រោងបែបនេះបន្ថែមទៀត និងការបង្ហោះផ្សេងៗ។ សូមចូលចិត្ត និងចែករំលែកការបង្ហោះទាំងនេះ។ ក៏សូមតាមដានខ្ញុំនៅលើ GitHub និង LinkedIn ផងដែរ។ ខ្ញុំសង្ឃឹមថាអ្នកនឹងចូលចិត្តមាតិការបស់ខ្ញុំ។",
+        "footer-quick-links": "តំណភ្ជាប់រហ័ស",
+        "footer-services": "សេវាកម្ម",
+        "footer-newsletter": "ព្រឹត្តិបត្រ",
+        "footer-newsletter-placeholder": "បញ្ចូលអ៊ីមែលរបស់អ្នក",
+        "footer-copyright": "©២០២៥ | បង្កើតដោយ Vanda Dev ដោយ Vanda Dev។ រក្សាសិទ្ធិទាំងអស់។"
+    }
+};
 
 function updateLanguage(lang) {
-    document.querySelectorAll("[data-lang]").forEach((element) => {
-        const key = element.getAttribute("data-lang")
-        if (translations[lang] && translations[lang][key]) {
-            if (key === "hero-subtitle" || key.includes("skill-")) {
-                element.innerHTML = translations[lang][key]
-            } else {
-                element.textContent = translations[lang][key]
-            }
+    try {
+        // Validate language
+        if (!translations[lang]) {
+            console.error(`Language ${lang} not supported. Falling back to English.`);
+            lang = "en";
         }
-    })
 
-    // Update HTML lang attribute
-    document.documentElement.lang = lang
+        // Add transition effect
+        document.body.style.transition = "opacity 0.3s ease";
+        document.body.style.opacity = "0.5";
 
-    // Update body class for font changes
-    document.body.classList.remove("en", "kh")
-    document.body.classList.add(lang)
+        // Update all elements with data-lang attributes
+        document.querySelectorAll("[data-lang]").forEach((element) => {
+            const key = element.getAttribute("data-lang");
+            if (translations[lang] && translations[lang][key]) {
+                // Handle HTML content for specific keys
+                if (key === "hero-subtitle" || key.includes("skill-")) {
+                    element.innerHTML = translations[lang][key];
+                } else if (key === "footer-newsletter-placeholder") {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            } else {
+                console.warn(`Translation missing for key: ${key} in language: ${lang}`);
+            }
+        });
 
-    // Update language wrapper class
-    const languageWrapper = document.querySelector(".language-wrapper")
-    if (languageWrapper) {
-        languageWrapper.classList.remove("en", "kh")
-        languageWrapper.classList.add(lang)
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+
+        // Update body class for font changes
+        document.body.classList.remove("en", "kh");
+        document.body.classList.add(lang);
+
+        // Update language wrapper class
+        const languageWrapper = document.querySelector(".language-wrapper");
+        if (languageWrapper) {
+            languageWrapper.classList.remove("en", "kh");
+            languageWrapper.classList.add(lang);
+        }
+
+        // Save language preference
+        localStorage.setItem("language", lang);
+
+        // Restore opacity after transition
+        setTimeout(() => {
+            document.body.style.opacity = "1";
+        }, 300);
+    } catch (error) {
+        console.error("Error updating language:", error);
     }
-
-    // Save language preference
-    localStorage.setItem("language", lang)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("language") || "en"
-    updateLanguage(savedLang)
+    try {
+        // Load saved language or default to English
+        const savedLang = localStorage.getItem("language") || "en";
+        const languageSelect = document.getElementById("language");
 
-    const languageSelect = document.getElementById("language")
-    if (languageSelect) {
-        // Set the initial value based on saved language
-        languageSelect.value = savedLang
+        if (languageSelect) {
+            // Set initial select value
+            languageSelect.value = savedLang;
 
-        languageSelect.addEventListener("change", (event) => {
-            updateLanguage(event.target.value)
-        })
+            // Update language on page load
+            updateLanguage(savedLang);
+
+            // Handle language change
+            languageSelect.addEventListener("change", (event) => {
+                const newLang = event.target.value;
+                updateLanguage(newLang);
+            });
+        } else {
+            console.warn("Language select element not found.");
+            updateLanguage(savedLang); // Apply default language anyway
+        }
+    } catch (error) {
+        console.error("Error initializing language:", error);
     }
-})
+});

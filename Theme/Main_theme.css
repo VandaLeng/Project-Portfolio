@@ -3,6 +3,7 @@
 body.light-theme {
     background: #ffffff;
     color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
 }
 
 body.light-theme header {
@@ -58,6 +59,7 @@ body.light-theme .language-wrapper select {
     color: #1a1a1a;
     border-color: rgba(0, 209, 255, 0.3);
     background: rgba(255, 255, 255, 0.5);
+    font-family: 'Poppins', sans-serif;
 }
 
 body.light-theme .language-wrapper select:hover {
@@ -67,18 +69,50 @@ body.light-theme .language-wrapper select:hover {
 body.light-theme .language-wrapper select option {
     background-color: #ffffff;
     color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
 }
 
-body.light-theme .language-wrapper::after {
+body.light-task .language-wrapper::after {
     color: #09317d;
 }
 
 body.light-theme .theme-toggle label {
     background: rgba(255, 204, 0, 0.1);
+    border-radius: 50px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
 }
 
 body.light-theme .theme-toggle label:hover {
     box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+body.light-theme .theme-toggle .fa-moon {
+    color: #ccc;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+body.light-theme .theme-toggle .fa-sun {
+    color: #ffcc00;
+    font-size: 18px;
+    opacity: 1;
+}
+
+body.light-theme .theme-toggle input:checked+label .fa-moon {
+    opacity: 1;
+    color: #00d1ff;
+}
+
+body.light-theme .theme-toggle input:checked+label .fa-sun {
+    opacity: 0.5;
+    color: #ccc;
 }
 
 body.light-theme .hero-content h1 {
@@ -195,9 +229,340 @@ body.light-theme .bg-particle {
     background: rgba(0, 209, 255, 0.3) !important;
 }
 
+
+/* Footer Styles for Light Theme */
+
+body.light-theme footer {
+    background: #f5f5f5;
+    color: #666;
+}
+
+body.light-theme footer .container {
+    border-top: 1px solid rgba(0, 209, 255, 0.2);
+}
+
+body.light-theme footer .logo {
+    color: #09317d;
+}
+
+body.light-theme footer .logo:hover {
+    color: #00d1ff;
+}
+
+body.light-theme footer p {
+    color: #666;
+}
+
+body.light-theme footer h3 {
+    color: #1a1a1a;
+}
+
+body.light-theme footer ul li a {
+    color: #666;
+}
+
+body.light-theme footer ul li a:hover {
+    color: #00d1ff;
+    text-shadow: 0 0 8px rgba(0, 209, 255, 0.3);
+}
+
+body.light-theme footer .social-icons a {
+    color: #00d1ff;
+}
+
+body.light-theme footer .social-icons a:hover {
+    color: #09317d;
+}
+
+body.light-theme footer .footer-2 {
+    background: rgba(0, 209, 255, 0.05);
+}
+
+body.light-theme footer .footer-2 p {
+    color: #666;
+}
+
+body.light-theme footer form input {
+    background: rgba(255, 255, 255, 0.8);
+    color: #1a1a1a;
+    border: 1px solid rgba(0, 209, 255, 0.3);
+}
+
+body.light-theme footer form input::placeholder {
+    color: #999;
+}
+
+body.light-theme footer form button {
+    background: #00d1ff;
+    color: #1a1a1a;
+}
+
+body.light-theme footer form button:hover {
+    background: #09317d;
+    color: #ffffff;
+}
+
+
+/* Dark Theme Styles */
+
+body.dark-theme {
+    background: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark-theme header {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 209, 255, 0.2);
+}
+
+body.dark-theme .logo {
+    color: #00d1ff;
+}
+
+body.dark-theme nav ul li a {
+    color: #ffffff;
+}
+
+body.dark-theme nav ul li a:hover {
+    color: #00d1ff;
+    text-shadow: 0 0 8px rgba(0, 209, 255, 0.5);
+}
+
+body.dark-theme nav ul li a.active {
+    color: #00d1ff;
+}
+
+body.dark-theme .language-wrapper {
+    background: rgba(0, 209, 255, 0.1);
+}
+
+body.dark-theme .language-wrapper label {
+    color: #ffffff;
+}
+
+body.dark-theme .language-wrapper select {
+    color: #ffffff;
+    background: rgba(0, 209, 255, 0.2);
+    border-color: rgba(0, 209, 255, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark-theme .language-wrapper select option {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-theme .theme-toggle label {
+    background: rgba(0, 209, 255, 0.1);
+    border-radius: 50px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+body.dark-theme .theme-toggle label:hover {
+    box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
+}
+
+body.dark-theme .theme-toggle .fa-moon {
+    color: #00d1ff;
+    font-size: 18px;
+    opacity: 1;
+}
+
+body.dark-theme .theme-toggle .fa-sun {
+    color: #ccc;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+body.dark-theme .theme-toggle input:not(:checked)+label .fa-moon {
+    opacity: 0.5;
+    color: #ccc;
+}
+
+body.dark-theme .theme-toggle input:not(:checked)+label .fa-sun {
+    opacity: 1;
+    color: #ffcc00;
+}
+
+body.dark-theme .hero-content h1 {
+    color: #ffffff;
+}
+
+body.dark-theme .hero-content h2 span {
+    color: #00d1ff;
+}
+
+body.dark-theme .hero-content p {
+    color: #cccccc;
+}
+
+body.dark-theme .skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 209, 255, 0.5);
+}
+
+body.dark-theme .skill-card:hover {
+    background: rgba(0, 209, 255, 0.2);
+}
+
+body.dark-theme .about-section h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .about-text h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .about-text p {
+    color: #cccccc;
+}
+
+body.dark-theme .trainer-section {
+    background-color: #222222;
+}
+
+body.dark-theme .contact-section {
+    background-color: #222222;
+}
+
+body.dark-theme .contact-heading {
+    color: #ffffff;
+}
+
+body.dark-theme .contact-description {
+    color: #cccccc;
+}
+
+
+/* Footer Styles for Dark Theme */
+
+body.dark-theme footer {
+    background: #222222;
+    color: #cccccc;
+}
+
+body.dark-theme footer .container {
+    border-top: 1px solid rgba(0, 209, 255, 0.3);
+}
+
+body.dark-theme footer .logo {
+    color: #00d1ff;
+}
+
+body.dark-theme footer .logo:hover {
+    color: #ffffff;
+}
+
+body.dark-theme footer p {
+    color: #cccccc;
+}
+
+body.dark-theme footer h3 {
+    color: #ffffff;
+}
+
+body.dark-theme footer ul li a {
+    color: #cccccc;
+}
+
+body.dark-theme footer ul li a:hover {
+    color: #00d1ff;
+    text-shadow: 0 0 8px rgba(0, 209, 255, 0.5);
+}
+
+body.dark-theme footer .social-icons a {
+    color: #00d1ff;
+}
+
+body.dark-theme footer .social-icons a:hover {
+    color: #ffffff;
+}
+
+body.dark-theme footer .footer-2 {
+    background: rgba(0, 209, 255, 0.1);
+}
+
+body.dark-theme footer .footer-2 p {
+    color: #cccccc;
+}
+
+body.dark-theme footer form input {
+    background: rgba(26, 26, 26, 0.8);
+    color: #ffffff;
+    border: 1px solid rgba(0, 209, 255, 0.5);
+}
+
+body.dark-theme footer form input::placeholder {
+    color: #999;
+}
+
+body.dark-theme footer form button {
+    background: #00d1ff;
+    color: #1a1a1a;
+}
+
+body.dark-theme footer form button:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+
+/* Language-Specific Font Styles */
+
+body.en {
+    font-family: 'Poppins', sans-serif;
+}
+
+body.kh {
+    font-family: 'Noto Sans Khmer', sans-serif;
+}
+
+body.kh .language-wrapper select {
+    font-family: 'Noto Sans Khmer', sans-serif;
+}
+
+body.kh .language-wrapper select option {
+    font-family: 'Noto Sans Khmer', sans-serif;
+}
+
+body.kh .hero-content h1,
+body.kh .hero-content h2,
+body.kh .hero-content p,
+body.kh .about-section h2,
+body.kh .about-text h3,
+body.kh .about-text p,
+body.kh .trainer-name,
+body.kh .trainer-position,
+body.kh .contact-heading,
+body.kh .contact-description,
+body.kh .contact-label,
+body.kh .contact-value,
+body.kh footer p,
+body.kh footer h3,
+body.kh footer ul li a,
+body.kh footer form input::placeholder {
+    font-family: 'Noto Sans Khmer', sans-serif;
+}
+
+
+/* Mobile Menu */
+
 @media (max-width: 768px) {
     body.light-theme.show-mobile-menu .nav-menu {
         background: rgba(255, 255, 255, 0.95);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    body.dark-theme.show-mobile-menu .nav-menu {
+        background: rgba(26, 26, 26, 0.95);
+        box-shadow: 0 5px 15px rgba(0, 209, 255, 0.2);
     }
 }
