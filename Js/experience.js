@@ -1,352 +1,330 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize animations and interactions specific to the experience page
-    initExperienceAnimations();
+    // Initialize experience page
+    initExperiencePage()
+})
 
-    // Check if AOS is loaded and initialize it
-    if (typeof AOS !== "undefined") {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-    }
-});
+function initExperiencePage() {
+    // Setup team members carousel with navigation
+    setupTeamMembersCarousel()
 
-function initExperienceAnimations() {
-    // Animate stats on scroll
-    animateStatsOnScroll();
+    // Add hover effects to project cards
+    setupProjectCardEffects()
 
-    // Add hover effects to project containers
-    setupProjectContainerEffects();
+    // Add hover effects to technology icons
+    setupTechIconEffects()
 
-    // Add scroll reveal animations to projects
-    revealProjectsOnScroll();
+    // Animate stats on scroll with plus icon
+    animateStatsOnScroll()
 
-    // Animate team members
-    animateTeamMembers();
+    // Add parallax effect to background particles
+    setupParallaxEffect()
+}
 
-    // Animate tools grid
-    animateToolsGrid();
+function setupTeamMembersCarousel() {
+    const carousels = document.querySelectorAll(".team-members-carousel")
 
-    // Add floating animation to view buttons
-    animateViewButtons();
+    carousels.forEach((carousel) => {
+        const slider = carousel.querySelector(".team-members-slider")
+        const members = slider.querySelectorAll(".team-member")
+
+        // Only proceed if we have members
+        if (!members.length) return
+
+        // Create navigation buttons
+        const navDiv = document.createElement("div")
+        navDiv.className = "carousel-nav"
+
+        const prevBtn = document.createElement("button")
+        prevBtn.className = "carousel-btn prev-btn"
+        prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>'
+
+        const nextBtn = document.createElement("button")
+        nextBtn.className = "carousel-btn next-btn"
+        nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>'
+
+        navDiv.appendChild(prevBtn)
+        navDiv.appendChild(nextBtn)
+        carousel.appendChild(navDiv)
+
+        // Set initial state - show only 3 members
+        let currentIndex = 0
+        const visibleCount = 3
+
+        // Calculate how many slides we can have
+        const maxIndex = Math.max(0, members.length - visibleCount)
+
+        // Initial positioning
+        updateCarouselPosition()
+
+        // Add event listeners for navigation
+        prevBtn.addEventListener("click", () => {
+            currentIndex = Math.max(0, currentIndex - 1)
+            updateCarouselPosition()
+        })
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = Math.min(maxIndex, currentIndex + 1)
+            updateCarouselPosition()
+        })
+
+        // Function to update carousel position
+        function updateCarouselPosition() {
+            // Calculate the percentage to translate
+            const translateX = -(currentIndex * (100 / visibleCount))
+            slider.style.transform = `translateX(${translateX}%)`
+
+            // Update button states
+            prevBtn.disabled = currentIndex === 0
+            prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1"
+
+            nextBtn.disabled = currentIndex === maxIndex
+            nextBtn.style.opacity = currentIndex === maxIndex ? "0.5" : "1"
+        }
+
+        // Add hover effects to team members
+        members.forEach((member) => {
+            member.addEventListener("mouseenter", () => {
+                const img = member.querySelector("img")
+                if (img) {
+                    img.style.transform = "scale(1.1)"
+                    img.style.boxShadow = "0 0 20px rgba(0, 153, 255, 0.8)"
+                }
+            })
+
+            member.addEventListener("mouseleave", () => {
+                const img = member.querySelector("img")
+                if (img) {
+                    img.style.transform = ""
+                    img.style.boxShadow = ""
+                }
+            })
+        })
+    })
+}
+
+function setupProjectCardEffects() {
+    const projectContainers = document.querySelectorAll(".project-container")
+
+    projectContainers.forEach((container) => {
+        // Add hover effect
+        container.addEventListener("mouseenter", () => {
+            container.style.transform = "translateY(-10px)"
+            container.style.boxShadow = "0 10px 30px rgba(0, 153, 255, 0.3)"
+
+            // Animate title
+            const title = container.querySelector(".project-title")
+            if (title) {
+                title.style.color = "#00ffcc"
+            }
+
+            // Animate view button
+            const viewBtn = container.querySelector(".view-btn")
+            if (viewBtn) {
+                viewBtn.style.animation = "pulseButton 2s infinite"
+            }
+        })
+
+        container.addEventListener("mouseleave", () => {
+            container.style.transform = ""
+            container.style.boxShadow = ""
+
+            // Reset title
+            const title = container.querySelector(".project-title")
+            if (title) {
+                title.style.color = ""
+            }
+
+            // Reset view button
+            const viewBtn = container.querySelector(".view-btn")
+            if (viewBtn) {
+                viewBtn.style.animation = ""
+            }
+        })
+    })
+}
+
+function setupTechIconEffects() {
+    // Tech icons
+    const techIcons = document.querySelectorAll(".tech-icon")
+
+    techIcons.forEach((icon) => {
+        icon.addEventListener("mouseenter", () => {
+            icon.style.transform = "translateY(-5px)"
+
+            const iconElement = icon.querySelector("i")
+            if (iconElement) {
+                iconElement.style.transform = "scale(1.2)"
+                iconElement.style.textShadow = "0 0 15px rgba(255, 255, 255, 0.8)"
+            }
+        })
+
+        icon.addEventListener("mouseleave", () => {
+            icon.style.transform = ""
+
+            const iconElement = icon.querySelector("i")
+            if (iconElement) {
+                iconElement.style.transform = ""
+                iconElement.style.textShadow = ""
+            }
+        })
+    })
+
+    // Tool items - language icons
+    const toolItems = document.querySelectorAll(".tool-item")
+
+    toolItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            item.style.transform = "translateY(-5px) scale(1.05)"
+
+            const icon = item.querySelector("i")
+            if (icon) {
+                icon.style.transform = "scale(1.2)"
+                icon.style.textShadow = "0 0 15px rgba(0, 209, 255, 0.8)"
+            }
+        })
+
+        item.addEventListener("mouseleave", () => {
+            item.style.transform = ""
+
+            const icon = item.querySelector("i")
+            if (icon) {
+                icon.style.transform = ""
+                icon.style.textShadow = ""
+            }
+        })
+    })
 }
 
 function animateStatsOnScroll() {
-    const stats = document.querySelectorAll('.stat-number');
+    const stats = document.querySelectorAll(".stat-number")
 
     // Only proceed if we have stats and IntersectionObserver is supported
-    if (!stats.length || !('IntersectionObserver' in window)) return;
+    if (!stats.length || !("IntersectionObserver" in window)) return
 
     // Store the original numbers to animate to
-    stats.forEach(stat => {
-        const targetNumber = parseInt(stat.textContent);
-        stat.setAttribute('data-target', targetNumber);
-        stat.textContent = '0';
-    });
+    stats.forEach((stat) => {
+        // Extract the number without the + sign
+        const text = stat.textContent.trim()
+        const targetNumber = Number.parseInt(text)
+
+        // Store the target number as a data attribute
+        stat.setAttribute("data-target", targetNumber)
+
+        // Reset the content to 0, but keep the + span if it exists
+        const hasPlus = text.includes("+")
+        if (hasPlus) {
+            stat.innerHTML = "0<span></span>"
+        } else {
+            stat.textContent = "0"
+        }
+    })
 
     // Create observer to trigger counting animation when stats are visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const stat = entry.target;
-                const target = parseInt(stat.getAttribute('data-target'));
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const stat = entry.target
+                    const target = Number.parseInt(stat.getAttribute("data-target"))
 
-                // Animate the number counting up
-                animateCounter(stat, 0, target, 2000); // 2 seconds duration
+                    // Animate the number counting up
+                    animateCounter(stat, 0, target, 2000) // 2 seconds duration
 
-                // Unobserve after animation starts
-                observer.unobserve(stat);
-            }
-        });
-    }, { threshold: 0.5 });
+                    // Unobserve after animation starts
+                    observer.unobserve(stat)
+                }
+            })
+        }, { threshold: 0.5 },
+    )
 
     // Observe each stat element
-    stats.forEach(stat => observer.observe(stat));
+    stats.forEach((stat) => observer.observe(stat))
 }
 
 function animateCounter(element, start, end, duration) {
-    let startTime = null;
-    const hasPlus = element.innerHTML.includes('+');
+    let startTime = null
+    const hasPlus = element.innerHTML.includes("<span>")
 
     // Animation function
     function animation(currentTime) {
-        if (!startTime) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
+        if (!startTime) startTime = currentTime
+        const timeElapsed = currentTime - startTime
+        const progress = Math.min(timeElapsed / duration, 1)
 
         // Calculate current count using easeOutQuad easing
-        const easeProgress = 1 - (1 - progress) * (1 - progress);
-        const currentCount = Math.floor(easeProgress * (end - start) + start);
+        const easeProgress = 1 - (1 - progress) * (1 - progress)
+        const currentCount = Math.floor(easeProgress * (end - start) + start)
 
         // Update the element text
-        element.textContent = currentCount + (hasPlus ? '<span>+</span>' : '');
+        if (hasPlus) {
+            element.innerHTML = currentCount + "<span></span>"
+        } else {
+            element.textContent = currentCount
+        }
 
         // Continue animation if not complete
         if (progress < 1) {
-            requestAnimationFrame(animation);
+            requestAnimationFrame(animation)
         } else {
             // Ensure final value is exactly the target
-            element.innerHTML = end + (hasPlus ? '<span>+</span>' : '');
+            if (hasPlus) {
+                element.innerHTML = end + "<span></span>"
+            } else {
+                element.textContent = end
+            }
         }
     }
 
     // Start the animation
-    requestAnimationFrame(animation);
+    requestAnimationFrame(animation)
 }
 
-function setupProjectContainerEffects() {
-    const projectContainers = document.querySelectorAll('.project-container');
+function setupParallaxEffect() {
+    const animatedBg = document.getElementById("animated-bg")
+    if (!animatedBg) return
 
-    projectContainers.forEach(container => {
-        // Add parallax effect to project images on mouse move
-        container.addEventListener('mousemove', (e) => {
-            const containerRect = container.getBoundingClientRect();
-            const containerCenterX = containerRect.left + containerRect.width / 2;
-            const containerCenterY = containerRect.top + containerRect.height / 2;
-
-            const mouseX = e.clientX - containerCenterX;
-            const mouseY = e.clientY - containerCenterY;
-
-            // Calculate rotation based on mouse position
-            const rotateX = mouseY * -0.01;
-            const rotateY = mouseX * 0.01;
-
-            // Apply subtle 3D rotation
-            container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-
-            // Move image slightly for parallax effect
-            const image = container.querySelector('.project-image img');
-            if (image) {
-                image.style.transform = `scale(1.05) translateX(${mouseX * 0.02}px) translateY(${mouseY * 0.02}px)`;
-            }
-
-            // Animate team members based on mouse position
-            const teamMembers = container.querySelectorAll('.team-member');
-            teamMembers.forEach((member, index) => {
-                const delay = index * 0.05;
-                member.style.transform = `translateX(${mouseX * 0.01}px) translateY(${mouseY * 0.01}px)`;
-                member.style.transition = `transform 0.3s ease ${delay}s`;
-            });
-
-            // Animate tools based on mouse position
-            const toolItems = container.querySelectorAll('.tool-item');
-            toolItems.forEach((tool, index) => {
-                const delay = index * 0.03;
-                tool.style.transform = `translateX(${mouseX * -0.005}px) translateY(${mouseY * -0.005}px)`;
-                tool.style.transition = `transform 0.3s ease ${delay}s`;
-            });
-        });
-
-        // Reset transforms when mouse leaves
-        container.addEventListener('mouseleave', () => {
-            container.style.transform = '';
-
-            const image = container.querySelector('.project-image img');
-            if (image) {
-                image.style.transform = '';
-            }
-
-            // Reset team members
-            const teamMembers = container.querySelectorAll('.team-member');
-            teamMembers.forEach(member => {
-                member.style.transform = '';
-            });
-
-            // Reset tools
-            const toolItems = container.querySelectorAll('.tool-item');
-            toolItems.forEach(tool => {
-                tool.style.transform = '';
-            });
-
-            // Add hover animation
-            container.style.transition = 'transform 0.5s ease';
-            container.style.transform = 'translateY(-10px)';
-
-            // Reset after animation
-            setTimeout(() => {
-                container.style.transition = 'transform 0.3s ease';
-                container.style.transform = '';
-            }, 500);
-        });
-    });
-}
-
-function revealProjectsOnScroll() {
-    const projectContainers = document.querySelectorAll('.project-container');
-
-    // Only proceed if we have projects and IntersectionObserver is supported
-    if (!projectContainers.length || !('IntersectionObserver' in window)) return;
-
-    // Create observer to trigger reveal animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                observer.unobserve(entry.target);
-
-                // Animate project components sequentially
-                animateProjectComponents(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    // Add initial styles and observe each project
-    projectContainers.forEach((container, index) => {
-        // Set initial state (hidden)
-        container.style.opacity = '0';
-        container.style.transform = 'translateY(50px)';
-        container.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-        // Add delay based on index
-        container.style.transitionDelay = `${index * 0.2}s`;
-
-        // Add revealed class handler
-        container.addEventListener('transitionend', () => {
-            if (container.classList.contains('revealed')) {
-                container.style.transitionDelay = '0s';
-            }
-        });
-
-        // Observe the container
-        observer.observe(container);
-    });
-
-    // Add CSS for revealed state
-    const style = document.createElement('style');
-    style.textContent = `
-        .project-container.revealed {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-function animateProjectComponents(projectContainer) {
-    const gsap = window.gsap;
-    if (!gsap) return;
-
-    // Get project components
-    const projectTitle = projectContainer.querySelector('.project-title');
-    const projectDescription = projectContainer.querySelector('.project-description');
-    const teamMembers = projectContainer.querySelectorAll('.team-member');
-    const toolItems = projectContainer.querySelectorAll('.tool-item');
-    const viewBtn = projectContainer.querySelector('.view-btn');
-
-    // Animate project title
-    gsap.fromTo(projectTitle, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out", delay: 0.2 });
-
-    // Animate project description
-    gsap.fromTo(projectDescription, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out", delay: 0.4 });
-
-    // Animate team members
-    gsap.fromTo(teamMembers, { x: 20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out", delay: 0.6 });
-
-    // Animate tool items
-    gsap.fromTo(toolItems, { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.05, ease: "power2.out", delay: 0.8 });
-
-    // Animate view button
-    if (viewBtn) {
-        gsap.fromTo(viewBtn, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out", delay: 1 });
+    // Create particles
+    for (let i = 0; i < 30; i++) {
+        createParticle(animatedBg)
     }
+
+    // Add parallax effect on mouse move
+    document.addEventListener("mousemove", (e) => {
+        const particles = document.querySelectorAll(".particle")
+        const mouseX = e.clientX / window.innerWidth
+        const mouseY = e.clientY / window.innerHeight
+
+        particles.forEach((particle, index) => {
+            const depth = 0.05 + (index % 5) * 0.01
+            const moveX = mouseX * depth * 100
+            const moveY = mouseY * depth * 100
+
+            particle.style.transform = `translate(${moveX}px, ${moveY}px)`
+        })
+    })
 }
 
-function animateTeamMembers() {
-    const teamMembers = document.querySelectorAll('.team-member');
+function createParticle(container) {
+    const particle = document.createElement("div")
+    particle.classList.add("particle")
 
-    teamMembers.forEach((member, index) => {
-        // Add hover effect
-        member.addEventListener('mouseenter', () => {
-            const img = member.querySelector('img');
-            const info = member.querySelector('.member-info');
+    // Random position
+    const posX = Math.random() * 100
+    const posY = Math.random() * 100
 
-            if (img) {
-                img.style.transform = 'scale(1.1) rotate(5deg)';
-                img.style.boxShadow = '0 0 15px rgba(0, 209, 255, 0.7)';
-            }
+    // Random size
+    const size = Math.random() * 3 + 1
 
-            if (info) {
-                info.style.transform = 'translateX(5px)';
-            }
-        });
+    // Random opacity
+    const opacity = Math.random() * 0.3 + 0.1
 
-        member.addEventListener('mouseleave', () => {
-            const img = member.querySelector('img');
-            const info = member.querySelector('.member-info');
+    // Set styles
+    particle.style.left = `${posX}%`
+    particle.style.top = `${posY}%`
+    particle.style.width = `${size}px`
+    particle.style.height = `${size}px`
+    particle.style.opacity = opacity
 
-            if (img) {
-                img.style.transform = '';
-                img.style.boxShadow = '';
-            }
-
-            if (info) {
-                info.style.transform = '';
-            }
-        });
-    });
-}
-
-function animateToolsGrid() {
-    const toolItems = document.querySelectorAll('.tool-item');
-
-    toolItems.forEach((tool, index) => {
-        // Add staggered animation on page load
-        tool.style.opacity = '0';
-        tool.style.transform = 'translateY(20px)';
-
-        setTimeout(() => {
-            tool.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            tool.style.opacity = '1';
-            tool.style.transform = 'translateY(0)';
-        }, 1000 + (index * 100));
-
-        // Add hover effect
-        tool.addEventListener('mouseenter', () => {
-            tool.style.transform = 'translateY(-5px) scale(1.05)';
-            tool.style.boxShadow = '0 5px 15px rgba(0, 209, 255, 0.3)';
-
-            const icon = tool.querySelector('i');
-            if (icon) {
-                icon.style.transform = 'scale(1.2)';
-                icon.style.color = '#ffffff';
-            }
-        });
-
-        tool.addEventListener('mouseleave', () => {
-            tool.style.transform = '';
-            tool.style.boxShadow = '';
-
-            const icon = tool.querySelector('i');
-            if (icon) {
-                icon.style.transform = '';
-                icon.style.color = '';
-            }
-        });
-    });
-}
-
-function animateViewButtons() {
-    const viewButtons = document.querySelectorAll('.view-btn');
-
-    viewButtons.forEach(button => {
-        // Add floating animation
-        button.addEventListener('mouseenter', () => {
-            button.style.animation = 'floatAnimation 1s ease infinite';
-
-            const icon = button.querySelector('i');
-            if (icon) {
-                icon.style.transform = 'translateX(5px)';
-            }
-        });
-
-        button.addEventListener('mouseleave', () => {
-            button.style.animation = '';
-
-            const icon = button.querySelector('i');
-            if (icon) {
-                icon.style.transform = '';
-            }
-        });
-    });
+    // Add to container
+    container.appendChild(particle)
 }
