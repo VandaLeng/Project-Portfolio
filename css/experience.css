@@ -340,12 +340,13 @@
 
 .team-members-carousel {
     position: relative;
+    top: 10px;
     overflow: hidden;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
     margin-top: 10px;
-    height: 220px;
+    height: 280px;
 }
 
 .team-members-slider {
