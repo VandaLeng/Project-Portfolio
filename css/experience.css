@@ -104,9 +104,6 @@
     margin-left: 2px;
 }
 
-
-/* New plus icon animation */
-
 .stat-number span::before {
     content: "+";
     position: absolute;
@@ -331,7 +328,7 @@
 }
 
 
-/* Team Members Carousel - New Style */
+/* Team Members Carousel */
 
 .team-section {
     position: relative;
@@ -394,44 +391,7 @@
 }
 
 
-/* Carousel Navigation */
-
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-    padding: 0 10px;
-}
-
-.carousel-btn {
-    background: rgba(0, 209, 255, 0.2);
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background: rgba(0, 209, 255, 0.5);
-    transform: scale(1.1);
-}
-
-.carousel-btn i {
-    font-size: 14px;
-}
-
-
-/* Tools Section - Improved */
+/* Tools Section */
 
 .tools-section {
     margin-top: 20px;
@@ -449,13 +409,11 @@
     align-items: center;
     gap: 5px;
     padding: 10px;
-    background: rgba(0, 209, 255, 0.05);
     border-radius: var(--border-radius-s);
     transition: var(--transition-ease);
 }
 
 .tool-item:hover {
-    background: rgba(0, 209, 255, 0.1);
     transform: translateY(-5px) scale(1.05);
     box-shadow: var(--shadow-medium);
 }
@@ -465,26 +423,114 @@
     transition: var(--transition-ease);
 }
 
-
-/* Language icons - no borders or boxes */
-
-.tool-item i {
-    color: inherit;
-    text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
-}
-
-.tool-item:hover i {
-    transform: scale(1.2);
-    text-shadow: 0 0 15px rgba(0, 209, 255, 0.8);
-}
-
 .tool-item span {
     font-size: var(--font-size-s);
     color: var(--white-color);
 }
 
 
-/* Special Project Layout (Last Project) */
+/* Language Icons Colors */
+
+.html-icon i {
+    color: #e34f26;
+}
+
+
+/* Official HTML5 color */
+
+.css-icon i {
+    color: #1572b6;
+}
+
+
+/* Official CSS3 color */
+
+.js-icon i {
+    color: #f7df1e;
+}
+
+
+/* Official JavaScript color */
+
+.sass-icon i {
+    color: #cc6699;
+}
+
+
+/* Official SASS color */
+
+.git-icon i {
+    color: #f05033;
+}
+
+
+/* Official Git color */
+
+.python-icon i {
+    color: #3776ab;
+}
+
+
+/* Official Python color */
+
+.smtplib-icon i {
+    color: #3776ab;
+}
+
+
+/* Matches Python color */
+
+.sqlite-icon i {
+    color: #003b57;
+}
+
+
+/* SQLite color */
+
+.firebase-icon i {
+    color: #ffca28;
+}
+
+
+/* Firebase color */
+
+.jira-icon i {
+    color: #0052cc;
+}
+
+
+/* Official Jira color */
+
+.bootstrap-icon i {
+    color: #7952b3;
+}
+
+
+/* Official Bootstrap color */
+
+.php-icon i {
+    color: #777bb4;
+}
+
+
+/* Official PHP color */
+
+.mysql-icon i {
+    color: #4479a1;
+}
+
+
+/* Official MySQL color */
+
+.github-icon i {
+    color: #181717;
+}
+
+
+/* Official GitHub color */
+
+
+/* Special Project Layout */
 
 .project-special {
     flex-direction: column;
@@ -497,23 +543,14 @@
 .project-tech-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 45px;
     justify-content: center;
     margin-bottom: 30px;
     padding: 10px 0;
-    background: rgba(0, 0, 0, 0.5);
     border-radius: var(--border-radius-s);
 }
 
-.tech-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    transition: var(--transition-ease);
-}
-
-.tech-icon-box {
+.tool-item .tool-icon-box {
     width: 50px;
     height: 50px;
     display: flex;
@@ -521,103 +558,33 @@
     justify-content: center;
     border-radius: 50%;
     margin-bottom: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
 }
 
-.tech-icon-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.tech-icon:hover .tech-icon-box::before {
-    opacity: 1;
-    animation: ripple 1s infinite;
-}
-
-@keyframes ripple {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
-    }
-}
-
-.html-icon {
-    background-color: #e34f26;
-}
-
-.css-icon {
-    background-color: #1572b6;
-}
-
-.js-icon {
-    background-color: #f7df1e;
-}
-
-.node-icon {
-    background-color: #339933;
-}
-
-.bootstrap-icon {
-    background-color: #7952b3;
-}
-
-.php-icon {
-    background-color: #777bb4;
-}
-
-.mysql-icon {
-    background-color: #4479a1;
-}
-
-.github-icon {
-    background-color: #181717;
-}
-
-.tech-icon i {
+.tool-item i {
     font-size: 1.8rem;
-    color: white;
     transition: var(--transition-ease);
     position: relative;
     z-index: 2;
 }
 
-.tech-icon span {
+.tool-item span {
     font-size: var(--font-size-s);
     color: var(--white-color);
     text-transform: uppercase;
     font-weight: var(--font-weight-medium);
 }
 
-.tech-icon:hover {
+.tool-item:hover {
     transform: translateY(-5px);
 }
 
-.tech-icon:hover i {
+.tool-item:hover i {
     transform: scale(1.2);
-    animation: iconPulse 1.5s infinite alternate;
 }
 
-@keyframes iconPulse {
-    0% {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-    100% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-    }
-}
+
+/* Special Project Content */
 
 .project-special-content {
     display: flex;
@@ -839,7 +806,7 @@
 }
 
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 
 @media (max-width: 992px) {
     .project-container {
@@ -906,14 +873,14 @@
         width: 120px;
         height: 240px;
     }
-    .tech-icon-box {
+    .tool-icon-box {
         width: 40px;
         height: 40px;
     }
-    .tech-icon i {
+    .tool-item i {
         font-size: 1.5rem;
     }
-    .tech-icon span {
+    .tool-item span {
         font-size: 0.8rem;
     }
     .team-member {
@@ -988,14 +955,14 @@
     .project-special {
         padding: 15px;
     }
-    .tech-icon-box {
+    .tool-icon-box {
         width: 35px;
         height: 35px;
     }
-    .tech-icon i {
+    .tool-item i {
         font-size: 1.2rem;
     }
-    .tech-icon span {
+    .tool-item span {
         font-size: 0.7rem;
     }
     .team-member {
