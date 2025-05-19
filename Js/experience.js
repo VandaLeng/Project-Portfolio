@@ -9,6 +9,27 @@ function initExperiencePage() {
     setupTechIconEffects();
     animateStatsOnScroll();
     setupParallaxEffect();
+    ensureTextVisibility();
+}
+
+function ensureTextVisibility() {
+    // Fallback to ensure team member text displays if language toggle fails
+    const memberNames = document.querySelectorAll(".member-name");
+    const memberRoles = document.querySelectorAll(".member-role");
+
+    memberNames.forEach((name) => {
+        if (!name.textContent.trim()) {
+            const dataLang = name.getAttribute("data-lang");
+            name.textContent = dataLang ? dataLang.replace("member", "Name ") : "Unknown Name";
+        }
+    });
+
+    memberRoles.forEach((role) => {
+        if (!role.textContent.trim()) {
+            const dataLang = role.getAttribute("data-lang");
+            role.textContent = dataLang ? dataLang.replace("member", "Role ") : "Unknown Role";
+        }
+    });
 }
 
 function setupTeamMembersCarousel() {
@@ -21,7 +42,7 @@ function setupTeamMembersCarousel() {
         if (!members.length) return;
 
         let currentIndex = 0;
-        const visibleCount = 3;
+        const visibleCount = Math.min(3, members.length);
         const totalMembers = members.length;
 
         const prevBtn = carousel.querySelector(".prev-btn");
@@ -31,46 +52,57 @@ function setupTeamMembersCarousel() {
         updateCarouselPosition();
         updateButtonStates();
 
-        prevBtn.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarouselPosition();
-                updateActiveMembers();
-                updateButtonStates();
-            }
-        });
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarouselPosition();
+                    updateActiveMembers();
+                    updateButtonStates();
+                }
+            });
+        }
 
-        nextBtn.addEventListener("click", () => {
-            if (currentIndex < totalMembers - visibleCount) {
-                currentIndex++;
-                updateCarouselPosition();
-                updateActiveMembers();
-                updateButtonStates();
-            }
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                if (currentIndex < totalMembers - visibleCount) {
+                    currentIndex++;
+                    updateCarouselPosition();
+                    updateActiveMembers();
+                    updateButtonStates();
+                }
+            });
+        }
 
         function updateCarouselPosition() {
             const translateX = -(currentIndex * (100 / visibleCount));
             slider.style.transform = `translateX(${translateX}%)`;
+            slider.style.transition = "transform 0.5s ease-in-out";
         }
 
         function updateActiveMembers() {
             members.forEach((member, index) => {
-                member.classList.toggle("active", index >= currentIndex && index < currentIndex + visibleCount);
+                const isActive = index >= currentIndex && index < currentIndex + visibleCount;
+                member.classList.toggle("active", isActive);
+                const info = member.querySelector(".member-info");
+                if (info) {
+                    info.style.opacity = isActive ? "1" : "0.6";
+                }
             });
         }
 
         function updateButtonStates() {
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex >= totalMembers - visibleCount;
+            if (prevBtn) prevBtn.disabled = currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = currentIndex >= totalMembers - visibleCount;
         }
 
         members.forEach((member) => {
             member.addEventListener("mouseenter", () => {
                 const img = member.querySelector("img");
                 if (img) {
-                    img.style.transform = "scale(1.1)";
-                    img.style.boxShadow = "0 0 20px rgba(0, 153, 255, 0.8)";
+                    img.style.transform = "scale(1.05)";
+                    img.style.boxShadow = "0 0 15px rgba(0, 153, 255, 0.7)";
+                    img.style.transition = "transform 0.3s, box-shadow 0.3s";
                 }
             });
 
@@ -95,6 +127,7 @@ function setupSpecialTeamCarousel() {
     if (!members.length) return;
 
     let currentIndex = 0;
+    const visibleCount = 1;
     const totalMembers = members.length;
 
     const prevBtn = specialCarousel.querySelector(".prev-btn");
@@ -103,39 +136,65 @@ function setupSpecialTeamCarousel() {
     updateSpecialCarouselPosition();
     updateSpecialButtonStates();
 
-    prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSpecialCarouselPosition();
-            updateSpecialButtonStates();
-        }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSpecialCarouselPosition();
+                updateSpecialButtonStates();
+            }
+        });
+    }
 
-    nextBtn.addEventListener("click", () => {
-        if (currentIndex < totalMembers - 1) {
-            currentIndex++;
-            updateSpecialCarouselPosition();
-            updateSpecialButtonStates();
-        }
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            if (currentIndex < totalMembers - visibleCount) {
+                currentIndex++;
+                updateSpecialCarouselPosition();
+                updateSpecialButtonStates();
+            }
+        });
+    }
 
     function updateSpecialCarouselPosition() {
-        const translateX = -(currentIndex * 100);
+        const translateX = -(currentIndex * (100 / visibleCount));
         slider.style.transform = `translateX(${translateX}%)`;
+        slider.style.transition = "transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
+
+        // Ensure current member's text is visible
+        members.forEach((member, index) => {
+            const isActive = index === currentIndex;
+            const info = member.querySelector(".member-info");
+            if (info) {
+                info.style.opacity = isActive ? "1" : "0.6";
+                info.style.transform = isActive ? "translateY(0)" : "translateY(10px)";
+                info.style.transition = "opacity 0.5s, transform 0.5s";
+            }
+        });
     }
 
     function updateSpecialButtonStates() {
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex === totalMembers - 1;
+        if (prevBtn) prevBtn.disabled = currentIndex === 0;
+        if (nextBtn) nextBtn.disabled = currentIndex >= totalMembers - visibleCount;
     }
 
-    // Removed auto-rotation to simplify behavior
-    specialCarousel.addEventListener("mouseenter", () => {
-        // Optional: Add visual feedback if needed
-    });
+    members.forEach((member) => {
+        member.addEventListener("mouseenter", () => {
+            const img = member.querySelector("img");
+            if (img) {
+                img.style.transform = "scale(1.03)";
+                img.style.boxShadow = "0 0 20px rgba(0, 209, 255, 0.5)";
+                img.style.transition = "transform 0.5s, box-shadow 0.5s";
+            }
+        });
 
-    specialCarousel.addEventListener("mouseleave", () => {
-        // Optional: Add visual feedback if needed
+        member.addEventListener("mouseleave", () => {
+            const img = member.querySelector("img");
+            if (img) {
+                img.style.transform = "";
+                img.style.boxShadow = "";
+            }
+        });
     });
 }
 
@@ -146,12 +205,15 @@ function setupProjectCardEffects() {
         container.addEventListener("mouseenter", () => {
             container.style.transform = "translateY(-10px)";
             container.style.boxShadow = "0 10px 30px rgba(0, 153, 255, 0.3)";
+            container.style.transition = "transform 0.3s, box-shadow 0.3s";
 
             const title = container.querySelector(".project-title");
             if (title) title.style.color = "#00ffcc";
 
             const viewBtn = container.querySelector(".view-btn");
-            if (viewBtn) viewBtn.style.animation = "pulseButton 2s infinite";
+            if (viewBtn) {
+                viewBtn.style.animation = "pulseButton 2s infinite";
+            }
         });
 
         container.addEventListener("mouseleave", () => {
@@ -173,11 +235,13 @@ function setupTechIconEffects() {
     toolItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
             item.style.transform = "translateY(-5px) scale(1.05)";
+            item.style.transition = "transform 0.3s";
 
             const icon = item.querySelector("i");
             if (icon) {
                 icon.style.transform = "scale(1.2)";
                 icon.style.textShadow = "0 0 15px rgba(0, 209, 255, 0.8)";
+                icon.style.transition = "transform 0.3s, text-shadow 0.3s";
             }
         });
 
@@ -264,6 +328,7 @@ function setupParallaxEffect() {
             const moveY = mouseY * depth * 100;
 
             particle.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            particle.style.transition = "transform 0.1s";
         });
     });
 }
@@ -282,6 +347,9 @@ function createParticle(container) {
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
     particle.style.opacity = opacity;
+    particle.style.position = "absolute";
+    particle.style.background = "rgba(0, 209, 255, 0.5)";
+    particle.style.borderRadius = "50%";
 
     container.appendChild(particle);
 }
