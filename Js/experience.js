@@ -1,22 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize experience page
     initExperiencePage();
 });
 
 function initExperiencePage() {
-    // Setup team members carousel with navigation
     setupTeamMembersCarousel();
-
-    // Add hover effects to project cards
+    setupSpecialTeamCarousel();
     setupProjectCardEffects();
-
-    // Add hover effects to technology icons
     setupTechIconEffects();
-
-    // Animate stats on scroll with plus icon
     animateStatsOnScroll();
-
-    // Add parallax effect to background particles
     setupParallaxEffect();
 }
 
@@ -27,61 +18,53 @@ function setupTeamMembersCarousel() {
         const slider = carousel.querySelector(".team-members-slider");
         const members = slider.querySelectorAll(".team-member");
 
-        // Only proceed if we have members
         if (!members.length) return;
 
-        // Create navigation buttons
-        const navDiv = document.createElement("div");
-        navDiv.className = "carousel-nav";
-
-        const prevBtn = document.createElement("button");
-        prevBtn.className = "carousel-btn prev-btn";
-        prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
-
-        const nextBtn = document.createElement("button");
-        nextBtn.className = "carousel-btn next-btn";
-        nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
-
-        navDiv.appendChild(prevBtn);
-        navDiv.appendChild(nextBtn);
-        carousel.appendChild(navDiv);
-
-        // Set initial state - show only 3 members
         let currentIndex = 0;
         const visibleCount = 3;
+        const totalMembers = members.length;
 
-        // Calculate how many slides we can have
-        const maxIndex = Math.max(0, members.length - visibleCount);
+        const prevBtn = carousel.querySelector(".prev-btn");
+        const nextBtn = carousel.querySelector(".next-btn");
 
-        // Initial positioning
+        updateActiveMembers();
         updateCarouselPosition();
+        updateButtonStates();
 
-        // Add event listeners for navigation
         prevBtn.addEventListener("click", () => {
-            currentIndex = Math.max(0, currentIndex - 1);
-            updateCarouselPosition();
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarouselPosition();
+                updateActiveMembers();
+                updateButtonStates();
+            }
         });
 
         nextBtn.addEventListener("click", () => {
-            currentIndex = Math.min(maxIndex, currentIndex + 1);
-            updateCarouselPosition();
+            if (currentIndex < totalMembers - visibleCount) {
+                currentIndex++;
+                updateCarouselPosition();
+                updateActiveMembers();
+                updateButtonStates();
+            }
         });
 
-        // Function to update carousel position
         function updateCarouselPosition() {
-            // Calculate the percentage to translate
             const translateX = -(currentIndex * (100 / visibleCount));
             slider.style.transform = `translateX(${translateX}%)`;
-
-            // Update button states
-            prevBtn.disabled = currentIndex === 0;
-            prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
-
-            nextBtn.disabled = currentIndex === maxIndex;
-            nextBtn.style.opacity = currentIndex === maxIndex ? "0.5" : "1";
         }
 
-        // Add hover effects to team members
+        function updateActiveMembers() {
+            members.forEach((member, index) => {
+                member.classList.toggle("active", index >= currentIndex && index < currentIndex + visibleCount);
+            });
+        }
+
+        function updateButtonStates() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= totalMembers - visibleCount;
+        }
+
         members.forEach((member) => {
             member.addEventListener("mouseenter", () => {
                 const img = member.querySelector("img");
@@ -102,74 +85,89 @@ function setupTeamMembersCarousel() {
     });
 }
 
+function setupSpecialTeamCarousel() {
+    const specialCarousel = document.querySelector(".team-members-special-carousel");
+    if (!specialCarousel) return;
+
+    const slider = specialCarousel.querySelector(".team-members-special-slider");
+    const members = slider.querySelectorAll(".team-member-special");
+
+    if (!members.length) return;
+
+    let currentIndex = 0;
+    const totalMembers = members.length;
+
+    const prevBtn = specialCarousel.querySelector(".prev-btn");
+    const nextBtn = specialCarousel.querySelector(".next-btn");
+
+    updateSpecialCarouselPosition();
+    updateSpecialButtonStates();
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSpecialCarouselPosition();
+            updateSpecialButtonStates();
+        }
+    });
+
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < totalMembers - 1) {
+            currentIndex++;
+            updateSpecialCarouselPosition();
+            updateSpecialButtonStates();
+        }
+    });
+
+    function updateSpecialCarouselPosition() {
+        const translateX = -(currentIndex * 100);
+        slider.style.transform = `translateX(${translateX}%)`;
+    }
+
+    function updateSpecialButtonStates() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === totalMembers - 1;
+    }
+
+    // Removed auto-rotation to simplify behavior
+    specialCarousel.addEventListener("mouseenter", () => {
+        // Optional: Add visual feedback if needed
+    });
+
+    specialCarousel.addEventListener("mouseleave", () => {
+        // Optional: Add visual feedback if needed
+    });
+}
+
 function setupProjectCardEffects() {
     const projectContainers = document.querySelectorAll(".project-container");
 
     projectContainers.forEach((container) => {
-        // Add hover effect
         container.addEventListener("mouseenter", () => {
             container.style.transform = "translateY(-10px)";
             container.style.boxShadow = "0 10px 30px rgba(0, 153, 255, 0.3)";
 
-            // Animate title
             const title = container.querySelector(".project-title");
-            if (title) {
-                title.style.color = "#00ffcc";
-            }
+            if (title) title.style.color = "#00ffcc";
 
-            // Animate view button
             const viewBtn = container.querySelector(".view-btn");
-            if (viewBtn) {
-                viewBtn.style.animation = "pulseButton 2s infinite";
-            }
+            if (viewBtn) viewBtn.style.animation = "pulseButton 2s infinite";
         });
 
         container.addEventListener("mouseleave", () => {
             container.style.transform = "";
             container.style.boxShadow = "";
 
-            // Reset title
             const title = container.querySelector(".project-title");
-            if (title) {
-                title.style.color = "";
-            }
+            if (title) title.style.color = "";
 
-            // Reset view button
             const viewBtn = container.querySelector(".view-btn");
-            if (viewBtn) {
-                viewBtn.style.animation = "";
-            }
+            if (viewBtn) viewBtn.style.animation = "";
         });
     });
 }
 
 function setupTechIconEffects() {
-    // Tech icons
-    const techIcons = document.querySelectorAll(".tech-icon");
-
-    techIcons.forEach((icon) => {
-        icon.addEventListener("mouseenter", () => {
-            icon.style.transform = "translateY(-5px)";
-
-            const iconElement = icon.querySelector("i");
-            if (iconElement) {
-                iconElement.style.transform = "scale(1.2)";
-                iconElement.style.textShadow = "0 0 15px rgba(255, 255, 255, 0.8)";
-            }
-        });
-
-        icon.addEventListener("mouseleave", () => {
-            icon.style.transform = "";
-
-            const iconElement = icon.querySelector("i");
-            if (iconElement) {
-                iconElement.style.transform = "";
-                iconElement.style.textShadow = "";
-            }
-        });
-    });
-
-    // Tool items - language icons
     const toolItems = document.querySelectorAll(".tool-item");
 
     toolItems.forEach((item) => {
@@ -198,46 +196,29 @@ function setupTechIconEffects() {
 function animateStatsOnScroll() {
     const stats = document.querySelectorAll(".stat-number");
 
-    // Only proceed if we have stats and IntersectionObserver is supported
     if (!stats.length || !("IntersectionObserver" in window)) return;
 
-    // Store the original numbers to animate to
     stats.forEach((stat) => {
-        // Extract the number without the + sign
         const text = stat.textContent.trim();
-        const targetNumber = Number.parseInt(text);
-
-        // Store the target number as a data attribute
+        const targetNumber = parseInt(text);
         stat.setAttribute("data-target", targetNumber);
-
-        // Reset the content to 0, but keep the + span if it exists
         const hasPlus = text.includes("+");
-        if (hasPlus) {
-            stat.innerHTML = "0<span></span>";
-        } else {
-            stat.textContent = "0";
-        }
+        stat.innerHTML = hasPlus ? "0<span></span>" : "0";
     });
 
-    // Create observer to trigger counting animation when stats are visible
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const stat = entry.target;
-                    const target = Number.parseInt(stat.getAttribute("data-target"));
-
-                    // Animate the number counting up
-                    animateCounter(stat, 0, target, 2000); // 2 seconds duration
-
-                    // Unobserve after animation starts
+                    const target = parseInt(stat.getAttribute("data-target"));
+                    animateCounter(stat, 0, target, 2000);
                     observer.unobserve(stat);
                 }
             });
         }, { threshold: 0.5 }
     );
 
-    // Observe each stat element
     stats.forEach((stat) => observer.observe(stat));
 }
 
@@ -245,37 +226,22 @@ function animateCounter(element, start, end, duration) {
     let startTime = null;
     const hasPlus = element.innerHTML.includes("<span>");
 
-    // Animation function
     function animation(currentTime) {
         if (!startTime) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
-
-        // Calculate current count using easeOutQuad easing
         const easeProgress = 1 - (1 - progress) * (1 - progress);
         const currentCount = Math.floor(easeProgress * (end - start) + start);
 
-        // Update the element text
-        if (hasPlus) {
-            element.innerHTML = currentCount + "<span></span>";
-        } else {
-            element.textContent = currentCount;
-        }
+        element.innerHTML = hasPlus ? `${currentCount}<span></span>` : currentCount;
 
-        // Continue animation if not complete
         if (progress < 1) {
             requestAnimationFrame(animation);
         } else {
-            // Ensure final value is exactly the target
-            if (hasPlus) {
-                element.innerHTML = end + "<span></span>";
-            } else {
-                element.textContent = end;
-            }
+            element.innerHTML = hasPlus ? `${end}<span></span>` : end;
         }
     }
 
-    // Start the animation
     requestAnimationFrame(animation);
 }
 
@@ -283,12 +249,10 @@ function setupParallaxEffect() {
     const animatedBg = document.getElementById("animated-bg");
     if (!animatedBg) return;
 
-    // Create particles
     for (let i = 0; i < 30; i++) {
         createParticle(animatedBg);
     }
 
-    // Add parallax effect on mouse move
     document.addEventListener("mousemove", (e) => {
         const particles = document.querySelectorAll(".particle");
         const mouseX = e.clientX / window.innerWidth;
@@ -308,23 +272,16 @@ function createParticle(container) {
     const particle = document.createElement("div");
     particle.classList.add("particle");
 
-    // Random position
     const posX = Math.random() * 100;
     const posY = Math.random() * 100;
-
-    // Random size
     const size = Math.random() * 3 + 1;
-
-    // Random opacity
     const opacity = Math.random() * 0.3 + 0.1;
 
-    // Set styles
     particle.style.left = `${posX}%`;
     particle.style.top = `${posY}%`;
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
     particle.style.opacity = opacity;
 
-    // Add to container
     container.appendChild(particle);
 }
