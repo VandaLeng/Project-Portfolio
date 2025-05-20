@@ -75,14 +75,12 @@ const translations = {
         "project1-description": "Library Project (Static Website Interface), I worked from 21st September 2024 to 4th November 2024. My team and I developed a static website for the library CSA. We structured sections according to each user's needs and implemented a clean, modern design. We used HTML, CSS, and JavaScript to create a website that is made responsive for different devices. I was responsible for managing tasks and assigning features using GitHub. Throughout the project, I collaborated closely with the customer (a teacher) and a coach to ensure the website met all requirements.",
         "member1-role": "Role: Fix & support",
         "member1-name": "Name: Kosol Pouy",
-        "member2-role": "Role: Code Lead",
+        "member2-role": "Role: Team leader",
         "member2-name": "Name: Sina Neak",
         "member3-role": "Role: Design UI",
         "member3-name": "Name: Solin Neat",
-        "member4-role": "Role: Project Manager",
+        "member4-role": "Role: Develop",
         "member4-name": "Name: Vanda Leng",
-        "member5-role": "Role: QA Tester",
-        "member5-name": "Name: Dara Meng",
         // Project 2
         "project2-title": "Project Python (Email Automation System)",
         "project2-description": "An automated email system built with Python that schedules and sends personalized emails to clients. The system includes an analytics dashboard for tracking email performance and a template management feature for creating and storing email templates. We implemented secure authentication and authorization to protect sensitive data. The project was completed in collaboration with a team of developers and designers.",
@@ -109,7 +107,7 @@ const translations = {
         "member14-name": "Name: Sokha Mey",
         // Project 4
         "project4-title": "Virtual Company One (VC1) Management System Project",
-        "project4-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate the employee's team-related projects. The system allowed employees to submit, approve, or reject corporate events.\n\nWe developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development. We supported our task tracking and communication through the entire development process.\n\nOur team was thorough throughout the entire process, to track and make sure the system worked as intended. We conducted extensive user testing and gathered feedback. This project taught us both technical and communication skills and gave us experience in delivering a functional product that met our client needs.",
+        "project4-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate the employee's team-related projects. The system allowed employees to submit, approve, or reject corporate events. We developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development. We supported our task tracking and communication through the entire development process. Our team was thorough throughout the entire process, to track and make sure the system worked as intended. We conducted extensive user testing and gathered feedback. This project taught us both technical and communication skills and gave us experience in delivering a functional product that met our client needs.",
         "member15-role": "Role: Scrum Master",
         "member15-name": "Name: Chab Charyna",
         "member16-role": "Role: Full Stack Developer",
@@ -160,7 +158,7 @@ const translations = {
         "about-address": "ភ្នំពេញ, កម្ពុជា",
         "skillset-title": "ជំនាញ",
         "skillset-subtitle": "បង្កើត និងបទពិសោធន៍ជំនាញវិជ្ជាជីវៈនៅលើផ្នែកមួយចំនួន",
-        "skillset-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង។ បច្ចុប្បន្ន ខ្ញុំជានិស្សិតដែលកំពុងសិក្សានៅ <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>។ លើសពីនេះ ខ្ញុំសិក្សានៅផ្នែកបច្ចេកវិទ្យាព័ត៌មានដែលផ្តោតលើការអភិវឌ្ឍន៍វែប។ ចំណង់ចំណូលចិត្តរបស់ខ្ញុំគឺការសរសេរកូដ និងការរៀនសូត្រ។",
+        "skillset-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង។ បច្ចុប្បន្ន ខ្ញុំជានិស្សិតដែលកំពុងសិក្សានៅ <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>�। លើសពីនេះ ខ្ញុំសិក្សានៅផ្នែកបច្ចេកវិទ្យាព័ត៌មានដែលផ្តោតលើការអភិវឌ្ឍន៍វែប។ ចំណង់ចំណូលចិត្តរបស់ខ្ញុំគឺការសរសេរកូដ និងការរៀនសូត្រ។",
         "btn-get-project": "ទទួលបានគម្រោងណាមួយ",
         "skill-product-design": "ការរចនា និងអភិវឌ្ឍន៍ផលិតផល",
         "skill-web-dev": "ការអភិវឌ្ឍន៍វែប",
@@ -197,17 +195,15 @@ const translations = {
         "project1-description": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ) ខ្ញុំបានធ្វើការចាប់ពីថ្ងៃទី ២១ ខែកញ្ញា ឆ្នាំ ២០២៤ ដល់ថ្ងៃទី ៤ ខែវិច្ឆិកា ឆ្នាំ ២០២៤។ ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានអភិវឌ្ឍគេហទំព័រស្ថិតិសម្រាប់បណ្ណាល័យ CSA។ យើងបានរៀបចំផ្នែកតាមតម្រូវការរបស់អ្នកប្រើប្រាស់នីមួយៗ និងបានអនុវត្តការរចនាដែលស្អាតនិងទំនើប។ យើងបានប្រើ HTML, CSS និង JavaScript ដើម្បីបង្កើតគេហទំព័រដែលមានការឆ្លើយតបសម្រាប់ឧបករណ៍ផ្សេងៗ។ ខ្ញុំទទួលខុសត្រូវក្នុងការគ្រប់គ្រងភារកិច្ចនិងចាត់តាំងមុខងារដោយប្រើ GitHub។ ពេញមួយគម្រោង ខ្ញុំបានសហការយ៉ាងជិតស្និទ្ធជាមួយអតិថិជន (គ្រូបង្រៀន) និងគ្រូបង្វឹកដើម្បីធានាថាគេហទំព័របំពេញតាមតម្រូវការទាំងអស់។",
         "member1-role": "តួនាទី៖ ជួសជុល និងគាំទ្រ",
         "member1-name": "ឈ្មោះ៖ កុសល ប៉ូយ",
-        "member2-role": "តួនាទី៖ អ្នកដឹកនាំកូដ",
+        "member2-role": "តួនាទី៖ អ្នកដឹកនាំក្រុម",
         "member2-name": "ឈ្មោះ៖ សីណា នាគ",
         "member3-role": "តួនាទី៖ រចនាចំណុចប្រទាក់អ្នកប្រើប្រាស់",
         "member3-name": "ឈ្មោះ៖ សូលីន នៀត",
-        "member4-role": "តួនាទី៖ អ្នកគ្រប់គ្រងគម្រោង",
+        "member4-role": "តួនាទី៖ អភិវឌ្ឍន៍",
         "member4-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
-        "member5-role": "តួនាទី៖ អ្នកធ្វើតេស្តគុណភាព",
-        "member5-name": "ឈ្មោះ៖ ដារ៉ា ម៉េង",
         // Project 2
         "project2-title": "គម្រោង Python (ប្រព័ន្ធស្វ័យប្រវត្តិកម្មអ៊ីមែល)",
-        "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន។ ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
+        "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន�। ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
         "member6-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ផ្នែកខាងក្រោយ",
         "member6-name": "ឈ្មោះ៖ ដារ៉ា សុខ",
         "member7-role": "តួនាទី៖ អ្នកគ្រប់គ្រងគម្រោង",
@@ -218,7 +214,7 @@ const translations = {
         "member9-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         // Project 3
         "project3-title": "គម្រោងកត់ត្រា (កម្មវិធីកត់ត្រា)",
-        "project3-description": "កម្មវិធីកត់ត្រាដែលមានមុខងារសម្បូរបែបជាមួយនឹងការធ្វើសមកាលកម្មពពក ការរំលឹក និងការចាត់ចំណាត់ថ្នាក់។ មាននៅលើទាំងប្រព័ន្ធប្រតិបត្តិការ Android និង iOS ជាមួយនឹងការរចនាសាមញ្ញនិងស្អាត។ កម្មវិធីនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត កែសម្រួល និងរៀបចំកំណត់ត្រាជាមួយនឹងការសម្រួលអត្ថបទសម្បូរបែប ភ្ជាប់រូបភាព និងកំណត់ការរំលឹក។ យើងបានអនុវត្តការធ្វើសមកាលកម្មពេលពិតរវាងឧបករណ៍និងមុខងារក្រៅបណ្តាញសម្រាប់បទពិសោធន៍អ្នកប្រើប្រាស់ដែលរលូន។",
+        "project3-description": "កម្មវិធីកត់ត្រាដែលមានមុខងារសម្បូរបែបជាមួយនឹងការធ្វើសមកាលកម្មពពក ការរំលឹក និងការចាត់ចំណាត់ថ្នាក់។ មាននៅលើទាំងប្រព័ន្ធប្រតិបត្តិការ Android និង iOS ជាមួយនឹងការរចនាសាមញ្ញនិងស្អាត។ កម្មវិធីនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត កែសម្រួល និងរៀបចំកំណត់ត្រាជាមួយនឹងការសម្រួលអត្ថបទសម្បូរបែប ភ្ជាប់រូបភាព និងកំណត់ការរំលឹក�। យើងបានអនុវត្តការធ្វើសមកាលកម្មពេលពិតរវាងឧបករណ៍និងមុខងារក្រៅបណ្តាញសម្រាប់បទពិសោធន៍អ្នកប្រើប្រាស់ដែលរលូន�।",
         "member10-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ទូរស័ព្ទចល័ត",
         "member10-name": "ឈ្មោះ៖ វិរៈ ព្រុំ",
         "member11-role": "តួនាទី៖ វិស្វករផ្នែកខាងក្រោយ",
@@ -230,8 +226,8 @@ const translations = {
         "member14-role": "តួនាទី៖ អ្នកគ្រប់គ្រងផលិតផល",
         "member14-name": "ឈ្មោះ៖ សុខា ម៉ី",
         // Project 4
-        "project4-title": "កម្មវិធីសន្និសីទនិម្មិត (VC) គម្រោងប្រព័ន្ធគ្រប់គ្រង",
-        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងមាតិកាសម្រាប់ក្រុមហ៊ុននិម្មិតមួយ (VC1) ដើម្បីធ្វើឱ្យប្រតិបត្តិការប្រចាំថ្ងៃរបស់ក្រុមហ៊ុនកាន់តែមានប្រសិទ្ធភាព និងស្វ័យប្រវត្តិកម្ម។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកបង្កើតនិងគ្រប់គ្រងមាតិកា តាមដានវឌ្ឍនភាពគម្រោង និងសហការប្រកបដោយប្រសិទ្ធភាព។ យើងបានអនុវត្តការរចនាដែលឆ្លើយតបដែលដំណើរការលើទាំងកុំព្យូទ័រនិងឧបករណ៍ចល័ត�。\n\nកម្មវិធីនេះត្រូវបានបង្កើតឡើងដោយប្រើរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាតនិងងាយស្រួលប្រើ។ ផ្នែកខាងក្រោយត្រូវបានបង្កើតឡើងដោយប្រើ PHP និង Node.js សម្រាប់ដោះស្រាយតក្កវិជ្ជាផ្នែកម៉ាស៊ីនមេនិងចំណុចចុងបញ្ចប់ API�。\n\nពេញមួយគម្រោង ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានធ្វើការយ៉ាងជិតស្និទ្ធជាមួយភាគីពាក់ព័ន្ធដើម្បីប្រមូលតម្រូវការនិងធ្វើការកែលម្អលើមុខងារ។ យើងបានប្រើវិធីសាស្ត្រ agile ជាមួយនឹងការបោះជំហានរយៈពេលពីរសប្តាហ៍ដើម្បីផ្តល់ការធ្វើបច្ចុប្បន្នភាពបន្តបន្ទាប់និងប្រមូលមតិត្រឡប់។ គម្រោងនេះរួមបញ្ចូលប្រព័ន្ធផ្ទៀងផ្ទាត់អត្តសញ្ញាណអ្នកប្រើប្រាស់ ផ្ទាំងគ្រប់គ្រង ប្រព័ន្ធគ្រប់គ្រងមាតិកា និងឧបករណ៍តាមដានគម្រោង។",
+        "project4-title": "គម្រោងប្រព័ន្ធគ្រប់គ្រង Virtual Company One (VC1)",
+        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។\n\nយើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។ យើងបានគាំទ្រការតាមដានភារកិច្ច និងការទំនាក់ទំនងពេញមួយដំណើរការអភិវឌ្ឍន៍។\n\nក្រុមរបស់យើងបានធ្វើការយ៉ាងហ្មត់ចត់ពេញមួយដំណើរការ ដើម្បីតាឮនិងធ្វើឱ្យប្រាកដថាប្រព័ន្ធដំណើរការតាមការគ្រោងទុក។ យើងបានធ្វើការសាកល្បងអ្នកប្រើប្រាស់យ៉ាងទូលំទូលាយ និងប្រមូលមតិយោបល់។ គម្រោងនេះបានបង្រៀនយើងទាំងជំនាញបច្ចេកទេស និងជំនាញទំនាក់ទំនង និងបានផ្តល់បទពិសោធន៍ក្នុងការផ្តល់ផលិតផលដែលមានមុខងារដែលបំពេញតាមតម្រូវការអតិថិជន។",
         "member15-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
         "member15-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
         "member16-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ពេញលេញ",
@@ -262,7 +258,7 @@ function updateLanguage(lang) {
             const key = element.getAttribute("data-lang");
             if (translations[lang] && translations[lang][key]) {
                 // Handle HTML content for specific keys
-                if (key === "hero-subtitle" || key === "skillset-description") {
+                if (key === "hero-subtitle" || key === "skillset-description" || key === "project4-description") {
                     element.innerHTML = translations[lang][key];
                 } else if (key === "footer-newsletter-placeholder") {
                     element.placeholder = translations[lang][key];
@@ -270,6 +266,13 @@ function updateLanguage(lang) {
                     element.innerHTML = `<span>${translations[lang][key]}</span><span>${element.querySelector('span:last-child').textContent}</span>`;
                 } else {
                     element.textContent = translations[lang][key];
+                }
+
+                // Force Khmer font for specific elements when language is Khmer
+                if (lang === "kh") {
+                    element.style.fontFamily = "'Noto Sans Khmer', 'Khmer', 'Khmer OS', 'Khmer OS Battambang', sans-serif";
+                } else {
+                    element.style.fontFamily = "'Poppins', sans-serif";
                 }
             } else {
                 console.warn(`Translation missing for key: ${key} in language: ${lang}`);

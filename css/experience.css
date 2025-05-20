@@ -203,13 +203,18 @@
 .project-image {
     position: relative;
     overflow: hidden;
-    height: 250px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Maintain consistent aspect ratio */
+    padding: 10px;
+    /* Add padding for better spacing */
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Ensure images cover the container */
     transition: transform 0.5s ease;
     filter: brightness(0.9);
 }
@@ -586,7 +591,10 @@
 }
 
 .project-special .project-image {
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Consistent aspect ratio */
+    padding: 10px;
     margin-bottom: 20px;
 }
 
@@ -1033,7 +1041,6 @@ body.dark-theme .theme-toggle .fa-sun {
 
 body.light-theme .theme-toggle .fa-moon {
     color: #999;
-    /* Adjusted for better visibility */
     opacity: 1;
 }
 
@@ -1114,7 +1121,8 @@ body.light-theme .theme-toggle label:hover {
         font-size: var(--font-size-m);
     }
     .project-image {
-        height: 200px;
+        aspect-ratio: 16 / 9;
+        padding: 8px;
     }
     .project-description {
         font-size: var(--font-size-s);
@@ -1192,7 +1200,8 @@ body.light-theme .theme-toggle label:hover {
         font-size: var(--font-size-s);
     }
     .project-image {
-        height: 180px;
+        aspect-ratio: 16 / 9;
+        padding: 5px;
     }
     .project-description {
         font-size: 0.8rem;
@@ -1279,7 +1288,8 @@ body.light-theme .theme-toggle label:hover {
         font-size: 0.8rem;
     }
     .project-image {
-        height: 150px;
+        aspect-ratio: 16 / 9;
+        padding: 5px;
     }
     .project-description {
         font-size: 0.75rem;
