@@ -49,6 +49,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -757,6 +758,7 @@
         margin-top: 40px;
         font-size: 1.6rem;
         margin-bottom: 40px;
+        display: none;
     }
     .category h3 {
         font-size: 1.2rem;

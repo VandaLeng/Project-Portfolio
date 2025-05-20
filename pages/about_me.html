@@ -18,9 +18,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/Main.css">
-    <link rel="stylesheet" href="../Theme/Main_theme.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="/assets/css/Main.css">
+    <link rel="stylesheet" href="/assets/Theme/Main_theme.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
 </head>
 
 <body>
@@ -57,16 +57,15 @@
     </header>
     <main class="about-me">
         <section class="about-section">
-
             <div class="about-content">
                 <div class="about-image">
-                    <img src="/images/Vanda.jpg" alt="Vanda Leng">
+                    <img src="/assets/images/Vanda.jpg" alt="Vanda Leng">
                 </div>
                 <div class="about-text">
                     <h3 class="fs-1" data-lang="about-experience">One Year Experienced Programming</h3>
                     <p data-lang="about-description">
-                        My name is Vanda Leng, Cambodian. I am a passionate student who study at Passerelles Numeriques Cambodia (PNC). I study only one year in PNC but I have many experiences in Programming such as HTML, CSS, JavaScript, Node.js, Laravel, Vue.js and many more.
-                        For my passionate in coding and learning in new technology, I always try my best to learn new things everyday.
+                        My name is Vanda Leng, Cambodian. I am a passionate student who study at Passerelles Numeriques Cambodia (PNC). I study only one year in PNC but I have many experiences in Programming such as HTML, CSS, JavaScript, Node.js, Laravel, Vue.js, React, MySQL,
+                        and more. For my passion in coding and learning new technology, I always try my best to learn new things every day and contribute to innovative projects.
                     </p>
                     <div class="about-details">
                         <div class="paragraph_text">
@@ -78,7 +77,7 @@
                             <p><strong data-lang="about-address-label">Address:</strong> <span data-lang="about-address">Phnom Penh, Cambodia</span></p>
                         </div>
                     </div>
-                    <a href="images/Vanda_Leng_CV.pdf">
+                    <a href="/assets/images/Vanda_Leng_CV.pdf">
                         <button class="btn1 download-btn" data-lang="btn-download">DOWNLOAD CV</button>
                     </a>
                 </div>
@@ -87,18 +86,19 @@
         <div class="container">
             <!-- Hard Skills Section -->
             <h1 class="section-title" data-aos="fade-up">Hard Skills</h1>
-
             <div class="main-content">
-
                 <!-- Learned Section -->
                 <div class="learned-section" data-aos="fade-right" data-aos-duration="1000">
                     <div class="text-content">
-                        <h2>What I have Learned?</h2>
-                        <p>At PNC: I've gained valuable experience with various programming languages, tools and improved my skills in English languages. My journey has equipped me with both technical expertise and soft skills needed for professional development.</p>
+                        <h2 data-lang="learned-title">What I Have Learned?</h2>
+                        <p data-lang="learned-description">
+                            At Passerelles Numériques Cambodia (PNC), I have developed a strong foundation in web development, mastering technologies like HTML, CSS, JavaScript, PHP, MySQL, Node.js, Laravel, Vue.js, React, and Python. I have also gained proficiency in tools like
+                            Git, VS Code, Jira, and Docker, and improved my English communication skills. My training has equipped me with the technical expertise and problem-solving abilities needed to build dynamic, user-friendly applications and contribute
+                            effectively to team projects. Through hands-on projects, I’ve learned to integrate APIs, optimize performance, and ensure cross-browser compatibility.
+                        </p>
                     </div>
-                    <img src="/images/Vanda Learning.jpg" alt="Student coding" class="student-img">
+                    <img src="/assets/images/Vanda_Learning.jpg" alt="Student coding" class="student-img">
                 </div>
-
                 <!-- Skills Circle -->
                 <div class="skills-circle-container" data-aos="fade-left" data-aos-duration="1000">
                     <div class="skills-circle">
@@ -112,195 +112,209 @@
                             <p class="progress-text">MVC Structure: 67%</p>
                         </div>
                     </div>
-
-                    <!-- Language logos will be added dynamically by JavaScript -->
                 </div>
             </div>
-
             <!-- Skill Categories -->
             <div class="skill-categories" data-aos="fade-up" data-aos-duration="800">
                 <!-- Frontend Category -->
                 <div class="category" data-aos="fade-up" data-aos-delay="100">
                     <h3>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
-                        </path>
-                    </svg> Frontend
+                            <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                        </svg> <span data-lang="skill-front-end">Frontend</span>
                     </h3>
                     <ul id="frontendSkills">
-                        <!-- Will be populated by JavaScript -->
+                        <li><span class="skill-label" data-lang="skill-html">HTML</span><span>90%</span></li>
+                        <li><span class="skill-label" data-lang="skill-css">CSS</span><span>85%</span></li>
+                        <li><span class="skill-label" data-lang="skill-js">JavaScript</span><span>80%</span></li>
+                        <li><span class="skill-label" data-lang="skill-vuejs">Vue.js</span><span>75%</span></li>
+                        <li><span class="skill-label" data-lang="skill-bootstrap">Bootstrap</span><span>70%</span></li>
+                        <li><span class="skill-label" data-lang="skill-react">React</span><span>65%</span></li>
                     </ul>
                 </div>
-
                 <!-- Backend Category -->
                 <div class="category" data-aos="fade-up" data-aos-delay="200">
                     <h3>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg> Backend
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg> <span data-lang="skill-back-end">Backend</span>
                     </h3>
                     <ul id="backendSkills">
-                        <!-- Will be populated by JavaScript -->
+                        <li><span class="skill-label" data-lang="skill-php">PHP</span><span>67%</span></li>
+                        <li><span class="skill-label" data-lang="skill-nodejs">Node.js</span><span>70%</span></li>
+                        <li><span class="skill-label" data-lang="skill-laravel">Laravel</span><span>65%</span></li>
+                        <li><span class="skill-label" data-lang="skill-python">Python</span><span>60%</span></li>
+                        <li><span class="skill-label" data-lang="skill-express">Express.js</span><span>60%</span></li>
                     </ul>
                 </div>
-
                 <!-- Database Category -->
                 <div class="category" data-aos="fade-up" data-aos-delay="300">
                     <h3>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                    </svg> Database
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg> <span data-lang="skill-database">Database</span>
                     </h3>
                     <ul id="databaseSkills">
-                        <!-- Will be populated by JavaScript -->
+                        <li><span class="skill-label" data-lang="skill-mysql">MySQL</span><span>70%</span></li>
+                        <li><span class="skill-label" data-lang="skill-mongodb">MongoDB</span><span>60%</span></li>
+                        <li><span class="skill-label" data-lang="skill-postgresql">PostgreSQL</span><span>55%</span></li>
                     </ul>
                 </div>
             </div>
-
             <!-- Soft Skills Section -->
             <div class="soft-skills-container">
                 <h1 class="section-title" data-aos="fade-up">Soft Skills</h1>
-
                 <div class="soft-skills-grid">
                     <!-- Teamwork Skill -->
                     <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="100">
                         <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                        <div class="soft-skill-title">Teamwork</div>
-                        <div class="soft-skill-description">
-                            Collaborating and working well with others to achieve shared goals. Respecting each team member's contributions and fostering a positive atmosphere.
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-teamwork">Teamwork</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-teamwork-desc">
+                            Collaborating effectively with diverse teams to achieve shared goals, fostering a positive environment, and valuing each member's contributions.
                         </div>
                     </div>
-
                     <!-- Problem Solving Skill -->
                     <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="200">
                         <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="9" y1="18" x2="15" y2="18"></line>
-                        <line x1="10" y1="22" x2="14" y2="22"></line>
-                        <path
-                            d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14">
-                        </path>
-                    </svg>
-                        <div class="soft-skill-title">Problem Solving</div>
-                        <div class="soft-skill-description">
-                            Identifying issues, thinking creatively, and finding solutions to challenges. Using analytical skills to break down problems and develop effective strategies for success.
+                            <line x1="9" y1="18" x2="15" y2="18"></line>
+                            <line x1="10" y1="22" x2="14" y2="22"></line>
+                            <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-problem-solving">Problem Solving</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-problem-solving-desc">
+                            Analyzing challenges critically, devising innovative solutions, and implementing effective strategies to overcome obstacles.
                         </div>
                     </div>
-
                     <!-- Time Management Skill -->
                     <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="300">
                         <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                        <div class="soft-skill-title">Time Management</div>
-                        <div class="soft-skill-description">
-                            Organizing and prioritizing tasks efficiently, meeting deadlines, and balancing multiple responsibilities to maximize productivity without burnout.
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-time-management">Time Management</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-time-management-desc">
+                            Prioritizing tasks efficiently, meeting deadlines, and balancing multiple responsibilities to maximize productivity.
                         </div>
                     </div>
-
                     <!-- Leadership Skill -->
                     <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="400">
                         <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                        <polygon points="12 1 15 6 9 6"></polygon>
-                    </svg>
-                        <div class="soft-skill-title">Leadership</div>
-                        <div class="soft-skill-description">
-                            Ability to guide a team toward achieving common goals, making sound decisions, and taking responsibility for both the team's successes and failures that supports team members.
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <polygon points="12 1 15 6 9 6"></polygon>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-leadership">Leadership</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-leadership-desc">
+                            Guiding teams toward common objectives, making informed decisions, and inspiring others to achieve excellence.
                         </div>
                     </div>
-
                     <!-- Adaptability Skill -->
                     <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="500">
                         <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="23 4 23 10 17 10"></polyline>
-                        <polyline points="1 20 1 14 7 14"></polyline>
-                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-                    </svg>
-                        <div class="soft-skill-title">Adaptability</div>
-                        <div class="soft-skill-description">
-                            Being flexible and adjusting to new situations, environments, and challenges quickly while staying positive even when facing new challenges.
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-adaptability">Adaptability</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-adaptability-desc">
+                            Embracing change, adapting to new environments, and thriving under pressure with a positive mindset.
                         </div>
                     </div>
-
                     <!-- Communication Skill -->
                     <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="600">
                         <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                        </path>
-                    </svg>
-                        <div class="soft-skill-title">Communication</div>
-                        <div class="soft-skill-description">
-                            Effectively sharing ideas and information with others in a clear and concise manner, while also using the right words so everyone understands. Being a good listener and actively seeking and giving constructive feedback.
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-communication">Communication</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-communication-desc">
+                            Conveying ideas clearly, listening actively, and providing constructive feedback to foster collaboration.
+                        </div>
+                    </div>
+                    <!-- Critical Thinking Skill -->
+                    <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="700">
+                        <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16a4 4 0 0 0 4-4 4 4 0 0 0-4-4 4 4 0 0 0-4 4 4 4 0 0 0 4 4z"></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M10 12h4"></path>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-critical-thinking">Critical Thinking</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-critical-thinking-desc">
+                            Evaluating situations logically, making informed decisions, and solving problems with evidence-based reasoning.
+                        </div>
+                    </div>
+                    <!-- Creativity Skill -->
+                    <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="800">
+                        <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"></path>
+                            <path d="M12 12l3 3"></path>
+                            <path d="M12 12l-3 3"></path>
+                        </svg>
+                        <div class="soft-skill-title" data-lang="soft-skill-creativity">Creativity</div>
+                        <div class="soft-skill-description" data-lang="soft-skill-creativity-desc">
+                            Innovating and designing unique solutions, enhancing user experiences through imaginative approaches.
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Education Section -->
             <div class="education-container">
                 <h1 class="section-title" data-aos="fade-up">Education</h1>
-
                 <div class="education-timeline">
                     <!-- PNC Education -->
                     <div class="education-item" data-aos="fade-right" data-aos-delay="100">
                         <div class="education-dot"></div>
                         <div class="education-card">
                             <div class="education-year">2024 - 2025</div>
-                            <div class="education-degree">UNIVERSITY CAMBODIA – PNC</div>
-                            <div class="education-school">Passerelles Numériques Cambodia (PNC)</div>
-                            <div class="education-description">
-                                Intensive training in web development technologies including front-end and back-end programming, database management, and software development methodologies.
+                            <div class="education-degree" data-lang="education-pnc-degree">Web Development Program</div>
+                            <div class="education-school" data-lang="education-pnc-school">Passerelles Numériques Cambodia (PNC)</div>
+                            <div class="education-description" data-lang="education-pnc-desc">
+                                Intensive training in web development, mastering HTML, CSS, JavaScript, PHP, Laravel, Vue.js, React, and MySQL. Built real-world projects, including a library management system, and developed strong collaboration and problem-solving skills.
                             </div>
                         </div>
                     </div>
 
-                    <!-- High School Education -->
-                    <div class="education-item" data-aos="fade-left" data-aos-delay="200">
-                        <div class="education-dot"></div>
-                        <div class="education-card">
-                            <div class="education-year">2025</div>
-                            <div class="education-degree">JOIN EVENT CADT UNIVERSITY</div>
-                            <div class="education-school"> CADT UNIVERSITY</div>
-                            <div class="education-description">
-                                Speaker Sessions | Insightful Presentations | Job Career Opportunities | Networking Sessions | Workshops prepare ourselves for a successful future together
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Certification -->
-                    <div class="education-item" data-aos="fade-right" data-aos-delay="300">
-                        <div class="education-dot"></div>
-                        <div class="education-card">
-                            <div class="education-year">2024</div>
-                            <div class="education-degree">WORKSHOP LEADERSHIP DEVELOPMENT</div>
-                            <div class="education-school">LeaderShip </div>
-                            <div class="education-description">
-                                Improve your communication, boost your presentation skills, learn how to share ideas effectively, and strengthen your teamwork abilities.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Certification -->
+                    <!-- CADT University Event -->
                     <div class="education-item" data-aos="fade-left" data-aos-delay="400">
                         <div class="education-dot"></div>
                         <div class="education-card">
+                            <div class="education-year">2025</div>
+                            <div class="education-degree" data-lang="education-cadt-degree">Join Event CADT University</div>
+                            <div class="education-school" data-lang="education-cadt-school">CADT University</div>
+                            <div class="education-description" data-lang="education-cadt-desc">
+                                Participated in tech-focused workshops and networking events, gaining insights into industry trends and career development strategies.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Leadership Workshop -->
+                    <div class="education-item" data-aos="fade-right" data-aos-delay="500">
+                        <div class="education-dot"></div>
+                        <div class="education-card">
+                            <div class="education-year">2024</div>
+                            <div class="education-degree" data-lang="education-leadership-degree">Workshop Leadership Development</div>
+                            <div class="education-school" data-lang="education-leadership-school">Leadership Academy</div>
+                            <div class="education-description" data-lang="education-leadership-desc">
+                                Developed leadership skills through practical exercises, focusing on team motivation, decision-making, and conflict resolution.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- High School Education -->
+                    <div class="education-item" data-aos="fade-left" data-aos-delay="600">
+                        <div class="education-dot"></div>
+                        <div class="education-card">
                             <div class="education-year">2017 - 2023</div>
-                            <div class="education-degree"> BAK TOUK HIGH SCHOOL</div>
-                            <div class="education-school">Bak Touk High School</div>
-                            <div class="education-description">
-                                A place to learn, grow, and build your future. Proud to be a student of Bak Touk, where we get knowledge, make friends, and prepare for the next step in life.
+                            <div class="education-degree" data-lang="education-highschool-degree">High School Diploma</div>
+                            <div class="education-school" data-lang="education-highschool-school">Bak Touk High School</div>
+                            <div class="education-description" data-lang="education-highschool-desc">
+                                Completed secondary education with a focus on mathematics, science, and leadership activities, laying a strong foundation for technical studies.
                             </div>
                         </div>
                     </div>
@@ -353,9 +367,9 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
-    <script src="../Js/languages.js"></script>
-    <script src="../Js/Main.js"></script>
-    <script src="../Js/about.js"></script>
+    <script src="/Js/languages.js"></script>
+    <script src="/Js/Main.js"></script>
+    <script src="/Js/about.js"></script>
     <script>
         AOS.init({
             duration: 800,

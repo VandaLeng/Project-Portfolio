@@ -1,4 +1,5 @@
 // Skills data with logo URLs
+
 const skills = [{
     id: "HTML",
     name: "HTML",
