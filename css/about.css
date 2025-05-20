@@ -663,3 +663,333 @@ body.kh .education-degree,
 body.kh .education-school {
     font-family: "Noto Sans Khmer", sans-serif;
 }
+
+
+/* 768px Breakpoint */
+
+@media (max-width: 768px) {
+    /* General Container */
+    .container {
+        padding: 20px 15px;
+        /* Reduced padding for better space usage */
+    }
+    /* About Section */
+    .about-section {
+        padding: 20px;
+    }
+    .about-content {
+        flex-direction: column;
+        /* Stack image and text */
+        gap: 20px;
+        align-items: center;
+    }
+    .about-image img {
+        width: 100%;
+        max-width: 300px;
+        /* Limit image size */
+        height: auto;
+        border-radius: 10px;
+    }
+    .about-text {
+        text-align: center;
+        /* Center text for better mobile readability */
+    }
+    .about-text h3 {
+        font-size: 1.8rem;
+        /* Slightly smaller heading */
+    }
+    .about-text p {
+        font-size: 0.9rem;
+        /* Adjust paragraph size */
+    }
+    .about-details {
+        flex-direction: column;
+        /* Stack details */
+        gap: 15px;
+    }
+    .paragraph_text,
+    .paragraph_texts {
+        width: 100%;
+        /* Full width for details */
+        text-align: center;
+    }
+    .download-btn {
+        font-size: 0.9rem;
+        /* Smaller button text */
+        padding: 10px 20px;
+    }
+    /* Main Content */
+    .main-content {
+        flex-direction: column;
+        gap: 40px;
+        /* Reduced gap for tighter layout */
+        align-items: center;
+    }
+    .learned-section {
+        padding: 15px;
+        max-width: 100%;
+        margin-bottom: 100px;
+        /* Full width */
+    }
+    .text-content h2 {
+        font-size: 1.6rem;
+        /* Smaller heading */
+    }
+    .text-content p {
+        font-size: 0.85rem;
+        /* Smaller text */
+    }
+    .student-img {
+        height: 200px;
+        /* Adjusted image height */
+        max-width: 100%;
+    }
+    /* Skills Circle */
+    .skills-circle-container {
+        width: 320px;
+        /* Slightly smaller for tablets */
+        height: 320px;
+    }
+    .lang-logo {
+        width: 45px;
+        /* Smaller logos */
+        height: 45px;
+    }
+    .skill-info {
+        width: 180px;
+        /* Slightly smaller info box */
+        padding: 15px;
+    }
+    .skill-info h3 {
+        font-size: 1.2rem;
+    }
+    .skill-info p {
+        font-size: 0.75rem;
+    }
+    .progress-bar {
+        height: 8px;
+        /* Thinner progress bar */
+    }
+    .progress-text {
+        font-size: 0.7rem;
+    }
+    /* Skill Categories */
+    .skill-categories {
+        flex-direction: column;
+        /* Already single column, but explicit */
+        gap: 30px;
+        /* Reduced gap */
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .category {
+        padding: 15px;
+    }
+    .category h3 {
+        font-size: 1.4rem;
+        /* Smaller heading */
+    }
+    .category li {
+        font-size: 0.85rem;
+        /* Smaller list items */
+    }
+    .category .mini-bar {
+        width: 180px;
+        /* Slightly smaller progress bars */
+    }
+    /* Soft Skills Grid */
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        /* Single column for better spacing */
+        gap: 20px;
+    }
+    .soft-skill-card {
+        min-height: 200px;
+        /* Slightly shorter cards */
+        padding: 15px;
+    }
+    .soft-skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .soft-skill-title {
+        font-size: 1.2rem;
+    }
+    .soft-skill-description {
+        font-size: 0.85rem;
+    }
+    /* Education Grid */
+    .education-grid {
+        grid-template-columns: 1fr;
+        /* Single column for better readability */
+        gap: 20px;
+    }
+    .education-card {
+        min-height: 200px;
+        padding: 15px;
+    }
+    .education-year {
+        font-size: 0.85rem;
+    }
+    .education-degree {
+        font-size: 1.2rem;
+    }
+    .education-school {
+        font-size: 1rem;
+    }
+    .education-description {
+        font-size: 0.85rem;
+    }
+    /* Section Title */
+    .section-title {
+        font-size: 2rem;
+        /* Smaller title */
+        margin-bottom: 40px;
+    }
+}
+
+
+/* 391px Breakpoint (Mobile Phones) */
+
+@media (max-width: 391px) {
+    /* General Container */
+    .container {
+        padding: 15px 10px;
+        /* Tighter padding */
+    }
+    /* About Section */
+    .about-section {
+        padding: 15px;
+    }
+    .about-content {
+        gap: 15px;
+    }
+    .about-image img {
+        max-width: 250px;
+        /* Smaller image */
+    }
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+    .about-text p {
+        font-size: 0.8rem;
+    }
+    .about-details {
+        gap: 10px;
+    }
+    .download-btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+    /* Main Content */
+    .main-content {
+        gap: 30px;
+        /* Tighter gap */
+    }
+    .learned-section {
+        padding: 10px;
+    }
+    .text-content h2 {
+        font-size: 1.4rem;
+    }
+    .text-content p {
+        font-size: 0.8rem;
+    }
+    .student-img {
+        height: 180px;
+        /* Smaller image */
+    }
+    /* Skills Circle */
+    .skills-circle-container {
+        width: 260px;
+        /* Smaller circle */
+        height: 260px;
+    }
+    .lang-logo {
+        width: 35px;
+        /* Smaller logos */
+        height: 35px;
+    }
+    .skill-info {
+        width: 160px;
+        /* Smaller info box */
+        padding: 10px;
+    }
+    .skill-info h3 {
+        font-size: 1.1rem;
+    }
+    .skill-info p {
+        font-size: 0.7rem;
+    }
+    .progress-bar {
+        height: 6px;
+        /* Thinner progress bar */
+    }
+    .progress-text {
+        font-size: 0.65rem;
+    }
+    /* Skill Categories */
+    .skill-categories {
+        gap: 20px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .category {
+        padding: 10px;
+    }
+    .category h3 {
+        font-size: 1.2rem;
+    }
+    .category li {
+        font-size: 0.8rem;
+    }
+    .category .mini-bar {
+        width: 150px;
+        /* Smaller progress bars */
+    }
+    /* Soft Skills Grid */
+    .soft-skills-grid {
+        gap: 15px;
+    }
+    .soft-skill-card {
+        min-height: 180px;
+        /* Shorter cards */
+        padding: 10px;
+    }
+    .soft-skill-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .soft-skill-title {
+        font-size: 1.1rem;
+    }
+    .soft-skill-description {
+        font-size: 0.8rem;
+    }
+    /* Education Grid */
+    .education-grid {
+        gap: 15px;
+    }
+    .education-card {
+        min-height: 180px;
+        padding: 10px;
+    }
+    .education-year {
+        font-size: 0.8rem;
+    }
+    .education-degree {
+        font-size: 1.1rem;
+    }
+    .education-school {
+        font-size: 0.9rem;
+    }
+    .education-description {
+        font-size: 0.8rem;
+    }
+    /* Section Title */
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        margin-right: 200px;
+    }
+}
