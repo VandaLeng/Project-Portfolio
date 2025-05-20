@@ -117,7 +117,33 @@ const translations = {
         "member18-role": "Role: UI/UX Designer",
         "member18-name": "Name: Dara Phan",
         "member19-role": "Role: QA Engineer",
-        "member19-name": "Name: Borey San"
+        "member19-name": "Name: Borey San",
+        // Soft Skills
+        "soft-skill-teamwork": "Teamwork",
+        "soft-skill-teamwork-desc": "Collaborating and working well with others to achieve shared goals. Respecting each team member's contributions and fostering a positive atmosphere.",
+        "soft-skill-problem-solving": "Problem Solving",
+        "soft-skill-problem-solving-desc": "Identifying issues, thinking creatively, and finding solutions to challenges. Using analytical skills to break down problems and develop effective strategies for success.",
+        "soft-skill-time-management": "Time Management",
+        "soft-skill-time-management-desc": "Organizing and prioritizing tasks efficiently, meeting deadlines, and balancing multiple responsibilities to maximize productivity without burnout.",
+        "soft-skill-leadership": "Leadership",
+        "soft-skill-leadership-desc": "Ability to guide a team toward achieving common goals, making sound decisions, and taking responsibility for both the team's successes and failures that supports team members.",
+        "soft-skill-adaptability": "Adaptability",
+        "soft-skill-adaptability-desc": "Being flexible and adjusting to new situations, environments, and challenges quickly while staying positive even when facing new challenges.",
+        "soft-skill-communication": "Communication",
+        "soft-skill-communication-desc": "Effectively sharing ideas and information with others in a clear and concise manner, while also using the right words so everyone understands. Being a good listener and actively seeking and giving constructive feedback.",
+        // Education
+        "education-1-degree": "Web Development",
+        "education-1-school": "Passerelles Numériques Cambodia (PNC)",
+        "education-1-desc": "Intensive training in web development technologies including front-end and back-end programming, database management, and software development methodologies.",
+        "education-2-degree": "High School Diploma",
+        "education-2-school": "Provincial High School",
+        "education-2-desc": "Completed general education with focus on mathematics, physics, and computer science fundamentals.",
+        "education-3-degree": "Web Design Certification",
+        "education-3-school": "Online Learning Platform",
+        "education-3-desc": "Specialized certification in modern web design principles, UI/UX fundamentals, and responsive design techniques.",
+        "education-4-degree": "JavaScript Advanced Course",
+        "education-4-school": "Udemy",
+        "education-4-desc": "Comprehensive course covering advanced JavaScript concepts including ES6+, asynchronous programming, and modern frameworks."
     },
     kh: {
         "nav-home": "ទំព័រដើម",
@@ -158,7 +184,7 @@ const translations = {
         "about-address": "ភ្នំពេញ, កម្ពុជា",
         "skillset-title": "ជំនាញ",
         "skillset-subtitle": "បង្កើត និងបទពិសោធន៍ជំនាញវិជ្ជាជីវៈនៅលើផ្នែកមួយចំនួន",
-        "skillset-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង។ បច្ចុប្បន្ន ខ្ញុំជានិស្សិតដែលកំពុងសិក្សានៅ <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>�। លើសពីនេះ ខ្ញុំសិក្សានៅផ្នែកបច្ចេកវិទ្យាព័ត៌មានដែលផ្តោតលើការអភិវឌ្ឍន៍វែប។ ចំណង់ចំណូលចិត្តរបស់ខ្ញុំគឺការសរសេរកូដ និងការរៀនសូត្រ។",
+        "skillset-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង។ បច្ចុប្បន្ន ខ្ញុំជានិស្សិតដែលកំពុងសិក្សានៅ <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>។ លើសពីនេះ ខ្ញុំសិក្សានៅផ្នែកបច្ចេកវិទ្យាព័ត៌មានដែលផ្តោតលើការអភិវឌ្ឍន៍វែប។ ចំណង់ចំណូលចិត្តរបស់ខ្ញុំគឺការសរសេរកូដ និងការរៀនសូត្រ។",
         "btn-get-project": "ទទួលបានគម្រោងណាមួយ",
         "skill-product-design": "ការរចនា និងអភិវឌ្ឍន៍ផលិតផល",
         "skill-web-dev": "ការអភិវឌ្ឍន៍វែប",
@@ -203,7 +229,7 @@ const translations = {
         "member4-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         // Project 2
         "project2-title": "គម្រោង Python (ប្រព័ន្ធស្វ័យប្រវត្តិកម្មអ៊ីមែល)",
-        "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន�। ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
+        "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន។ ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
         "member6-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ផ្នែកខាងក្រោយ",
         "member6-name": "ឈ្មោះ៖ ដារ៉ា សុខ",
         "member7-role": "តួនាទី៖ អ្នកគ្រប់គ្រងគម្រោង",
@@ -214,7 +240,7 @@ const translations = {
         "member9-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         // Project 3
         "project3-title": "គម្រោងកត់ត្រា (កម្មវិធីកត់ត្រា)",
-        "project3-description": "កម្មវិធីកត់ត្រាដែលមានមុខងារសម្បូរបែបជាមួយនឹងការធ្វើសមកាលកម្មពពក ការរំលឹក និងការចាត់ចំណាត់ថ្នាក់។ មាននៅលើទាំងប្រព័ន្ធប្រតិបត្តិការ Android និង iOS ជាមួយនឹងការរចនាសាមញ្ញនិងស្អាត។ កម្មវិធីនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត កែសម្រួល និងរៀបចំកំណត់ត្រាជាមួយនឹងការសម្រួលអត្ថបទសម្បូរបែប ភ្ជាប់រូបភាព និងកំណត់ការរំលឹក�। យើងបានអនុវត្តការធ្វើសមកាលកម្មពេលពិតរវាងឧបករណ៍និងមុខងារក្រៅបណ្តាញសម្រាប់បទពិសោធន៍អ្នកប្រើប្រាស់ដែលរលូន�।",
+        "project3-description": "កម្មវិធីកត់ត្រាដែលមានមុខងារសម្បូរបែបជាមួយនឹងការធ្វើសមកាលកម្មពពក ការរំលឹក និងការចាត់ចំណាត់ថ្នាក់។ មាននៅលើទាំងប្រព័ន្ធប្រតិបត្តិការ Android និង iOS ជាមួយនឹងការរចនាសាមញ្ញនិងស្អាត។ កម្មវិធីនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត កែសម្រួល និងរៀបចំកំណត់ត្រាជាមួយនឹងការសម្រួលអត្ថបទសម្បូរបែប ភ្ជាប់រូបភាព និងកំណត់ការរំលឹក។ យើងបានអនុវត្តការធ្វើសមកាលកម្មពេលពិតរវាងឧបករណ៍និងមុខងារក្រៅបណ្តាញសម្រាប់បទពិសោធន៍អ្នកប្រើប្រាស់ដែលរលូន។",
         "member10-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ទូរស័ព្ទចល័ត",
         "member10-name": "ឈ្មោះ៖ វិរៈ ព្រុំ",
         "member11-role": "តួនាទី៖ វិស្វករផ្នែកខាងក្រោយ",
@@ -227,7 +253,7 @@ const translations = {
         "member14-name": "ឈ្មោះ៖ សុខា ម៉ី",
         // Project 4
         "project4-title": "គម្រោងប្រព័ន្ធគ្រប់គ្រង Virtual Company One (VC1)",
-        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។\n\nយើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។ យើងបានគាំទ្រការតាមដានភារកិច្ច និងការទំនាក់ទំនងពេញមួយដំណើរការអភិវឌ្ឍន៍។\n\nក្រុមរបស់យើងបានធ្វើការយ៉ាងហ្មត់ចត់ពេញមួយដំណើរការ ដើម្បីតាឮនិងធ្វើឱ្យប្រាកដថាប្រព័ន្ធដំណើរការតាមការគ្រោងទុក។ យើងបានធ្វើការសាកល្បងអ្នកប្រើប្រាស់យ៉ាងទូលំទូលាយ និងប្រមូលមតិយោបល់។ គម្រោងនេះបានបង្រៀនយើងទាំងជំនាញបច្ចេកទេស និងជំនាញទំនាក់ទំនង និងបានផ្តល់បទពិសោធន៍ក្នុងការផ្តល់ផលិតផលដែលមានមុខងារដែលបំពេញតាមតម្រូវការអតិថិជន។",
+        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។\n\nយើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។ យើងបានគាំទ្រការតាមដានភារកិច្ច និងការទំនាក់ទំនងពេញមួយដំណើរការអភិវឌ្ឍន៍។\n\nក្រុមរបស់យើងបានធ្វើការយ៉ាងហ្មត់ចត់ពេញមួយដំណើរការ ដើម្បីតាមដាននិងធ្វើឱ្យប្រាកដថាប្រព័ន្ធដំណើរការតាមការគ្រោងទុក។ យើងបានធ្វើការសាកល្បងអ្នកប្រើប្រាស់យ៉ាងទូលំទូលាយ និងប្រមូលមតិយោបល់។ គម្រោងនេះបានបង្រៀនយើងទាំងជំនាញបច្ចេកទេស និងជំនាញទំនាក់ទំនង និងបានផ្តល់បទពិសោធន៍ក្នុងការផ្តល់ផលិតផលដែលមានមុខងារដែលបំពេញតាមតម្រូវការអតិថិជន។",
         "member15-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
         "member15-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
         "member16-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ពេញលេញ",
@@ -237,7 +263,32 @@ const translations = {
         "member18-role": "តួនាទី៖ អ្នករចនាចំណុចប្រទាក់អ្នកប្រើប្រាស់",
         "member18-name": "ឈ្មោះ៖ ដារ៉ា ផាន",
         "member19-role": "តួនាទី៖ វិស្វករធានាគុណភាព",
-        "member19-name": "ឈ្មោះ៖ បូរី សាន"
+        "member19-name": "ឈ្មោះ៖ បូរី សាន",
+        "soft-skill-teamwork": "ការធ្វើការជាក្រុម",
+        "soft-skill-teamwork-desc": "ការសហការនិងធ្វើការបានល្អជាមួយអ្នកដទៃដើម្បីសម្រេចគោលដៅរួម។ គោរពការរួមចំណែករបស់សមាជិកក្រុមនីមួយៗនិងបង្កើតបរិយាកាសវិជ្ជមាន។",
+        "soft-skill-problem-solving": "ការដោះស្រាយបញ្ហា",
+        "soft-skill-problem-solving-desc": "កំណត់បញ្ហា គិតប្រកបដោយភាពច្នៃប្រឌិត និងស្វែងរកដំណោះស្រាយចំពោះបញ្ហាប្រឈម។ ប្រើជំនាញវិភាគដើម្បីបំបែកបញ្ហានិងបង្កើតយុទ្ធសាស្ត្រប្រកបដោយប្រសិទ្ធភាព។",
+        "soft-skill-time-management": "ការគ្រប់គ្រងពេលវេលា",
+        "soft-skill-time-management-desc": "រៀបចំនិងផ្តល់អាទិភាពដល់កិច្ចការប្រកបដោយប្រសិទ្ធភាព បំពេញតាមកាលកំណត់ និងទប់សមតុល្យទំនួលខុសត្រូវច្រើនដើម្បីបង្កើនផលិតភាពដោយមិនអស់កម្លាំង។",
+        "soft-skill-leadership": "ភាពជាអ្នកដឹកនាំ",
+        "soft-skill-leadership-desc": "សមត្ថភាពដឹកនាំក្រុមឆ្ពោះទៅរកការសម្រេចគោលដៅរួម ធ្វើការសម្រេចចិត្តប្រកបដោយហេតុផល និងទទួលខុសត្រូវចំពោះទាំងជោគជ័យនិងបរាជ័យរបស់ក្រុម។",
+        "soft-skill-adaptability": "ភាពបត់បែន",
+        "soft-skill-adaptability-desc": "មានភាពបត់បែននិងសម្របខ្លួនទៅនឹងស្ថានភាព បរិស្ថាន និងបញ្ហាប្រឈមថ្មីៗបានយ៉ាងឆាប់រហ័ស ខណៈពេលដែលរក្សាភាពវិជ្ជមាន។",
+        "soft-skill-communication": "ការទំនាក់ទំនង",
+        "soft-skill-communication-desc": "ការចែករំលែកគំនិតនិងព័ត៌មានជាមួយអ្នកដទៃប្រកបដោយភាពច្បាស់លាស់និងសង្ខេប ដោយប្រើពាក្យសមស្របដើម្បីឱ្យគ្រប់គ្នាយល់។ ជាអ្នកស្តាប់ល្អនិងស្វែងរកនិងផ្តល់មតិយោបល់ប្រកបដោយស្ថាបនា។",
+        // Education
+        "education-1-degree": "ការអភិវឌ្ឍន៍គេហទំព័រ",
+        "education-1-school": "Passerelles Numériques Cambodia (PNC)",
+        "education-1-desc": "ការបណ្តុះបណ្តាលផ្តោតលើបច្ចេកវិទ្យាអភិវឌ្ឍន៍គេហទំព័រដែលរួមមានការសរសេរកម្មវិធីផ្នែកខាងមុខនិងខាងក្រោយ ការគ្រប់គ្រងមូលដ្ឋានទិន្នន័យ និងវិធីសាស្ត្រអភិវឌ្ឍន៍កម្មវិធី។",
+        "education-2-degree": "សញ្ញាបត្រវិទ្យាល័យ",
+        "education-2-school": "វិទ្យាល័យខេត្ត",
+        "education-2-desc": "បានបញ្ចប់ការអប់រំទូទៅដោយផ្តោតលើគណិតវិទ្យា រូបវិទ្យា និងមូលដ្ឋានវិទ្យាសាស្ត្រកុំព្យូទ័រ។",
+        "education-3-degree": "វិញ្ញាបនបត្ររចនាគេហទំព័រ",
+        "education-3-school": "វេទិកាសិក្សាតាមអនឡាញ",
+        "education-3-desc": "វិញ្ញាបនបត្រឯកទេសផ្នែកគោលការណ៍រចនាគេហទំព័រទំនើប មូលដ្ឋាន UI/UX និងបច្ចេកទេសរចនាឆ្លើយតប។",
+        "education-4-degree": "វគ្គសិក្សា JavaScript កម្រិតខ្ពស់",
+        "education-4-school": "Udemy",
+        "education-4-desc": "វគ្គសិក្សាទូលំទូលាយដែលគ្របដណ្តប់គោលគំនិត JavaScript កម្រិតខ្ពស់រួមមាន ES6+ ការសរសេរកម្មវិធីអសមកាល និងក្របខ័ណ្ឌទំនើប។"
     }
 };
 
@@ -271,8 +322,14 @@ function updateLanguage(lang) {
                 // Force Khmer font for specific elements when language is Khmer
                 if (lang === "kh") {
                     element.style.fontFamily = "'Noto Sans Khmer', 'Khmer', 'Khmer OS', 'Khmer OS Battambang', sans-serif";
+                    element.style.fontWeight = "500"; // Ensure proper weight for Khmer font
+                    element.style.letterSpacing = "0.02em"; // Better spacing for Khmer
+                    element.style.lineHeight = "1.8"; // Better line height for Khmer
                 } else {
                     element.style.fontFamily = "'Poppins', sans-serif";
+                    element.style.fontWeight = ""; // Reset to default
+                    element.style.letterSpacing = ""; // Reset to default
+                    element.style.lineHeight = ""; // Reset to default
                 }
             } else {
                 console.warn(`Translation missing for key: ${key} in language: ${lang}`);
@@ -291,6 +348,24 @@ function updateLanguage(lang) {
         if (languageWrapper) {
             languageWrapper.classList.remove("en", "kh");
             languageWrapper.classList.add(lang);
+        }
+
+        // Apply specific Khmer font styles to headings and important elements
+        if (lang === "kh") {
+            const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, .section-title, .soft-skill-title, .education-degree');
+            headings.forEach(heading => {
+                heading.style.fontFamily = "'Noto Sans Khmer', 'Khmer', 'Khmer OS', 'Khmer OS Battambang', sans-serif";
+                heading.style.fontWeight = "600";
+                heading.style.letterSpacing = "0.01em";
+            });
+
+            // Apply to buttons
+            const buttons = document.querySelectorAll('button, .btn, .btn1');
+            buttons.forEach(button => {
+                button.style.fontFamily = "'Noto Sans Khmer', 'Khmer', 'Khmer OS', 'Khmer OS Battambang', sans-serif";
+                button.style.fontWeight = "500";
+                button.style.letterSpacing = "0.02em";
+            });
         }
 
         // Save language preference
@@ -331,5 +406,3 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error initializing language:", error);
     }
 });
-
-AOS.init();

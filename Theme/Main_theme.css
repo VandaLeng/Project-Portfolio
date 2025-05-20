@@ -598,34 +598,3 @@ body.dark-theme footer form button:hover {
 body.en {
     font-family: "Poppins", sans-serif;
 }
-
-body.kh {
-    font-family: "Noto Sans Khmer", sans-serif;
-}
-
-body.kh .language-wrapper select {
-    font-family: "Noto Sans Khmer", sans-serif;
-}
-
-body.kh .language-wrapper select option {
-    font-family: "Noto Sans Khmer", sans-serif;
-}
-
-body.kh .hero-content h1,
-body.kh .hero-content h2,
-body.kh .hero-content p,
-body.kh .about-section h2,
-body.kh .about-text h3,
-body.kh .about-text p,
-body.kh .trainer-name,
-body.kh .trainer-position,
-body.kh .contact-heading,
-body.kh .contact-description,
-body.kh .contact-label,
-body.kh .contact-value,
-body.kh footer p,
-body.kh footer h3,
-body.kh footer ul li a,
-body.kh footer form input::placeholder {
-    font-family: "Noto Sans Khmer", sans-serif;
-}

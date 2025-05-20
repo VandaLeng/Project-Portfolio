@@ -1,6 +1,3 @@
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
-
 // Skills data with logo URLs
 const skills = [{
     id: "HTML",
@@ -45,13 +42,6 @@ const skills = [{
     category: "backend",
     level: 65
 }, {
-    id: "React",
-    name: "React",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    color: "#61DAFB",
-    category: "frontend",
-    level: 72
-}, {
     id: "Vue",
     name: "Vue.js",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
@@ -72,6 +62,20 @@ const skills = [{
     color: "#563D7C",
     category: "frontend",
     level: 78
+}, {
+    id: "VSCode",
+    name: "VS Code",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    color: "#007ACC",
+    category: "frontend",
+    level: 85
+}, {
+    id: "GitHub",
+    name: "GitHub",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    color: "#181717",
+    category: "frontend",
+    level: 75
 }];
 
 // Skill info data
@@ -101,10 +105,6 @@ const skillInfo = {
         description: "Node.js is a runtime environment that allows you to run JavaScript on the server side.",
         level: 65
     },
-    React: {
-        description: "React is a JavaScript library for building user interfaces, particularly single-page applications.",
-        level: 72
-    },
     Vue: {
         description: "Vue.js is a progressive JavaScript framework for building user interfaces.",
         level: 60
@@ -116,6 +116,14 @@ const skillInfo = {
     Bootstrap: {
         description: "Bootstrap is a popular CSS framework for building responsive and mobile-first websites.",
         level: 78
+    },
+    VSCode: {
+        description: "Visual Studio Code is a lightweight but powerful source code editor with support for many programming languages.",
+        level: 85
+    },
+    GitHub: {
+        description: "GitHub is a platform and cloud-based service for software development and version control using Git.",
+        level: 75
     }
 };
 
@@ -127,7 +135,7 @@ const frontendSkillsList = document.getElementById('frontendSkills');
 const backendSkillsList = document.getElementById('backendSkills');
 const databaseSkillsList = document.getElementById('databaseSkills');
 
-// Function to create language logos outside the circle
+// Function to create language logos around the circle
 function createLanguageLogos() {
     if (!skillsCircleContainer) return;
 
@@ -236,10 +244,28 @@ function createSkillListHTML(skills) {
         <li>
             <span>${skill.name}</span>
             <div class="mini-bar">
-                <div class="mini-progress" style="width: ${skill.level}%"></div>
+                <div class="mini-progress" style="width: 0%"></div>
             </div>
         </li>
     `).join('');
+}
+
+// Function to animate skill progress bars
+function animateSkillBars() {
+    // Animate mini progress bars
+    const miniProgressBars = document.querySelectorAll('.mini-progress');
+    miniProgressBars.forEach((bar, index) => {
+        const skill = skills[index % skills.length]; // In case there are more bars than skills
+        gsap.to(bar, {
+            width: `${skill.level}%`,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: bar,
+                start: "top 90%"
+            }
+        });
+    });
 }
 
 // Function to handle responsive adjustments for the skills circle
@@ -278,6 +304,11 @@ document.addEventListener('DOMContentLoaded', () => {
     createLanguageLogos();
     populateSkillCategories();
 
+    // Set initial skill info
+    if (skillInfoElement && skills.length > 0) {
+        showSkillInfo(skills[3].id); // Show PHP by default (index 3)
+    }
+
     // Animate the skills circle
     if (skillsCircle) {
         gsap.from('.skills-circle', {
@@ -302,73 +333,50 @@ document.addEventListener('DOMContentLoaded', () => {
         delay: 0.5
     });
 
-    // Animate the learned section
-    gsap.from('.learned-section', {
-        opacity: 0,
-        x: -50,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: '.learned-section',
-            start: "top 80%"
-        }
-    });
-
-    // Animate section titles
-    gsap.from('.section-title', {
-        y: -30,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: '.section-title',
-            start: "top 80%"
-        }
-    });
-
-    // Animate skill categories
-    gsap.from('.category', {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: '.skill-categories',
-            start: "top 80%"
-        }
-    });
-
-    // Animate soft skill cards
-    gsap.from('.soft-skill-card', {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: '.soft-skills-grid',
-            start: "top 80%"
-        }
-    });
-
-    // Animate education cards
-    gsap.from('.education-card', {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: '.education-grid',
-            start: "top 80%"
-        }
-    });
+    // Animate skill bars
+    animateSkillBars();
 
     // Handle window resize for responsive adjustments
     window.addEventListener('resize', handleResponsiveCircle);
 
     // Initial call to position elements correctly
     handleResponsiveCircle();
+
+    // Add hover effects to education cards
+    const educationCards = document.querySelectorAll('.education-card');
+    educationCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            gsap.to(card, {
+                y: -10,
+                boxShadow: '0 15px 30px rgba(0, 255, 255, 0.3)',
+                duration: 0.3
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, {
+                y: 0,
+                boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
+                duration: 0.3
+            });
+        });
+    });
+
+    // Add hover effects to soft skill cards
+    const softSkillCards = document.querySelectorAll('.soft-skill-card');
+    softSkillCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            gsap.to(card.querySelector('.soft-skill-icon'), {
+                scale: 1.2,
+                duration: 0.3
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card.querySelector('.soft-skill-icon'), {
+                scale: 1,
+                duration: 0.3
+            });
+        });
+    });
 });
