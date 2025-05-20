@@ -36,6 +36,14 @@ const translations = {
         "about-email-label": "Email:",
         "about-address-label": "Address:",
         "about-address": "Phnom Penh, Cambodia",
+        "skillset-title": "SKILLSET",
+        "skillset-subtitle": "Create and Professional Skills Experience on Few Area",
+        "skillset-description": "My name is Vanda Leng. Currently, I am a student who studied at <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>. Moreover, I study with the information technology department that focus on Web development. For my passionate is coding and learning.",
+        "btn-get-project": "Get Any Project",
+        "skill-product-design": "Product Design & Development",
+        "skill-web-dev": "Web Development",
+        "skill-front-end": "Front-End Development",
+        "skill-ui-ux": "UI Design & UX Development",
         "trainer-title": "Trainer",
         "contact-title": "Contact Me",
         "contact-description": "Get in touch with me anytime! You can use the contact form, send me an email, or even give me a phone call if that's more convenient. I'm always happy to hear from you. Whether you have a question, a project idea, or just want to say hello, don't hesitate to reach out!",
@@ -44,14 +52,14 @@ const translations = {
         "contact-email-label": "Email:",
         "contact-email-value": "vanda.leng@student.passerellesnumeriques.org",
         "contact-phone-label": "Phone:",
-        "contact-phone-value": "+855 69-699-696",
+        "contact-phone-value": "+855 10-591-065",
+        "footer-logo": "VL",
         "footer-description": "Follow my Facebook channel named Vanda_Leng to see more of such projects and other posts. Also Like and share these posts. Also follow me on GitHub and LinkedIn. I hope you will like my content.",
         "footer-quick-links": "Quick Links",
         "footer-services": "Services",
         "footer-newsletter": "Newsletter",
         "footer-newsletter-placeholder": "Enter your email",
         "footer-copyright": "©2025 | Made with Vanda Dev by Vanda Dev. All Rights Reserved.",
-
         // Experience page translations
         "experience-title": "My Projects",
         "experience-subtitle": "Experience Details",
@@ -62,7 +70,6 @@ const translations = {
         "view-web": "View Web",
         "team-members": "Team Members",
         "languages-tools": "Languages & Tools",
-
         // Project 1
         "project1-title": "PROJECT LIBRARY (static website interface)",
         "project1-description": "Library Project (Static Website Interface), I worked from 21st September 2024 to 4th November 2024. My team and I developed a static website for the library CSA. We structured sections according to each user's needs and implemented a clean, modern design. We used HTML, CSS, and JavaScript to create a website that is made responsive for different devices. I was responsible for managing tasks and assigning features using GitHub. Throughout the project, I collaborated closely with the customer (a teacher) and a coach to ensure the website met all requirements.",
@@ -76,7 +83,6 @@ const translations = {
         "member4-name": "Name: Vanda Leng",
         "member5-role": "Role: QA Tester",
         "member5-name": "Name: Dara Meng",
-
         // Project 2
         "project2-title": "Project Python (Email Automation System)",
         "project2-description": "An automated email system built with Python that schedules and sends personalized emails to clients. The system includes an analytics dashboard for tracking email performance and a template management feature for creating and storing email templates. We implemented secure authentication and authorization to protect sensitive data. The project was completed in collaboration with a team of developers and designers.",
@@ -88,7 +94,6 @@ const translations = {
         "member8-name": "Name: Sopheap Meas",
         "member9-role": "Role: Frontend Developer",
         "member9-name": "Name: Vanda Leng",
-
         // Project 3
         "project3-title": "Project Note Taker (Note Taker App)",
         "project3-description": "A feature-rich note-taking application with cloud sync, reminders, and categorization. Available on both Android and iOS platforms with a clean, minimalist design. The app allows users to create, edit, and organize notes with rich text formatting, attach images, and set reminders. We implemented real-time synchronization across devices and offline functionality for a seamless user experience.",
@@ -102,7 +107,6 @@ const translations = {
         "member13-name": "Name: Vanda Leng",
         "member14-role": "Role: Product Manager",
         "member14-name": "Name: Sokha Mey",
-
         // Project 4
         "project4-title": "Virtual Company One (VC1) Management System Project",
         "project4-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate the employee's team-related projects. The system allowed employees to submit, approve, or reject corporate events.\n\nWe developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development. We supported our task tracking and communication through the entire development process.\n\nOur team was thorough throughout the entire process, to track and make sure the system worked as intended. We conducted extensive user testing and gathered feedback. This project taught us both technical and communication skills and gave us experience in delivering a functional product that met our client needs.",
@@ -154,6 +158,14 @@ const translations = {
         "about-email-label": "អ៊ីមែល:",
         "about-address-label": "អាសយដ្ឋាន:",
         "about-address": "ភ្នំពេញ, កម្ពុជា",
+        "skillset-title": "ជំនាញ",
+        "skillset-subtitle": "បង្កើត និងបទពិសោធន៍ជំនាញវិជ្ជាជីវៈនៅលើផ្នែកមួយចំនួន",
+        "skillset-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង។ បច្ចុប្បន្ន ខ្ញុំជានិស្សិតដែលកំពុងសិក្សានៅ <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>។ លើសពីនេះ ខ្ញុំសិក្សានៅផ្នែកបច្ចេកវិទ្យាព័ត៌មានដែលផ្តោតលើការអភិវឌ្ឍន៍វែប។ ចំណង់ចំណូលចិត្តរបស់ខ្ញុំគឺការសរសេរកូដ និងការរៀនសូត្រ។",
+        "btn-get-project": "ទទួលបានគម្រោងណាមួយ",
+        "skill-product-design": "ការរចនា និងអភិវឌ្ឍន៍ផលិតផល",
+        "skill-web-dev": "ការអភិវឌ្ឍន៍វែប",
+        "skill-front-end": "ការអភិវឌ្ឍន៍ផ្នែកខាងមុខ",
+        "skill-ui-ux": "ការរចនា UI និងការអភិវឌ្ឍន៍ UX",
         "trainer-title": "គ្រូបង្វឹក",
         "contact-title": "ទំនាក់ទំនងមកខ្ញុំ",
         "contact-description": "ទាក់ទងមកខ្ញុំបានគ្រប់ពេល! អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែលមកខ្ញុំ ឬហៅទូរស័ព្ទប្រសិនបើវាកាន់តែងាយស្រួល។ ខ្ញុំតែងតែរីករាយក្នុងការទទួលស្តាប់ពីអ្នក។ មិនថាអ្នកមានសំណួរ គំនិតគម្រោង ឬគ្រាន់តែចង់ជំរាបសួរ កុំស្ទាក់ស្ទើកក្នុងការទាក់ទង!",
@@ -162,14 +174,14 @@ const translations = {
         "contact-email-label": "អ៊ីមែល:",
         "contact-email-value": "vanda.leng@student.passerellesnumeriques.org",
         "contact-phone-label": "ទូរស័ព្ទ:",
-        "contact-phone-value": "+៨៥៥ ៦៩-៦៩៩-៦៩៦",
+        "contact-phone-value": "+៨៥៥ ១០-៥៩១-០៦៥",
+        "footer-logo": "VL",
         "footer-description": "តាមដានឆានែល Facebook របស់ខ្ញុំឈ្មោះ Vanda_Leng ដើម្បីមើលគម្រោងបែបនេះបន្ថែមទៀត និងការបង្ហោះផ្សេងៗ។ សូមចូលចិត្ត និងចែករំលែកការបង្ហោះទាំងនេះ។ ក៏សូមតាមដានខ្ញុំនៅលើ GitHub និង LinkedIn ផងដែរ។ ខ្ញុំសង្ឃឹមថាអ្នកនឹងចូលចិត្តមាតិការបស់ខ្ញុំ។",
         "footer-quick-links": "តំណភ្ជាប់រហ័ស",
         "footer-services": "សេវាកម្ម",
         "footer-newsletter": "ព្រឹត្តិបត្រ",
         "footer-newsletter-placeholder": "បញ្ចូលអ៊ីមែលរបស់អ្នក",
         "footer-copyright": "©២០២៥ | បង្កើតដោយ Vanda Dev ដោយ Vanda Dev។ រក្សាសិទ្ធិទាំងអស់។",
-
         // Experience page translations
         "experience-title": "គម្រោងរបស់ខ្ញុំ",
         "experience-subtitle": "ព័ត៌មានលម្អិតអំពីបទពិសោធន៍",
@@ -180,7 +192,6 @@ const translations = {
         "view-web": "មើលវែបសាយ",
         "team-members": "សមាជិកក្រុម",
         "languages-tools": "ភាសា និងឧបករណ៍",
-
         // Project 1
         "project1-title": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ)",
         "project1-description": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ) ខ្ញុំបានធ្វើការចាប់ពីថ្ងៃទី ២១ ខែកញ្ញា ឆ្នាំ ២០២៤ ដល់ថ្ងៃទី ៤ ខែវិច្ឆិកា ឆ្នាំ ២០២៤។ ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានអភិវឌ្ឍគេហទំព័រស្ថិតិសម្រាប់បណ្ណាល័យ CSA។ យើងបានរៀបចំផ្នែកតាមតម្រូវការរបស់អ្នកប្រើប្រាស់នីមួយៗ និងបានអនុវត្តការរចនាដែលស្អាតនិងទំនើប។ យើងបានប្រើ HTML, CSS និង JavaScript ដើម្បីបង្កើតគេហទំព័រដែលមានការឆ្លើយតបសម្រាប់ឧបករណ៍ផ្សេងៗ។ ខ្ញុំទទួលខុសត្រូវក្នុងការគ្រប់គ្រងភារកិច្ចនិងចាត់តាំងមុខងារដោយប្រើ GitHub។ ពេញមួយគម្រោង ខ្ញុំបានសហការយ៉ាងជិតស្និទ្ធជាមួយអតិថិជន (គ្រូបង្រៀន) និងគ្រូបង្វឹកដើម្បីធានាថាគេហទំព័របំពេញតាមតម្រូវការទាំងអស់។",
@@ -194,7 +205,6 @@ const translations = {
         "member4-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         "member5-role": "តួនាទី៖ អ្នកធ្វើតេស្តគុណភាព",
         "member5-name": "ឈ្មោះ៖ ដារ៉ា ម៉េង",
-
         // Project 2
         "project2-title": "គម្រោង Python (ប្រព័ន្ធស្វ័យប្រវត្តិកម្មអ៊ីមែល)",
         "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន។ ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
@@ -206,7 +216,6 @@ const translations = {
         "member8-name": "ឈ្មោះ៖ សុភាព ម៉ាស",
         "member9-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ផ្នែកខាងមុខ",
         "member9-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
-
         // Project 3
         "project3-title": "គម្រោងកត់ត្រា (កម្មវិធីកត់ត្រា)",
         "project3-description": "កម្មវិធីកត់ត្រាដែលមានមុខងារសម្បូរបែបជាមួយនឹងការធ្វើសមកាលកម្មពពក ការរំលឹក និងការចាត់ចំណាត់ថ្នាក់។ មាននៅលើទាំងប្រព័ន្ធប្រតិបត្តិការ Android និង iOS ជាមួយនឹងការរចនាសាមញ្ញនិងស្អាត។ កម្មវិធីនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត កែសម្រួល និងរៀបចំកំណត់ត្រាជាមួយនឹងការសម្រួលអត្ថបទសម្បូរបែប ភ្ជាប់រូបភាព និងកំណត់ការរំលឹក។ យើងបានអនុវត្តការធ្វើសមកាលកម្មពេលពិតរវាងឧបករណ៍និងមុខងារក្រៅបណ្តាញសម្រាប់បទពិសោធន៍អ្នកប្រើប្រាស់ដែលរលូន។",
@@ -220,10 +229,9 @@ const translations = {
         "member13-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         "member14-role": "តួនាទី៖ អ្នកគ្រប់គ្រងផលិតផល",
         "member14-name": "ឈ្មោះ៖ សុខា ម៉ី",
-
         // Project 4
         "project4-title": "កម្មវិធីសន្និសីទនិម្មិត (VC) គម្រោងប្រព័ន្ធគ្រប់គ្រង",
-        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងមាតិកាសម្រាប់ក្រុមហ៊ុននិម្មិតមួយ (VC1) ដើម្បីធ្វើឱ្យប្រតិបត្តិការប្រចាំថ្ងៃរបស់ក្រុមហ៊ុនកាន់តែមានប្រសិទ្ធភាព និងស្វ័យប្រវត្តិកម្ម។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកបង្កើតនិងគ្រប់គ្រងមាតិកា តាមដានវឌ្ឍនភាពគម្រោង និងសហការប្រកបដោយប្រសិទ្ធភាព។ យើងបានអនុវត្តការរចនាដែលឆ្លើយតបដែលដំណើរការលើទាំងកុំព្យូទ័រនិងឧបករណ៍ចល័ត។\n\nកម្មវិធីនេះត្រូវបានបង្កើតឡើងដោយប្រើរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាតនិងងាយស្រួលប្រើ។ ផ្នែកខាងក្រោយត្រូវបានបង្កើតឡើងដោយប្រើ PHP និង Node.js សម្រាប់ដោះស្រាយតក្កវិជ្ជាផ្នែកម៉ាស៊ីនមេនិងចំណុចចុងបញ្ចប់ API។\n\nពេញមួយគម្រោង ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានធ្វើការយ៉ាងជិតស្និទ្ធជាមួយភាគីពាក់ព័ន្ធដើម្បីប្រមូលតម្រូវការនិងធ្វើការកែលម្អលើមុខងារ។ យើងបានប្រើវិធីសាស្ត្រ agile ជាមួយនឹងការបោះជំហានរយៈពេលពីរសប្តាហ៍ដើម្បីផ្តល់ការធ្វើបច្ចុប្បន្នភាពបន្តបន្ទាប់និងប្រមូលមតិត្រឡប់។ គម្រោងនេះរួមបញ្ចូលប្រព័ន្ធផ្ទៀងផ្ទាត់អត្តសញ្ញាណអ្នកប្រើប្រាស់ ផ្ទាំងគ្រប់គ្រង ប្រព័ន្ធគ្រប់គ្រងមាតិកា និងឧបករណ៍តាមដានគម្រោង។",
+        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងមាតិកាសម្រាប់ក្រុមហ៊ុននិម្មិតមួយ (VC1) ដើម្បីធ្វើឱ្យប្រតិបត្តិការប្រចាំថ្ងៃរបស់ក្រុមហ៊ុនកាន់តែមានប្រសិទ្ធភាព និងស្វ័យប្រវត្តិកម្ម។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកបង្កើតនិងគ្រប់គ្រងមាតិកា តាមដានវឌ្ឍនភាពគម្រោង និងសហការប្រកបដោយប្រសិទ្ធភាព។ យើងបានអនុវត្តការរចនាដែលឆ្លើយតបដែលដំណើរការលើទាំងកុំព្យូទ័រនិងឧបករណ៍ចល័ត�。\n\nកម្មវិធីនេះត្រូវបានបង្កើតឡើងដោយប្រើរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាតនិងងាយស្រួលប្រើ។ ផ្នែកខាងក្រោយត្រូវបានបង្កើតឡើងដោយប្រើ PHP និង Node.js សម្រាប់ដោះស្រាយតក្កវិជ្ជាផ្នែកម៉ាស៊ីនមេនិងចំណុចចុងបញ្ចប់ API�。\n\nពេញមួយគម្រោង ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានធ្វើការយ៉ាងជិតស្និទ្ធជាមួយភាគីពាក់ព័ន្ធដើម្បីប្រមូលតម្រូវការនិងធ្វើការកែលម្អលើមុខងារ។ យើងបានប្រើវិធីសាស្ត្រ agile ជាមួយនឹងការបោះជំហានរយៈពេលពីរសប្តាហ៍ដើម្បីផ្តល់ការធ្វើបច្ចុប្បន្នភាពបន្តបន្ទាប់និងប្រមូលមតិត្រឡប់។ គម្រោងនេះរួមបញ្ចូលប្រព័ន្ធផ្ទៀងផ្ទាត់អត្តសញ្ញាណអ្នកប្រើប្រាស់ ផ្ទាំងគ្រប់គ្រង ប្រព័ន្ធគ្រប់គ្រងមាតិកា និងឧបករណ៍តាមដានគម្រោង។",
         "member15-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
         "member15-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
         "member16-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍ពេញលេញ",
@@ -254,10 +262,12 @@ function updateLanguage(lang) {
             const key = element.getAttribute("data-lang");
             if (translations[lang] && translations[lang][key]) {
                 // Handle HTML content for specific keys
-                if (key === "hero-subtitle" || key.includes("skill-")) {
+                if (key === "hero-subtitle" || key === "skillset-description") {
                     element.innerHTML = translations[lang][key];
                 } else if (key === "footer-newsletter-placeholder") {
                     element.placeholder = translations[lang][key];
+                } else if (element.classList.contains("skill-label")) {
+                    element.innerHTML = `<span>${translations[lang][key]}</span><span>${element.querySelector('span:last-child').textContent}</span>`;
                 } else {
                     element.textContent = translations[lang][key];
                 }
@@ -318,3 +328,5 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error initializing language:", error);
     }
 });
+
+AOS.init();

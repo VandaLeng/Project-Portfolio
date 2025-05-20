@@ -6,6 +6,7 @@
     --secondary-color: #02e4fd;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
+    /* Will override in light theme for better contrast */
     /* Additional Colors */
     --background-dark: #1a1a1a;
     --accent-cyan: #16caf2;
@@ -354,7 +355,6 @@
     padding: 15px;
     margin-top: 10px;
     min-height: 220px;
-    /* Adjusted for consistency */
 }
 
 .team-members-slider {
@@ -376,7 +376,7 @@
 }
 
 .team-member.active {
-    transform [type here]transform: scale(1);
+    transform: scale(1);
     opacity: 1;
     box-shadow: 0 0 20px rgba(0, 209, 255, 0.7);
 }
@@ -461,7 +461,6 @@
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 1;
-    /* Ensure visibility */
 }
 
 .carousel-btn:hover {
@@ -796,7 +795,6 @@
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 1;
-    /* Ensure visibility */
 }
 
 .special-carousel-btn:hover {
@@ -958,6 +956,102 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+/* Theme Toggle Improvements */
+
+.theme-toggle {
+    position: relative;
+    margin-left: 15px;
+}
+
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.theme-toggle label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .theme-toggle label {
+    background: rgba(0, 209, 255, 0.1);
+}
+
+body.light-theme .theme-toggle label {
+    background: rgba(255, 204, 0, 0.1);
+}
+
+.theme-toggle label::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    top: 4px;
+}
+
+body.dark-theme .theme-toggle label::after {
+    background-color: #00d1ff;
+    left: 4px;
+}
+
+body.light-theme .theme-toggle label::after {
+    background-color: #ffcc00;
+    left: 34px;
+}
+
+.theme-toggle .fa-sun,
+.theme-toggle .fa-moon {
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+body.dark-theme .theme-toggle .fa-moon {
+    color: #1a1a1a;
+    opacity: 1;
+}
+
+body.dark-theme .theme-toggle .fa-sun {
+    color: #ccc;
+    opacity: 0.5;
+}
+
+body.light-theme .theme-toggle .fa-moon {
+    color: #999;
+    /* Adjusted for better visibility */
+    opacity: 1;
+}
+
+body.light-theme .theme-toggle .fa-sun {
+    color: #1a1a1a;
+    opacity: 1;
+}
+
+.theme-toggle label:hover {
+    transform: scale(1.05);
+}
+
+body.dark-theme .theme-toggle label:hover {
+    box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
+}
+
+body.light-theme .theme-toggle label:hover {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
 }
 
 
@@ -1196,5 +1290,58 @@
     .team-member img {
         width: 40px;
         height: 70px;
+    }
+}
+
+
+/* Mobile Menu */
+
+@media (max-width: 768px) {
+    body.light-theme.show-mobile-menu .nav-menu {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    body.dark-theme.show-mobile-menu .nav-menu {
+        background: rgba(26, 26, 26, 0.95);
+        box-shadow: 0 5px 15px rgba(0, 209, 255, 0.2);
+    }
+    .theme-toggle label {
+        width: 50px;
+        height: 26px;
+    }
+    body.dark-theme .theme-toggle label::after {
+        width: 18px;
+        height: 18px;
+    }
+    body.light-theme .theme-toggle label::after {
+        left: 28px;
+        width: 18px;
+        height: 18px;
+    }
+    .theme-toggle .fa-sun,
+    .theme-toggle .fa-moon {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 391px) {
+    .theme-toggle label {
+        width: 45px;
+        height: 24px;
+    }
+    body.dark-theme .theme-toggle label::after {
+        width: 16px;
+        height: 16px;
+        top: 4px;
+    }
+    body.light-theme .theme-toggle label::after {
+        left: 25px;
+        width: 16px;
+        height: 16px;
+        top: 4px;
+    }
+    .theme-toggle .fa-sun,
+    .theme-toggle .fa-moon {
+        font-size: 12px;
     }
 }
