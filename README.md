@@ -1,4 +1,4 @@
-# 📁 Vanda's Portfolio Website
+# 👨‍💼 Vanda's Portfolio Website
 
 This is my personal portfolio website built to showcase my projects, skills, and experience as a web developer. The site is responsive, clean, and easy to deploy locally or on a live server.
 
