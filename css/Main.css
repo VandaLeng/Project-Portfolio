@@ -573,11 +573,6 @@ header:hover {
     background: var(--accent-cyan);
 }
 
-.hire-btn:hover {
-    color: var(--dark-color);
-    background: var(--accent-cyan);
-}
-
 .social-icons {
     display: flex;
     gap: 25px;
