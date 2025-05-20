@@ -6,7 +6,6 @@
     --secondary-color: #02e4fd;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
-    /* Will override in light theme for better contrast */
     /* Additional Colors */
     --background-dark: #1a1a1a;
     --accent-cyan: #16caf2;
@@ -56,7 +55,6 @@
 /* Container */
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -120,11 +118,13 @@
 
 .main-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 150px;
     margin-bottom: 120px;
+    position: relative;
+    top: 130px;
+    right: 250px;
 }
 
 
@@ -327,8 +327,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 100px;
-    margin-top: 60px;
     margin-bottom: 100px;
+    margin: auto;
+    margin-top: 100px;
 }
 
 .category {
@@ -631,17 +632,23 @@
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
-        gap: 60px;
+        gap: 40px;
+        top: 0;
+        right: 0;
+        padding: 0 10px;
     }
     .skills-circle-container {
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
     .skill-categories {
         flex-direction: column;
+        gap: 50px;
     }
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .soft-skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -652,10 +659,11 @@
         height: 50px;
     }
     .skill-info {
-        width: 200px;
+        width: 180px;
+        padding: 15px;
     }
     .skill-info h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .skill-info p {
         font-size: 0.8rem;
@@ -668,6 +676,13 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    .learned-section {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .student-img {
+        height: 200px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -675,76 +690,106 @@
         grid-template-columns: 1fr;
     }
     .skills-circle-container {
-        width: 300px;
-        height: 300px;
-    }
-    .lang-logo {
-        width: 45px;
-        height: 45px;
-    }
-    .section-title {
-        font-size: 1.6rem;
-        position: relative;
-        left: 1px;
-        width: 60%;
-        margin: auto;
-    }
-    .learned-section {
-        padding: 15px;
-    }
-    .text-content h2 {
-        font-size: 1.5rem;
-    }
-    .student-img {
-        height: 200px;
-    }
-    .education-card {
-        padding: 15px;
-    }
-    .education-degree {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 391px) {
-    .skills-circle-container {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
     .lang-logo {
         width: 40px;
         height: 40px;
     }
-    .skill-info {
-        width: 180px;
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .learned-section {
         padding: 15px;
     }
+    .text-content h2 {
+        font-size: 1.4rem;
+    }
+    .student-img {
+        height: 180px;
+    }
+    .education-card {
+        padding: 15px;
+    }
+    .education-degree {
+        font-size: 1.1rem;
+    }
+    .main-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 391px) {
+    .skills-circle-container {
+        width: 220px;
+        height: 220px;
+        margin-top: 100px;
+    }
+    .lang-logo {
+        width: 35px;
+        height: 35px;
+    }
+    .skill-info {
+        width: 150px;
+        padding: 10px;
+        height: 120px;
+    }
     .skill-info h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 5px;
     }
     .skill-info p {
-        font-size: 0.75rem;
-        margin-bottom: 10px;
+        font-size: 0.5rem;
+        margin-bottom: 8px;
+    }
+    .progress-bar {
+        display: none;
+    }
+    .progress-text {
+        display: none;
     }
     .section-title {
+        margin-top: 40px;
         font-size: 1.6rem;
         margin-bottom: 40px;
     }
     .category h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .soft-skill-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .education-degree {
-        font-size: 1.2rem;
-    }
-    .education-school {
         font-size: 1rem;
     }
+    .education-school {
+        font-size: 0.9rem;
+    }
     .container {
-        padding: 30px 15px;
+        padding: 20px 10px;
+    }
+    .main-content {
+        gap: 20px;
+    }
+    .learned-section {
+        padding: 10px;
+    }
+    .text-content h2 {
+        font-size: 1.2rem;
+    }
+    .student-img {
+        height: 150px;
+    }
+    .soft-skills-grid {
+        gap: 15px;
+    }
+    .education-card {
+        padding: 10px;
     }
 }
 
@@ -982,6 +1027,14 @@ body.kh .education-description {
     animation: scaleIn 0.8s ease forwards;
 }
 
+.bounce-in {
+    animation: bounceIn 1s ease forwards;
+}
+
+.rotate-in {
+    animation: rotateIn 1s ease forwards;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1032,6 +1085,31 @@ body.kh .education-description {
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-20deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
     }
 }
 
