@@ -1,5 +1,4 @@
 // Skills data with logo URLs
-
 const skills = [{
     id: "HTML",
     name: "HTML",
@@ -135,6 +134,72 @@ const skillInfoElement = document.getElementById('skillInfo');
 const frontendSkillsList = document.getElementById('frontendSkills');
 const backendSkillsList = document.getElementById('backendSkills');
 const databaseSkillsList = document.getElementById('databaseSkills');
+
+// Function to create animated background
+function createAnimatedBackground() {
+    const animatedBg = document.createElement("div");
+    animatedBg.id = "animated-bg";
+    animatedBg.style.position = "fixed";
+    animatedBg.style.top = "0";
+    animatedBg.style.left = "0";
+    animatedBg.style.width = "100%";
+    animatedBg.style.height = "100%";
+    animatedBg.style.zIndex = "-1";
+    document.body.appendChild(animatedBg);
+
+    // Create particles
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement("div");
+        particle.className = "bg-particle";
+
+        // Random position
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+
+        // Random size
+        const size = Math.random() * 5 + 2;
+
+        // Style the particle
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}px`;
+        particle.style.top = `${posY}px`;
+        particle.style.background = "rgba(0, 209, 255, 0.5)";
+        particle.style.borderRadius = "50%";
+        particle.style.position = "absolute";
+        particle.style.boxShadow = "0 0 10px rgba(0, 209, 255, 0.8)";
+
+        // Add animation with random duration
+        const duration = Math.random() * 20 + 10;
+        particle.style.animation = `floatParticle ${duration}s infinite linear`;
+
+        // Add to background
+        animatedBg.appendChild(particle);
+    }
+
+    // Add CSS animation
+    const style = document.createElement("style");
+    style.textContent = `
+        @keyframes floatParticle {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100px, 50px);
+            }
+            50% {
+                transform: translate(50px, 100px);
+            }
+            75% {
+                transform: translate(-50px, 50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+}
 
 // Function to create language logos around the circle
 function createLanguageLogos() {
@@ -302,6 +367,7 @@ function handleResponsiveCircle() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    createAnimatedBackground();
     createLanguageLogos();
     populateSkillCategories();
 
