@@ -52,7 +52,7 @@ const translations = {
         "skillset-description": "My name is Vanda Leng. Currently, I am a student who studied at <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>. Moreover, I study with the information technology department that focus on Web development. For my passionate is coding and learning.",
         // Hard Skills
         "learned-title": "What I Have Learned?",
-        "learned-description": "At Passerelles Numériques Cambodia (PNC), I have developed a strong foundation in web development, mastering technologies like HTML, CSS, JavaScript, PHP, MySQL, Node.js, Laravel, Vue.js, and React. I have also gained proficiency in tools like Git, VS Code, and Jira, and improved my English communication skills. My training has equipped me with the technical expertise and problem-solving abilities needed to build dynamic, user-friendly applications and contribute effectively to team projects.",
+        "learned-description": "At Passerelles Numériques Cambodia (PNC), I have developed a strong foundation in web development, mastering technologies like HTML, CSS, JavaScript, PHP, MySQL, Node.js, Laravel,and Vue.js. I have also gained proficiency in tools like Git, VS Code, and Jira, and improved my English communication skills. My training has equipped me with the technical expertise and problem-solving abilities needed to build dynamic, user-friendly applications and contribute effectively to team projects.",
         "skill-front-end": "Frontend",
         "skill-html": "HTML",
         "skill-css": "CSS",
@@ -120,7 +120,7 @@ const translations = {
         "footer-services": "Services",
         "footer-newsletter": "Newsletter",
         "footer-newsletter-placeholder": "Enter your email",
-        "footer-copyright": "©2025 | Made with Vanda Dev by Vanda Dev. All Rights Reserved.",
+        "footer-copyright": "©2025 | Made with Vanda Dev . All Rights Reserved.",
         // Experience Page
         "experience-title": "My Projects",
         "experience-subtitle": "Experience Details",
