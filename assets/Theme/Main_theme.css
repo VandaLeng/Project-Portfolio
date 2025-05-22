@@ -397,6 +397,10 @@ body.light-theme footer form button:hover {
     color: #ffffff;
 }
 
+body.light-theme .subtitle {
+    color: #1a1a1a;
+}
+
 
 /* Dark Theme Styles */
 
