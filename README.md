@@ -1,104 +1,118 @@
 # 👨‍💼 Vanda's Portfolio Website
 
-This is my personal portfolio website built to showcase my projects, skills, and experience as a web developer. The site is responsive, clean, and easy to deploy locally or on a live server.
+Welcome to my **personal portfolio website**!  
+This website shows my **projects, skills, and experience** as a web developer.  
+It's **fully responsive**, clean, and easy to run on any device or server.
 
 ---
+## 🧰 Languages & Technologies Used
+
+🖋️ LANGUAGES
+───────────────
+🔸 HTML5
+🔸 CSS3 (Flexbox, Grid)
+🔸 JavaScript (Vanilla JS)
+🔸 (Optional) Tailwind CSS / Bootstrap
 
 ## 📁 Project Structure
 
-- 📄 index.html  
-- 📂 page  
-  - 📄 about-me.html  
-  - 📄 experience.html  
-  - 📄 contact-me.html  
-- 📂 assets  
-  - 📂 images  
-  - 📂 css  
-    - 📄 main.css  
-    - 📄 about-me.css  
-    - 📄 experience.css  
-    - 📄 contact-me.css  
-  - 📂 theme  
-    - 📄 themecss.css  
-- 📂 js  
-  - 📄 main.js  
-  - 📄 about-me.js  
-  - 📄 experience.js  
-  - 📄 contact-me.js  
-  - 📄 languages.js  
+📦 portfolio-website/
+├── 📄 index.html
+├── 📂 page/
+│ ├── 📄 about-me.html
+│ ├── 📄 experience.html
+│ └── 📄 contact-me.html
+├── 📂 assets/
+│ ├── 📂 images/
+│ ├── 📂 css/
+│ │ ├── 📄 main.css
+│ │ ├── 📄 about-me.css
+│ │ ├── 📄 experience.css
+│ │ └── 📄 contact-me.css
+│ └── 📂 theme/
+│ └── 📄 themecss.css
+├── 📂 js/
+│ ├── 📄 main.js
+│ ├── 📄 about-me.js
+│ ├── 📄 experience.js
+│ ├── 📄 contact-me.js
+│ └── 📄 languages.js
+
+
+---
 
 ## ✨ Features
 
-- Clean and modern design
-- Responsive layout for desktop and mobile devices
-- Project showcase section
-- Contact form for easy communication
-- Downloadable CV (optional)
-- Smooth animations for better user experience
-- Hard skills and soft skills sections
+- 🎨 **Modern and clean design**
+- 📱 **Responsive** layout (desktop & mobile)
+- 💼 Projects showcase
+- 📬 Contact form
+- 📄 Optional downloadable CV
+- 🎞️ Smooth animations
+- 🧠 Hard and soft skills sections
 
 ---
 
 ## 💻 Built With
 
-- HTML5
-- CSS3 (Flexbox and Grid)
-- JavaScript (Vanilla JS)
-- *(Optional)* Bootstrap / Tailwind CSS — suggested for future projects
+- ⚙️ HTML5  
+- 🎨 CSS3 (Flexbox + Grid)  
+- 🧠 JavaScript (Vanilla JS)  
+- 💡 *(Future Option)* Bootstrap or Tailwind CSS  
 
 ---
 
 ## 🛠️ Tools Used
 
-I use various tools for development, project management, and design:
-
-- **Git** and **GitHub** for version control and repository hosting
-- **Jira** for task and project management
-- **Mindomo** for mind mapping and planning
-- **Figma** for UI/UX and interface design
-- **Flow** for workflow and process visualization
+- 🧰 **Git** + **GitHub** – version control  
+- 🗂️ **Jira** – task management  
+- 🧠 **Mindomo** – mind mapping  
+- 🎨 **Figma** – UI/UX design  
+- 🔁 **Flow** – workflow design  
 
 ---
 
-## ✅ Acceptance Criteria
+## ✅ Requirements
 
-### 📌 Pre-requisites
+Before you begin, make sure you have:
 
-Before setting up this project, make sure you have installed:
+- ✅ **Git** installed  
+- ✅ **VS Code** or any code editor  
+- ✅ *(Optional)* Live Server extension in VS Code  
 
-- **Git** (latest version)
-- **VS Code** or any preferred code editor
-- **Live Server extension** for VS Code (optional but recommended)
-
-No database or backend is required, as this is a static website.
+🗒️ No backend or database is needed. This is a static website.
 
 ---
 
-## 🛠️ Installation Steps
+## 🚀 Installation
 
-To set up this project locally:
-
-1. **Clone this repository:**
+Follow these steps to set it up locally:
 
 ```bash
 git clone https://github.com/yourusername/portfolio-website.git
 
-Open the project:
-Open index.html directly in your web browser
-Or use the Live Server extension in VS Code for live preview
+---
 
+🔓 Then open the project:
+Click index.html to open in your browser
+Or, right-click index.html → Open with Live Server (in VS Code)
+
+---
 ▶️ How to Run
 
 This is a static website so no special commands are needed.
 For live preview with VS Code Live Server:
 Right-click on index.html → Select Open with Live Server
 
+---
 📬 Contact Me
+Feel free to reach out or collaborate with me!
 
-Feel free to get in touch or collaborate!
-Email: vanda.leng@student.passerellesnumeriques.org / vandaleng21@gmail.com
-LinkedIn: linkedin.com/in/vanda-leng-5bb8b5344
-GitHub: (https://github.com/VandaLeng)
+📧 Email: vandaleng21@gmail.com / vanda.leng@student.passerellesnumeriques.org
+💼 LinkedIn: linkedin.com/in/vanda-leng-5bb8b5344
+🐙 GitHub: github.com/VandaLeng
+
+---
 
 ## 📄 License
 
