@@ -8,36 +8,35 @@ It's **fully responsive**, clean, and easy to run on any device or server.
 ## 🧰 Languages & Technologies Used
 
 🖋️ LANGUAGES
-───────────────
+
 🔸 HTML5
 🔸 CSS3 (Flexbox, Grid)
-🔸 JavaScript (Vanilla JS)
+🔸 JavaScript 
 🔸 (Optional) Tailwind CSS / Bootstrap
 
 ## 📁 Project Structure
 
 📦 portfolio-website/
-├── 📄 index.html
-├── 📂 page/
-│ ├── 📄 about-me.html
-│ ├── 📄 experience.html
-│ └── 📄 contact-me.html
-├── 📂 assets/
-│ ├── 📂 images/
-│ ├── 📂 css/
-│ │ ├── 📄 main.css
-│ │ ├── 📄 about-me.css
-│ │ ├── 📄 experience.css
-│ │ └── 📄 contact-me.css
-│ └── 📂 theme/
-│ └── 📄 themecss.css
-├── 📂 js/
-│ ├── 📄 main.js
-│ ├── 📄 about-me.js
-│ ├── 📄 experience.js
-│ ├── 📄 contact-me.js
-│ └── 📄 languages.js
-
+- 📄 index.html  
+- 📂 page  
+  - 📄 about-me.html  
+  - 📄 experience.html  
+  - 📄 contact-me.html  
+- 📂 assets  
+  - 📂 images  
+  - 📂 css  
+    - 📄 main.css  
+    - 📄 about-me.css  
+    - 📄 experience.css  
+    - 📄 contact-me.css  
+  - 📂 theme  
+    - 📄 themecss.css  
+- 📂 js  
+  - 📄 main.js  
+  - 📄 about-me.js  
+  - 📄 experience.js  
+  - 📄 contact-me.js  
+  - 📄 languages.js  
 
 ---
 
