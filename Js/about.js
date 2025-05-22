@@ -90,16 +90,16 @@ const skillInfo = {
     },
     JS: {
         description: "JavaScript is a versatile programming language used to create interactive effects within web browsers.",
-        level: 75
+        level: 63
     },
     PHP: {
         description: "PHP is a server-side language used to create dynamic websites and connect to databases.",
-        level: 67,
+        level: 60,
         subtitle: "MVC Structure"
     },
     MySQL: {
         description: "MySQL is an open-source relational database management system.",
-        level: 70
+        level: 65
     },
     Node: {
         description: "Node.js is a runtime environment that allows you to run JavaScript on the server side.",
