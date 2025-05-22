@@ -44,10 +44,19 @@
     padding: 120px 20px 60px;
     max-width: 1500px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.contact-section h1 {
+.contact-header {
+    position: relative;
+    top: 100px;
+    padding: 120px 20px 60px;
+    max-width: 2000px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(74, 74, 74, 0.1);
+}
+
+.contact-header h1 {
     font-size: 70px;
     margin-bottom: 10px;
     color: var(--secondary-color);
@@ -55,13 +64,13 @@
     animation: fadeInDown 1s ease-out;
 }
 
-.contact-section .subtitle {
+.contact-header .subtitle {
     font-size: var(--font-size-l);
     margin-bottom: 70px;
     color: var(--white-color);
     position: relative;
     display: inline-block;
-    width: 70%;
+    width: 60%;
     padding-bottom: 2px;
     animation: fadeIn 1.5s ease-out;
 }

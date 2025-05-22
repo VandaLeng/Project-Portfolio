@@ -52,7 +52,7 @@ const translations = {
         "skillset-description": "My name is Vanda Leng. Currently, I am a student who studied at <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>. Moreover, I study with the information technology department that focus on Web development. For my passionate is coding and learning.",
         // Hard Skills
         "learned-title": "What I Have Learned?",
-        "learned-description": "At Passerelles Numériques Cambodia (PNC), I have developed a strong foundation in web development, mastering technologies like HTML, CSS, JavaScript, PHP, MySQL, Node.js, Laravel,and Vue.js. I have also gained proficiency in tools like Git, VS Code, and Jira, and improved my English communication skills. My training has equipped me with the technical expertise and problem-solving abilities needed to build dynamic, user-friendly applications and contribute effectively to team projects.",
+        "learned-description": "At Passerelles Numériques Cambodia (PNC), I have developed a strong foundation in web development, mastering technologies like HTML, CSS, JavaScript, PHP, MySQL, Node.js, Laravel, and Vue.js. I have also gained proficiency in tools like Git, VS Code, and Jira, and improved my English communication skills. My training has equipped me with the technical expertise and problem-solving abilities needed to build dynamic, user-friendly applications and contribute effectively to team projects.",
         "skill-front-end": "Frontend",
         "skill-html": "HTML",
         "skill-css": "CSS",
@@ -67,7 +67,6 @@ const translations = {
         "skill-database": "Database",
         "skill-mysql": "MySQL",
         "skill-mongodb": "MongoDB",
-
         // Soft Skills
         "soft-skill-teamwork": "Teamwork",
         "soft-skill-teamwork-desc": "Collaborating and working well with others to achieve shared goals. Respecting each team member's contributions and fostering a positive atmosphere.",
@@ -85,12 +84,10 @@ const translations = {
         "soft-skill-critical-thinking-desc": "Analyzing situations logically and making informed decisions based on evidence and reasoning. Evaluating challenges objectively to identify the best solutions.",
         "soft-skill-creativity": "Creativity",
         "soft-skill-creativity-desc": "Thinking outside the box to develop innovative ideas and solutions. Applying imagination to design user-friendly interfaces and solve complex problems.",
-
         // Education
         "education-pnc-degree": "Web Development Program",
         "education-pnc-school": "Passerelles Numériques Cambodia (PNC)",
         "education-pnc-desc": "Intensive training in web development, focusing on front-end and back-end technologies, including HTML, CSS, JavaScript, PHP, Laravel, Vue.js, and MySQL. Developed real-world projects and honed collaboration and problem-solving skills.",
-
         "education-softskills-degree": "Soft Skills Workshop",
         "education-softskills-school": "Professional Development Academy",
         "education-softskills-desc": "Participated in workshops to enhance communication, leadership, and teamwork skills, preparing for effective collaboration in professional environments.",
@@ -103,9 +100,10 @@ const translations = {
         "education-highschool-degree": "High School Diploma",
         "education-highschool-school": "Bak Touk High School",
         "education-highschool-desc": "Completed secondary education with a focus on foundational academics, leadership activities, and community engagement, preparing for advanced studies in technology.",
-
         // Contact Section
         "contact-title": "Contact Me",
+        "contact-subtitle": "Get in touch with me anytime. You can use the contact form, send me an email, or even give me a phone call if that’s more convenient.",
+        "contact-title-Get": "Get In Touch",
         "contact-description": "Get in touch with me anytime! You can use the contact form, send me an email, or even give me a phone call if that's more convenient. I'm always happy to hear from you. Whether you have a question, a project idea, or just want to say hello, don't hesitate to reach out!",
         "contact-address-label": "Address:",
         "contact-address-value": "Street 371, Borey Sorla, Phnom Penh, Cambodia",
@@ -213,7 +211,7 @@ const translations = {
         // About Section
         "about-title": "អំពីខ្ញុំ",
         "about-experience": "បទពិសោធន៍សរសេរកម្មវិធីមួយឆ្នាំ",
-        "about-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង ជនជាតិខ្មែរ។ ខ្ញុំជានិស្សិតដែលមានចំណង់ចំណូលចិត្ត ដែលកំពុងសិក្សានៅ Passerelles Numeriques Cambodia (PNC)�। ខ្ញុំសិក្សាតែមួយឆ្នាំនៅ PNC ប៉ុន្តែខ្ញុំមានបទពិសោធន៍ច្រើនក្នុងការសរសេរកម្មវិធីដូចជា HTML, CSS, JavaScript, Node.js, Laravel, Vue.js និងច្រើនទៀត។ ដោយសារតែចំណង់ចំណូលចិត្តរបស់ខ្ញុំក្នុងការសរសេរកូដ និងការសិក្សាបច្ចេកវិទ្យាថ្មីៗ ខ្ញុំតែងតែព្យាយាមឱ្យអស់ពីសមត្ថភាពដើម្បីរៀនរបស់ថ្មីជារៀងរាល់ថ្ងៃ។",
+        "about-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង ជនជាតិខ្មែរ។ ខ្ញុំជានិស្សិតដែលមានចំណង់ចំណូលចិត្ត ដែលកំពុងសិក្សានៅ Passerelles Numeriques Cambodia (PNC)។ ខ្ញុំសិក្សាតែមួយឆ្នាំនៅ PNC ប៉ុន្តែខ្ញុំមានបទពិសោធន៍ច្រើនក្នុងការសរសេរកម្មវិធីដូចជា HTML, CSS, JavaScript, Node.js, Laravel, Vue.js និងច្រើនទៀត។ ដោយសារតែចំណង់ចំណូលចិត្តរបស់ខ្ញុំក្នុងការសរសេរកូដ និងការសិក្សាបច្ចេកវិទ្យាថ្មីៗ ខ្ញុំតែងតែព្យាយាមឱ្យអស់ពីសមត្ថភាពដើម្បីរៀនរបស់ថ្មីជារៀងរាល់ថ្ងៃ។",
         "about-name-label": "ឈ្មោះ:",
         "about-name": "វណ្ណដា ឡេង",
         "about-age-label": "អាយុ:",
@@ -242,7 +240,6 @@ const translations = {
         "skill-database": "មូលដ្ឋានទិន្នន័យ",
         "skill-mysql": "MySQL",
         "skill-mongodb": "MongoDB",
-
         // Soft Skills
         "soft-skill-teamwork": "ការធ្វើការជាក្រុម",
         "soft-skill-teamwork-desc": "ការសហការ និងធ្វើការល្អជាមួយអ្នកដទៃ ដើម្បីសម្រេចគោលដៅរួម។ ការគោរពការចូលរួមរបស់សមាជិកក្រុមនីមួយៗ និងជំរុញបរិយាកាសវិជ្ជមាន។",
@@ -260,12 +257,10 @@ const translations = {
         "soft-skill-critical-thinking-desc": "ការវិភាគស្ថានភាពដោយឡែក និងការសម្រេចចិត្តដោយផ្អែកលើភស្តុតាង និងហេតុផល។ ការវាយតម្លៃការប្រឈមដោយវ័យវ័យដើម្បីកំណត់អត្តសញ្ញាណដំណោះស្រាយដ៏ល្អបំផុត។",
         "soft-skill-creativity": "ការច្នៃប្រឌិត",
         "soft-skill-creativity-desc": "ការគិតខុសពីធម្មតា ដើម្បីអភិវឌ្ឍគំនិត និងដំណោះស្រាយថ្មីៗ។ ការអនុវត្តការស្រមៃដើម្បីរចនាចំណុចប្រទាក់ដែលងាយស្រួលប្រើ និងដោះស្រាយបញ្ហាស្មុគស្មាញ។",
-
         // Education
         "education-pnc-degree": "កម្មវិធីអភិវឌ្ឍន៍វែបសាយ",
         "education-pnc-school": "Passerelles Numériques Cambodia (PNC)",
         "education-pnc-desc": "ការបណ្តុះបណ្តាលយ៉ាងហ្មត់ចត់ក្នុងការអភិវឌ្ឍន៍វែបសាយ ដោយផ្តោតលើបច្ចេកវិទ្យាផ្នែកខាងមុខ និងខាងក្រោយ រួមមាន HTML, CSS, JavaScript, PHP, Laravel, Vue.js និង MySQL។ បានអភិវឌ្ឍគម្រោងពិតប្រាកដ និងពង្រឹងជំនាញសហការ និងដោះស្រាយបញ្ហា។",
-
         "education-softskills-degree": "សិក្ខាសាលាជំនាញទន់",
         "education-softskills-school": "អាកាដេមីអភិវឌ្ឍន៍វិជ្ជាជីវៈ",
         "education-softskills-desc": "បានចូលរួមសិក្ខាសាលាដើម្បីពង្រឹងជំនាញទំនាក់ទំនង សមត្ថភាពដឹកនាំ និងការធ្វើការជាក្រុម ដើម្បីរៀបចំសម្រាប់ការសហការមានប្រសិទ្ធភាពក្នុងបរិស្ថានវិជ្ជាជីវៈ។",
@@ -280,6 +275,8 @@ const translations = {
         "education-highschool-desc": "បានបញ្ចប់ការសិក្សាអនុវិទ្យាល័យដោយផ្តោតលើគ្រឹះសិក្សា សកម្មភាពដឹកនាំ និងការចូលរួមសហគមន៍ ដើម្បីរៀបចំសម្រាប់ការសិក្សាកម្រិតខ្ពស់ក្នុងវិស័យបច្ចេកវិទ្យា។",
         // Contact Section
         "contact-title": "ទំនាក់ទំនងមកខ្ញុំ",
+        "contact-subtitle": "ទាក់ទងជាមួយខ្ញុំបានគ្រប់ពេល។ អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែល ឬហៅទូរស័ព្ទមកខ្ញុំប្រសិនបើវាកាន់តែងាយស្រួល។",
+        "contact-title-Get": "ទំនាក់ទំនង",
         "contact-description": "ទាក់ទងមកខ្ញុំបានគ្រប់ពេល! អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែលមកខ្ញុំ ឬហៅទូរស័ព្ទប្រសិនបើវាកាន់តែងាយស្រួល។ ខ្ញុំតែងតែរីករាយក្នុងការទទួលស្តាប់ពីអ្នក។ មិនថាអ្នកមានសំណួរ គំនិតគម្រោង ឬគ្រាន់តែចង់ជំរាបសួរ កុំស្ទាក់ស្ទើកក្នុងការទាក់ទង!",
         "contact-address-label": "អាសយដ្ឋាន:",
         "contact-address-value": "ផ្លូវ ៣៧១, បុរីសូឡា, ភ្នំពេញ, កម្ពុជា",
@@ -307,7 +304,7 @@ const translations = {
         "languages-tools": "ភាសា និងឧបករណ៍",
         // Project 1
         "project1-title": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ)",
-        "project1-description": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ) ខ្ញុំបានធ្វើការចាប់ពីថ្ងៃទី ២១ ខែកញ្ញា ឆ្នាំ ២០២៤ ដល់ថ្ងៃទី ៤ ខែវិច្ឆិកា ឆ្នាំ ២០២៤។ ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានអភិវឌ្ឍគេហទំព័រស្ថិតិសម្រាប់បណ្ណាល័យ CSA។ យើងបានរៀបចំផ្នែកតាមតម្រូវការរបស់អ្នកប្រើប្រាស់នីមួយៗ និងបានអនុវត្តការរចនាដែលស្អាតនិងទំនើប។ យើងបានប្រើ HTML, CSS និង JavaScript ដើម្បីបង្កើតគេហទំព័រដែលមានការឆ្លើយតបសម្រាប់ឧបករណ៍ផ្សេងៗ�। ខ្ញុំទទួលខុសត្រូវក្នុងការគ្រប់គ្រងភារកិច្ចនិងចាត់តាំងមុខងារដោយប្រើ GitHub។ ពេញមួយគម្រោង ខ្ញុំបានសហការយ៉ាងជិតស្និទ្ធជាមួយអតិថិជន (គ្រូបង្រៀន) និងគ្រូបង្វឹកដើម្បីធានាថាគេហទំព័របំពេញតាមតម្រូវការទាំងអស់។",
+        "project1-description": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ) ខ្ញុំបានធ្វើការចាប់ពីថ្ងៃទី ២១ ខែកញ្ញា ឆ្នាំ ២០២៤ ដល់ថ្ងៃទី ៤ ខែវិច្ឆិកា ឆ្នាំ ២០២៤។ ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានអភិវឌ្ឍគេហទំព័រស្ថិតិសម្រាប់បណ្ណាល័យ CSA។ យើងបានរៀបចំផ្នែកតាមតម្រូវការរបស់អ្នកប្រើប្រាស់នីមួយៗ និងបានអនុវត្តការរចនាដែលស្អាតនិងទំនើប។ យើងបានប្រើ HTML, CSS និង JavaScript ដើម្បីបង្កើតគេហទំព័រដែលមានការឆ្លើយតបសម្រាប់ឧបករណ៍ផ្សេងៗ។ ខ្ញុំទទួលខុសត្រូវក្នុងការគ្រប់គ្រងភារកិច្ចនិងចាត់តាំងមុខងារដោយប្រើ GitHub�। ពេញមួយគម្រោង ខ្ញុំបានសហការយ៉ាងជិតស្និទ្ធជាមួយអតិថិជន (គ្រូបង្រៀន) និងគ្រូបង្វឹកដើម្បីធានាថាគេហទំព័របំពេញតាមតម្រូវការទាំងអស់។",
         "member1-role": "តួនាទី៖ ជួសជុល និងគាំទ្រ",
         "member1-name": "ឈ្មោះ៖ កុសល ប៉ូយ",
         "member2-role": "តួនាទី៖ អ្នកដឹកនាំក្រុម",
@@ -336,7 +333,7 @@ const translations = {
         "member12-name": "ឈ្មោះ៖ ឈីន ស",
         // Project 4
         "project4-title": "គម្រោងប្រព័ន្ធគ្រប់គ្រង Virtual Company One (VC1)",
-        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។ យើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។ យើងបានគាំទ្រការតាមដានភារកិច្ច និងការទំនាក់ទំនងពេញមួយដំណើរការអភិវឌ្ឍន៍�। ក្រុមរបស់យើងបានធ្វើការយ៉ាងហ្មត់ចត់ពេញមួយដំណើរការ ដើម្បីតាមដាននិងធ្វើឱ្យប្រាកដថាប្រព័ន្ធដំណើរការតាមការគ្រោងទុក�। យើងបានធ្វើការសាកល្បងអ្នកប្រើប្រាស់យ៉ាងទូលំទូលាយ និងប្រមូលមតិយោបល់។ គម្រោងនេះបានបង្រៀនយើងទាំងជំនាញបច្ចេកទេស និងជំនាញទំនាក់ទំនង និងបានផ្តល់បទពិសោធន៍ក្នុងការផ្តល់ផលិតផលដែលមានមុខងារដែលបំពេញតាមតម្រូវការអតិថិជន។",
+        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។ យើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ�। ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។ យើងបានគាំទ្រការតាមដានភារកិច្ច និងការទំនាក់ទំនងពេញមួយដំណើរការអភិវឌ្ឍន៍។ ក្រុមរបស់យើងបានធ្វើការយ៉ាងហ្មត់ចត់ពេញមួយដំណើរការ ដើម្បីតាមដាននិងធ្វើឱ្យប្រាកដថាប្រព័ន្ធដំណើរការតាមការគ្រោងទុក។ យើងបានធ្វើការសាកល្បងអ្នកប្រើប្រាស់យ៉ាងទូលំទូលាយ និងប្រមូលមតិយោបល់។ គម្រោងនេះបានបង្រៀនយើងទាំងជំនាញបច្ចេកទេស និងជំនាញទំនាក់ទំនង និងបានផ្តល់បទពិសោធន៍ក្នុងការផ្តល់ផលិតផលដែលមានមុខងារដែលបំពេញតាមតម្រូវការអតិថិជន។",
         "member15-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
         "member15-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
         "member16-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍",
@@ -412,7 +409,7 @@ function updateLanguage(lang) {
         if (lang === "kh") {
             // General elements (headings, paragraphs, buttons, etc.)
             const generalElements = document.querySelectorAll(
-                'h1, h2, h3, h4, h5, h6, p, button, .btn, .btn1, .download-btn, .section-title, .nav-links a, .footer-2 p, .social-icons a'
+                'h1, h2, h3, h4, h5, h6, p, button, .btn, .btn1, .download-btn, .section-title, .nav-links a, .footer-2 p, .social-icons a, .subtitle, .contact-heading, .contact-description, .contact-label, .contact-value'
             );
             generalElements.forEach(element => {
                 element.style.fontFamily = "'Noto Sans Khmer', 'Khmer', 'Khmer OS', 'Khmer OS Battambang', sans-serif";
@@ -454,6 +451,17 @@ function updateLanguage(lang) {
                 element.style.lineHeight = "1.8";
             });
 
+            // Contact Section
+            const contactElements = document.querySelectorAll(
+                '.contact-section, .contact-container, .map-container, .contact-info, .contact-items, .contact-item, .contact-icon, .contact-text'
+            );
+            contactElements.forEach(element => {
+                element.style.fontFamily = "'Noto Sans Khmer', 'Khmer', 'Khmer OS', 'Khmer OS Battambang', sans-serif";
+                element.style.fontWeight = element.classList.contains('contact-heading') ? "600" : "500";
+                element.style.letterSpacing = "0.02em";
+                element.style.lineHeight = "1.8";
+            });
+
             // Footer Section
             const footerElements = document.querySelectorAll(
                 '.footer, .col-1, .col-2, .col-3, .col-4, .col-1 p, .col-2 h3, .col-2 ul, .col-2 li, .col-3 h3, .col-3 ul, .col-3 li, .col-4 h3, .col-4 form, .col-4 input, .footer-2 p'
@@ -467,10 +475,11 @@ function updateLanguage(lang) {
         } else {
             // Reset styles for English
             const allElements = document.querySelectorAll(
-                'h1, h2, h3, h4, h5, h6, p, button, .btn, .btn1, .download-btn, .section-title, .nav-links a, .footer-2 p, .social-icons a, ' +
+                'h1, h2, h3, h4, h5, h6, p, button, .btn, .btn1, .download-btn, .section-title, .nav-links a, .footer-2 p, .social-icons a, .subtitle, .contact-heading, .contact-description, .contact-label, .contact-value, ' +
                 '.skills-circle-container, .skill-info, .skill-info h3, .skill-info p, .skill-categories, .category, .category h3, .category ul, .category li, .learned-section, .learned-section .text-content, .learned-section h2, .learned-section p, ' +
                 '.soft-skills-container, .soft-skill-card, .soft-skill-title, .soft-skill-description, ' +
                 '.education-container, .education-timeline, .education-item, .education-card, .education-year, .education-degree, .education-school, .education-description, ' +
+                '.contact-section, .contact-container, .map-container, .contact-info, .contact-items, .contact-item, .contact-icon, .contact-text, ' +
                 '.footer, .col-1, .col-2, .col-3, .col-4, .col-1 p, .col-2 h3, .col-2 ul, .col-2 li, .col-3 h3, .col-3 ul, .col-3 li, .col-4 h3, .col-4 form, .col-4 input, .footer-2 p'
             );
             allElements.forEach(element => {
