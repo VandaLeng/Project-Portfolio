@@ -1,0 +1,67 @@
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #09317d;
+    --secondary-color: #02e4fd;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+    /* Additional Colors */
+    --background-dark: #1a1a1a;
+    --accent-cyan: #16caf2;
+    --focus-cyan: #00ffcc;
+    /* Font Sizes */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xll: 2.3rem;
+    --font-size-xxl: 2.9rem;
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    /* Border Radius */
+    --border-radius-xs: 86px;
+    --border-radius-s: 16px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+    /* Site Max Width */
+    --site-max-width: 1300px;
+    /* Shadows */
+    --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 4px 10px rgba(0, 209, 255, 0.3);
+    --shadow-glow: 0 0 15px rgba(0, 255, 204, 0.5);
+    /* Transitions */
+    --transition-ease: all 0.3s ease;
+}
+
+.contact-section {
+    position: relative;
+    top: 100px;
+    padding: 120px 20px 60px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-semibold);
+    animation: fadeInDown 1s ease-out;
+}
+
+.contact-section .subtitle {
+    font-size: var(--font-size-l);
+    margin-bottom: 70px;
+    color: var(--white-color);
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    padding-bottom: 2px;
+    animation: fadeIn 1.5s ease-out;
+}
