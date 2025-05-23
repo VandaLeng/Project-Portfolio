@@ -4,6 +4,8 @@ body.light-theme {
     background: #ffffff;
     color: #1a1a1a;
     font-family: "Poppins", sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    /* Added smooth transition */
 }
 
 body.light-theme header {
@@ -11,6 +13,8 @@ body.light-theme header {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(0, 209, 255, 0.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease, border-bottom 0.3s ease;
+    /* Smooth header transition */
 }
 
 body.light-theme header:hover {
@@ -20,6 +24,8 @@ body.light-theme header:hover {
 
 body.light-theme .logo {
     color: #09317d;
+    transition: color 0.3s ease;
+    /* Smooth logo color change */
 }
 
 body.light-theme .logo:hover {
@@ -28,6 +34,8 @@ body.light-theme .logo:hover {
 
 body.light-theme nav ul li a {
     color: #1a1a1a;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth nav link transitions */
 }
 
 body.light-theme nav ul li a:hover {
@@ -45,6 +53,8 @@ body.light-theme nav ul li a.active::after {
 
 body.light-theme .language-wrapper {
     background: rgba(0, 209, 255, 0.05);
+    transition: background 0.3s ease;
+    /* Smooth language wrapper transition */
 }
 
 body.light-theme .language-wrapper:hover {
@@ -60,6 +70,8 @@ body.light-theme .language-wrapper select {
     border-color: rgba(0, 209, 255, 0.3);
     background: rgba(255, 255, 255, 0.5);
     font-family: "Poppins", sans-serif;
+    transition: background 0.3s ease;
+    /* Smooth select transition */
 }
 
 body.light-theme .language-wrapper select:hover {
@@ -83,6 +95,8 @@ body.light-theme .theme-toggle label {
     height: 30px;
     position: relative;
     cursor: pointer;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth toggle transition */
 }
 
 body.light-theme .theme-toggle label:hover {
@@ -92,13 +106,17 @@ body.light-theme .theme-toggle label:hover {
 body.light-theme .theme-toggle .fa-moon {
     color: #999;
     font-size: 18px;
-    opacity: 1;
+    opacity: 0.5;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    /* Smooth icon transition */
 }
 
 body.light-theme .theme-toggle .fa-sun {
     color: #ffcc00;
     font-size: 18px;
     opacity: 1;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    /* Smooth icon transition */
 }
 
 body.light-theme .theme-toggle input:checked+label .fa-moon {
@@ -112,37 +130,121 @@ body.light-theme .theme-toggle input:checked+label .fa-sun {
 }
 
 
+/* Enhanced Contact Section Styles for Light Theme */
+
+body.light-theme .contact-section {
+    background-color: #f5f5f5;
+    transition: background 0.3s ease;
+    /* Smooth background transition */
+}
+
+body.light-theme .contact-header h1 {
+    color: #09317d;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+    /* Smooth heading transition */
+}
+
+body.light-theme .contact-header .subtitle {
+    color: #1a1a1a;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+    /* Smooth subtitle transition */
+}
+
+body.light-theme .section-title h2 {
+    color: #09317d;
+    transition: color 0.3s ease;
+    /* Smooth title transition */
+}
+
+body.light-theme .title-underline {
+    background-color: #00d1ff;
+    transition: background 0.3s ease;
+    /* Smooth underline transition */
+}
+
+body.light-theme .contact-heading {
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    /* Smooth heading transition */
+}
+
+body.light-theme .contact-description {
+    color: #333;
+    transition: color 0.3s ease;
+    /* Smooth description transition */
+}
+
+body.light-theme .contact-value {
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    /* Smooth value transition */
+}
+
+body.light-theme .contact-value a {
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    /* Smooth link transition */
+}
+
+body.light-theme .contact-value a:hover {
+    color: #00d1ff;
+    text-decoration: underline;
+}
+
+body.light-theme .contact-icon i {
+    color: #00d1ff;
+    transition: color 0.3s ease;
+    /* Smooth icon transition */
+}
+
+body.light-theme .contact-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+body.light-theme .contact-item:hover {
+    transform: translateY(-5px);
+    /* Subtle lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 209, 255, 0.2);
+    /* Subtle shadow */
+}
+
+body.light-theme .map-container {
+    border: 1px solid rgba(0, 209, 255, 0.3);
+    border-radius: 8px;
+    /* Rounded corners for map */
+    overflow: hidden;
+    /* Ensure map fits within rounded borders */
+    transition: border 0.3s ease;
+    /* Smooth border transition */
+}
+
+
 /* Enhanced Experience Section Styles for Light Theme */
 
 body.light-theme .experience-section h1[data-lang="experience-title"] {
     color: #09317d;
-    /* Darker color for better contrast */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for readability */
 }
 
 body.light-theme .experience-section .subtitle[data-lang="experience-subtitle"] {
     color: #1a1a1a;
-    /* Darker subtitle text */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    /* Slight shadow for clarity */
 }
 
 body.light-theme .experience-stats {
     background: rgba(0, 209, 255, 0.05);
-    /* Light background for stats */
     border: 1px solid rgba(0, 209, 255, 0.2);
-    /* Subtle border */
 }
 
 body.light-theme .stat-item .stat-number {
     color: #00d1ff;
-    /* Bright color for numbers */
 }
 
 body.light-theme .stat-item .stat-label {
     color: #1a1a1a;
-    /* Darker label text */
 }
 
 
@@ -292,26 +394,6 @@ body.light-theme .trainer-description {
     color: #333;
 }
 
-body.light-theme .contact-section {
-    background-color: #f5f5f5;
-}
-
-body.light-theme .contact-heading {
-    color: #1a1a1a;
-}
-
-body.light-theme .contact-description {
-    color: #333;
-}
-
-body.light-theme .contact-value {
-    color: #1a1a1a;
-}
-
-body.light-theme .contact-value a {
-    color: #1a1a1a;
-}
-
 body.light-theme #animated-bg {
     background: #f5f5f5;
 }
@@ -330,6 +412,8 @@ body.light-theme .bg-particle {
 body.light-theme footer {
     background: #f5f5f5;
     color: #333;
+    transition: background 0.3s ease;
+    /* Smooth footer transition */
 }
 
 body.light-theme footer .container {
@@ -338,6 +422,8 @@ body.light-theme footer .container {
 
 body.light-theme footer .logo {
     color: #09317d;
+    transition: color 0.3s ease;
+    /* Smooth logo transition */
 }
 
 body.light-theme footer .logo:hover {
@@ -354,6 +440,8 @@ body.light-theme footer h3 {
 
 body.light-theme footer ul li a {
     color: #333;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth link transition */
 }
 
 body.light-theme footer ul li a:hover {
@@ -363,6 +451,8 @@ body.light-theme footer ul li a:hover {
 
 body.light-theme footer .social-icons a {
     color: #00d1ff;
+    transition: color 0.3s ease;
+    /* Smooth social icon transition */
 }
 
 body.light-theme footer .social-icons a:hover {
@@ -381,6 +471,8 @@ body.light-theme footer form input {
     background: rgba(255, 255, 255, 0.8);
     color: #1a1a1a;
     border: 1px solid rgba(0, 209, 255, 0.3);
+    transition: background 0.3s ease, border 0.3s ease;
+    /* Smooth input transition */
 }
 
 body.light-theme footer form input::placeholder {
@@ -390,6 +482,8 @@ body.light-theme footer form input::placeholder {
 body.light-theme footer form button {
     background: #00d1ff;
     color: #1a1a1a;
+    transition: background 0.3s ease, color 0.3s ease;
+    /* Smooth button transition */
 }
 
 body.light-theme footer form button:hover {
@@ -408,20 +502,28 @@ body.dark-theme {
     background: #1a1a1a;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
 }
 
 body.dark-theme header {
     background: rgba(26, 26, 26, 0.8);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(0, 209, 255, 0.2);
+    transition: background 0.3s ease, border-bottom 0.3s ease;
+    /* Smooth header transition */
 }
 
 body.dark-theme .logo {
     color: #00d1ff;
+    transition: color 0.3s ease;
+    /* Smooth logo transition */
 }
 
 body.dark-theme nav ul li a {
     color: #ffffff;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth nav link transitions */
 }
 
 body.dark-theme nav ul li a:hover {
@@ -435,6 +537,8 @@ body.dark-theme nav ul li a.active {
 
 body.dark-theme .language-wrapper {
     background: rgba(0, 209, 255, 0.1);
+    transition: background 0.3s ease;
+    /* Smooth language wrapper transition */
 }
 
 body.dark-theme .language-wrapper label {
@@ -446,6 +550,8 @@ body.dark-theme .language-wrapper select {
     background: rgba(0, 209, 255, 0.2);
     border-color: rgba(0, 209, 255, 0.5);
     font-family: "Poppins", sans-serif;
+    transition: background 0.3s ease;
+    /* Smooth select transition */
 }
 
 body.dark-theme .language-wrapper select option {
@@ -464,6 +570,8 @@ body.dark-theme .theme-toggle label {
     height: 30px;
     position: relative;
     cursor: pointer;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth toggle transition */
 }
 
 body.dark-theme .theme-toggle label:hover {
@@ -474,12 +582,16 @@ body.dark-theme .theme-toggle .fa-moon {
     color: #00d1ff;
     font-size: 18px;
     opacity: 1;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    /* Smooth icon transition */
 }
 
 body.dark-theme .theme-toggle .fa-sun {
     color: #ccc;
     font-size: 18px;
     opacity: 0.5;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    /* Smooth icon transition */
 }
 
 body.dark-theme .theme-toggle input:not(:checked)+label .fa-moon {
@@ -491,6 +603,101 @@ body.dark-theme .theme-toggle input:not(:checked)+label .fa-sun {
     opacity: 1;
     color: #ffcc00;
 }
+
+
+/* Enhanced Contact Section Styles for Dark Theme */
+
+body.dark-theme .contact-section {
+    background-color: #222222;
+    transition: background 0.3s ease;
+    /* Smooth background transition */
+}
+
+body.dark-theme .contact-header h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+    /* Smooth heading transition */
+}
+
+body.dark-theme .contact-header .subtitle {
+    color: #cccccc;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+    /* Smooth subtitle transition */
+}
+
+body.dark-theme .section-title h2 {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    /* Smooth title transition */
+}
+
+body.dark-theme .title-underline {
+    background-color: #00d1ff;
+    transition: background 0.3s ease;
+    /* Smooth underline transition */
+}
+
+body.dark-theme .contact-heading {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    /* Smooth heading transition */
+}
+
+body.dark-theme .contact-description {
+    color: #cccccc;
+    transition: color 0.3s ease;
+    /* Smooth description transition */
+}
+
+body.dark-theme .contact-value {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    /* Smooth value transition */
+}
+
+body.dark-theme .contact-value a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    /* Smooth link transition */
+}
+
+body.dark-theme .contact-value a:hover {
+    color: #00d1ff;
+    text-decoration: underline;
+}
+
+body.dark-theme .contact-icon i {
+    color: #00d1ff;
+    transition: color 0.3s ease;
+    /* Smooth icon transition */
+}
+
+body.dark-theme .contact-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+body.dark-theme .contact-item:hover {
+    transform: translateY(-5px);
+    /* Subtle lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 209, 255, 0.3);
+    /* Subtle shadow */
+}
+
+body.dark-theme .map-container {
+    border: 1px solid rgba(0, 209, 255, 0.5);
+    border-radius: 8px;
+    /* Rounded corners for map */
+    overflow: hidden;
+    /* Ensure map fits within rounded borders */
+    transition: border 0.3s ease;
+    /* Smooth border transition */
+}
+
+
+/* Additional Dark Theme Styles */
 
 body.dark-theme .hero-content h1 {
     color: #ffffff;
@@ -529,24 +736,14 @@ body.dark-theme .trainer-section {
     background-color: #222222;
 }
 
-body.dark-theme .contact-section {
-    background-color: #222222;
-}
-
-body.dark-theme .contact-heading {
-    color: #ffffff;
-}
-
-body.dark-theme .contact-description {
-    color: #cccccc;
-}
-
 
 /* Footer Styles for Dark Theme */
 
 body.dark-theme footer {
     background: #222222;
     color: #cccccc;
+    transition: background 0.3s ease;
+    /* Smooth footer transition */
 }
 
 body.dark-theme footer .container {
@@ -555,6 +752,8 @@ body.dark-theme footer .container {
 
 body.dark-theme footer .logo {
     color: #00d1ff;
+    transition: color 0.3s ease;
+    /* Smooth logo transition */
 }
 
 body.dark-theme footer .logo:hover {
@@ -571,6 +770,8 @@ body.dark-theme footer h3 {
 
 body.dark-theme footer ul li a {
     color: #cccccc;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth link transition */
 }
 
 body.dark-theme footer ul li a:hover {
@@ -580,6 +781,8 @@ body.dark-theme footer ul li a:hover {
 
 body.dark-theme footer .social-icons a {
     color: #00d1ff;
+    transition: color 0.3s ease;
+    /* Smooth social icon transition */
 }
 
 body.dark-theme footer .social-icons a:hover {
@@ -598,6 +801,8 @@ body.dark-theme footer form input {
     background: rgba(26, 26, 26, 0.8);
     color: #ffffff;
     border: 1px solid rgba(0, 209, 255, 0.5);
+    transition: background 0.3s ease, border 0.3s ease;
+    /* Smooth input transition */
 }
 
 body.dark-theme footer form input::placeholder {
@@ -607,6 +812,8 @@ body.dark-theme footer form input::placeholder {
 body.dark-theme footer form button {
     background: #00d1ff;
     color: #1a1a1a;
+    transition: background 0.3s ease, color 0.3s ease;
+    /* Smooth button transition */
 }
 
 body.dark-theme footer form button:hover {
@@ -619,4 +826,8 @@ body.dark-theme footer form button:hover {
 
 body.en {
     font-family: "Poppins", sans-serif;
+}
+
+body.kh {
+    font-family: "Noto Sans Khmer", sans-serif;
 }
