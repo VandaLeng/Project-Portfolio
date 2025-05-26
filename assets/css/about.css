@@ -124,8 +124,7 @@
     gap: 150px;
     margin-bottom: 120px;
     position: relative;
-    top: 130px;
-    right: 250px;
+    top: 100px;
 }
 
 
@@ -728,6 +727,14 @@
 }
 
 @media (max-width: 391px) {
+    .main-content {
+        position: relative;
+        right: 20px;
+    }
+    .skill-categories {
+        position: relative;
+        right: 20px;
+    }
     .skills-circle-container {
         width: 220px;
         height: 220px;
@@ -738,9 +745,9 @@
         height: 35px;
     }
     .skill-info {
-        width: 150px;
+        width: 200px;
         padding: 10px;
-        height: 120px;
+        height: 100px;
     }
     .skill-info h3 {
         font-size: 1rem;
@@ -794,6 +801,16 @@
     }
     .education-card {
         padding: 10px;
+        width: 150%;
+        position: relative;
+    }
+    .education-container {
+        position: relative;
+        right: 70px;
+    }
+    .soft-skills-container {
+        position: relative;
+        right: 20px;
     }
 }
 
