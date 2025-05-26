@@ -23,7 +23,7 @@
             <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="/index.html" id="home-link" data-lang="nav-home">Home</a></li>
-                    <li><a href="/pages/experience.html" id="experience-link" data-lang="nav-experience">Experience</a></li>
+                    <li><a href="#experience-section" id="experience-link" data-lang="nav-experience">Experience</a></li>
                     <li><a href="/pages/about_me.html" id="about-link" data-lang="nav-about">About Me</a></li>
                     <li><a href="/pages/Contact_me.html" id="contact-link" data-lang="nav-contact">Contact Me</a></li>
                 </ul>
@@ -50,7 +50,7 @@
             </button>
         </header>
         <main>
-            <section class="experience-section">
+            <section class="experience-section" id="experience-section">
                 <h1 data-aos="fade-down" data-lang="experience-title"><span>+</span> My Projects</h1>
                 <div class="subtitle" data-lang="experience-subtitle">Experience Details</div>
                 <div class="experience-stats">
@@ -73,7 +73,7 @@
                 </div>
             </section>
 
-            <section class="projects-section">
+            <section class="projects-section" id="projects-section">
                 <!-- Project 1 -->
                 <div class="project-container" data-aos="fade-up">
                     <div class="project-showcase">
@@ -435,7 +435,7 @@
                     <h3 data-lang="footer-quick-links">Quick Links</h3>
                     <ul>
                         <li><a href="/index.html" data-lang="nav-home">Home</a></li>
-                        <li><a href="/pages/experience.html" data-lang="nav-experience">Experience</a></li>
+                        <li><a href="#experience-section" data-lang="nav-experience">Experience</a></li>
                         <li><a href="/pages/about_me.html" data-lang="nav-about">About Me</a></li>
                         <li><a href="/pages/Contact_me.html" data-lang="nav-contact">Contact Me</a></li>
                     </ul>
@@ -485,6 +485,23 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
 </body>

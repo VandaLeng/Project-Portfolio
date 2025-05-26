@@ -6,7 +6,6 @@
     --secondary-color: #02e4fd;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
-    /* Will override in light theme for better contrast */
     /* Additional Colors */
     --background-dark: #1a1a1a;
     --accent-cyan: #16caf2;
@@ -37,6 +36,13 @@
     --shadow-glow: 0 0 15px rgba(0, 255, 204, 0.5);
     /* Transitions */
     --transition-ease: all 0.3s ease;
+}
+
+
+/* Smooth scrolling for the entire page */
+
+html {
+    scroll-behavior: smooth;
 }
 
 .experience-section {
@@ -216,17 +222,16 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* Maintain consistent aspect ratio */
     padding: 10px;
-    /* Add padding for better spacing */
+    max-height: 400px;
+    /* Adjusted to allow larger images */
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /* Ensure images cover the container */
+    object-fit: contain;
+    /* Changed to contain to show full image */
     transition: transform 0.5s ease;
     filter: brightness(0.9);
 }
@@ -604,10 +609,9 @@
 
 .project-special .project-image {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* Consistent aspect ratio */
     padding: 10px;
-    margin-bottom: 20px;
+    max-height: 400px;
+    /* Adjusted to allow larger images */
 }
 
 .project-tech-icons {
@@ -1119,6 +1123,10 @@ body.light-theme .theme-toggle label:hover {
     .carousel-btn i {
         font-size: 0.8rem;
     }
+    .project-image {
+        max-height: 300px;
+        /* Adjusted for smaller screens */
+    }
 }
 
 @media (max-width: 768px) {
@@ -1139,7 +1147,7 @@ body.light-theme .theme-toggle label:hover {
         font-size: var(--font-size-m);
     }
     .project-image {
-        aspect-ratio: 16 / 9;
+        max-height: 250px;
         padding: 8px;
     }
     .project-description {
@@ -1221,7 +1229,7 @@ body.light-theme .theme-toggle label:hover {
         font-size: var(--font-size-s);
     }
     .project-image {
-        aspect-ratio: 16 / 9;
+        max-height: 200px;
         padding: 5px;
     }
     .project-description {
@@ -1309,7 +1317,7 @@ body.light-theme .theme-toggle label:hover {
         font-size: 0.8rem;
     }
     .project-image {
-        aspect-ratio: 16 / 9;
+        max-height: 180px;
         padding: 5px;
     }
     .project-description {
@@ -1322,46 +1330,33 @@ body.light-theme .theme-toggle label:hover {
         width: 40px;
         height: 70px;
     }
-    /* Adjustments for the last project's team members */
     .project-special-team {
         min-width: 100%;
-        /* Ensure it takes full width */
-        margin: 0 auto;
-        /* Center the container */
         padding: 10px;
     }
     .team-members-special-carousel {
         min-height: 150px;
-        /* Reduced height for smaller screens */
         padding: 10px;
         margin: 0 auto;
-        /* Center the carousel */
         width: 100%;
-        /* Ensure it fits within the container */
         max-width: 300px;
-        /* Prevent it from being too wide */
     }
     .team-members-special-slider {
         display: flex;
         justify-content: center;
-        /* Center the slider content */
         align-items: center;
     }
     .team-member-special {
         flex: 0 0 100%;
         padding: 5px;
         margin: 0 auto;
-        /* Center each team member */
         width: 100%;
         max-width: 250px;
-        /* Ensure it fits within the screen */
     }
     .team-member-special img {
         width: 120px;
-        /* Smaller image size for 391px */
         height: 140px;
         margin: 0 auto 10px;
-        /* Center the image */
         display: block;
     }
     .team-member-special .member-info {

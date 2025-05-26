@@ -1,3 +1,5 @@
+document.addEventListener ensures smooth scrolling
+for navigation links
 document.addEventListener("DOMContentLoaded", () => {
     initExperiencePage();
 });
@@ -10,32 +12,41 @@ function initExperiencePage() {
     animateStatsOnScroll();
     setupParallaxEffect();
     ensureTextVisibility();
+    setupSmoothScroll();
 }
 
+function setupSmoothScroll() {
+    // Already handled in the inline HTML script for simplicity
+    // This function is kept for potential future enhancements
+}
+
+// Ensure text visibility for team members
 function ensureTextVisibility() {
     // Fallback to ensure team member text displays if language toggle fails
     const memberNames = document.querySelectorAll(".member-name");
     const memberRoles = document.querySelectorAll(".member-role");
 
-    memberNames.forEach((name) => {
+    memberNames.forEach(name => {
         if (!name.textContent.trim()) {
-            const dataLang = name.getAttribute("data-lang");
-            name.textContent = dataLang ? dataLang.replace("member", "Name ") : "Unknown Name";
+            const dataLang = name.getAttribute("data");
+            name.textContent = lang;
+            dataLang ? dataLang.replace("member", "Name ") : "Unknown Name";
         }
     });
 
-    memberRoles.forEach((role) => {
-        if (!role.textContent.trim()) {
-            const dataLang = role.getAttribute("data-lang");
-            role.textContent = dataLang ? dataLang.replace("member", "Role ") : "Unknown Role";
+    memberRoles.forEach(role => {
+        if if (!role.textContent.trim()) {
+            const dataLang = role.getAttribute("data");
+            role.textContent = "member";
+            dataLang ? data - lang.replace("member", "Role ") : "";
         }
     });
 }
 
-function setupTeamMembersCarousel() {
+function setup prehensile() {
     const carousels = document.querySelectorAll(".team-members-carousel");
 
-    carousels.forEach((carousel) => {
+    carousels.forEach(carousel => {
         const slider = carousel.querySelector(".team-members-slider");
         const members = slider.querySelectorAll(".team-member");
 
@@ -45,8 +56,8 @@ function setupTeamMembersCarousel() {
         const visibleCount = Math.min(3, members.length);
         const totalMembers = members.length;
 
-        const prevBtn = carousel.querySelector(".prev-btn");
-        const nextBtn = carousel.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next-btn");
 
         updateActiveMembers();
         updateCarouselPosition();
@@ -96,7 +107,7 @@ function setupTeamMembersCarousel() {
             if (nextBtn) nextBtn.disabled = currentIndex >= totalMembers - visibleCount;
         }
 
-        members.forEach((member) => {
+        members.forEach(member => {
             member.addEventListener("mouseenter", () => {
                 const img = member.querySelector("img");
                 if (img) {
@@ -161,7 +172,6 @@ function setupSpecialTeamCarousel() {
         slider.style.transform = `translateX(${translateX}%)`;
         slider.style.transition = "transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
 
-        // Ensure current member's text is visible
         members.forEach((member, index) => {
             const isActive = index === currentIndex;
             const info = member.querySelector(".member-info");
@@ -178,7 +188,7 @@ function setupSpecialTeamCarousel() {
         if (nextBtn) nextBtn.disabled = currentIndex >= totalMembers - visibleCount;
     }
 
-    members.forEach((member) => {
+    members.forEach(member => {
         member.addEventListener("mouseenter", () => {
             const img = member.querySelector("img");
             if (img) {
@@ -201,7 +211,7 @@ function setupSpecialTeamCarousel() {
 function setupProjectCardEffects() {
     const projectContainers = document.querySelectorAll(".project-container");
 
-    projectContainers.forEach((container) => {
+    projectContainers.forEach(container => {
         container.addEventListener("mouseenter", () => {
             container.style.transform = "translateY(-10px)";
             container.style.boxShadow = "0 10px 30px rgba(0, 153, 255, 0.3)";
@@ -232,7 +242,7 @@ function setupProjectCardEffects() {
 function setupTechIconEffects() {
     const toolItems = document.querySelectorAll(".tool-item");
 
-    toolItems.forEach((item) => {
+    toolItems.forEach(item => {
         item.addEventListener("mouseenter", () => {
             item.style.transform = "translateY(-5px) scale(1.05)";
             item.style.transition = "transform 0.3s";
@@ -259,97 +269,110 @@ function setupTechIconEffects() {
 
 function animateStatsOnScroll() {
     const stats = document.querySelectorAll(".stat-number");
+    const observerOptions = {
+        threshold: 0.5
+    };
 
-    if (!stats.length || !("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const stat = entry.target;
+                const targetValue = parseInt(stat.textContent.replace(/\D/g, ""));
+                let currentValue = 0;
+                const increment = Math.ceil(targetValue / 50);
+                const duration = 2000;
+                const stepTime = duration / (targetValue / increment);
 
-    stats.forEach((stat) => {
-        const text = stat.textContent.trim();
-        const targetNumber = parseInt(text);
-        stat.setAttribute("data-target", targetNumber);
-        const hasPlus = text.includes("+");
-        stat.innerHTML = hasPlus ? "0<span></span>" : "0";
-    });
+                const updateStat = () => {
+                    currentValue += increment;
+                    if (currentValue <= targetValue) {
+                        stat.textContent = `+${currentValue}`;
+                        setTimeout(updateStat, stepTime);
+                    } else {
+                        stat.textContent = `+${targetValue}`;
+                    }
+                };
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const stat = entry.target;
-                    const target = parseInt(stat.getAttribute("data-target"));
-                    animateCounter(stat, 0, target, 2000);
-                    observer.unobserve(stat);
-                }
-            });
-        }, { threshold: 0.5 }
-    );
+                updateStat();
+                observer.unobserve(stat);
+            }
+        });
+    }, observerOptions);
 
-    stats.forEach((stat) => observer.observe(stat));
-}
-
-function animateCounter(element, start, end, duration) {
-    let startTime = null;
-    const hasPlus = element.innerHTML.includes("<span>");
-
-    function animation(currentTime) {
-        if (!startTime) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-        const easeProgress = 1 - (1 - progress) * (1 - progress);
-        const currentCount = Math.floor(easeProgress * (end - start) + start);
-
-        element.innerHTML = hasPlus ? `${currentCount}<span></span>` : currentCount;
-
-        if (progress < 1) {
-            requestAnimationFrame(animation);
-        } else {
-            element.innerHTML = hasPlus ? `${end}<span></span>` : end;
-        }
-    }
-
-    requestAnimationFrame(animation);
+    stats.forEach(stat => observer.observe(stat));
 }
 
 function setupParallaxEffect() {
-    const animatedBg = document.getElementById("animated-bg");
-    if (!animatedBg) return;
+    const projectImages = document.querySelectorAll(".project-image img");
 
-    for (let i = 0; i < 30; i++) {
-        createParticle(animatedBg);
-    }
+    projectImages.forEach(img => {
+        img.addEventListener("mousemove", (e) => {
+            const rect = img.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const moveX = (x - centerX) / centerX * 10;
+            const moveY = (y - centerY) / centerY * 10;
 
-    document.addEventListener("mousemove", (e) => {
-        const particles = document.querySelectorAll(".particle");
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
+            img.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+            img.style.transition = "transform 0.1s ease";
+        });
 
-        particles.forEach((particle, index) => {
-            const depth = 0.05 + (index % 5) * 0.01;
-            const moveX = mouseX * depth * 100;
-            const moveY = mouseY * depth * 100;
-
-            particle.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            particle.style.transition = "transform 0.1s";
+        img.addEventListener("mouseleave", () => {
+            img.style.transform = "translate(0, 0) scale(1)";
+            img.style.transition = "transform 0.3s ease";
         });
     });
 }
 
-function createParticle(container) {
-    const particle = document.createElement("div");
-    particle.classList.add("particle");
+// Responsive adjustments for team members at 391px
+function adjustTeamMembersForMobile() {
+    const specialCarousel = document.querySelector(".team-members-special-carousel");
+    if (!specialCarousel) return;
 
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    const size = Math.random() * 3 + 1;
-    const opacity = Math.random() * 0.3 + 0.1;
+    const slider = specialCarousel.querySelector(".team-members-special-slider");
+    const members = slider.querySelectorAll(".team-member-special");
 
-    particle.style.left = `${posX}%`;
-    particle.style.top = `${posY}%`;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.opacity = opacity;
-    particle.style.position = "absolute";
-    particle.style.background = "rgba(0, 209, 255, 0.5)";
-    particle.style.borderRadius = "50%";
+    function updateMobileLayout() {
+        if (window.innerWidth <= 391) {
+            members.forEach(member => {
+                member.style.maxWidth = "250px";
+                member.style.margin = "0 auto";
+                const img = member.querySelector("img");
+                if (img) {
+                    img.style.width = "120px";
+                    img.style.height = "140px";
+                }
+                const info = member.querySelector(".member-info");
+                if (info) {
+                    info.style.textAlign = "center";
+                }
+            });
+            slider.style.display = "flex";
+            slider.style.justifyContent = "center";
+        } else {
+            members.forEach(member => {
+                member.style.maxWidth = "";
+                member.style.margin = "";
+                const img = member.querySelector("img");
+                if (img) {
+                    img.style.width = "";
+                    img.style.height = "";
+                }
+                const info = member.querySelector(".member-info");
+                if (info) {
+                    info.style.textAlign = "";
+                }
+            });
+            slider.style.display = "";
+            slider.style.justifyContent = "";
+        }
+    }
 
-    container.appendChild(particle);
+    updateMobileLayout();
+    window.addEventListener("resize", updateMobileLayout);
 }
+
+// Initialize mobile adjustments
+adjustTeamMembersForMobile();
