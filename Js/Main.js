@@ -1,3 +1,4 @@
+// JavaScript for Main.js (consolidated)
 document.addEventListener("DOMContentLoaded", () => {
     createAnimatedBackground();
     typewriterAnimation();
@@ -20,19 +21,14 @@ function createAnimatedBackground() {
     const animatedBg = document.getElementById("animated-bg");
     if (!animatedBg) return;
 
-    // Create particles
     for (let i = 0; i < 50; i++) {
         const particle = document.createElement("div");
         particle.className = "bg-particle";
 
-        // Random position
         const posX = Math.random() * window.innerWidth;
         const posY = Math.random() * window.innerHeight;
-
-        // Random size
         const size = Math.random() * 5 + 2;
 
-        // Style the particle
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
         particle.style.left = `${posX}px`;
@@ -42,35 +38,22 @@ function createAnimatedBackground() {
         particle.style.position = "absolute";
         particle.style.boxShadow = "0 0 10px rgba(0, 209, 255, 0.8)";
 
-        // Add animation with random duration
         const duration = Math.random() * 20 + 10;
         particle.style.animation = `floatParticle ${duration}s infinite linear`;
 
-        // Add to background
         animatedBg.appendChild(particle);
     }
 
-    // Add CSS animation
     const style = document.createElement("style");
     style.textContent = `
-    @keyframes floatParticle {
-      0% {
-        transform: translate(0, 0);
-      }
-      25% {
-        transform: translate(100px, 50px);
-      }
-      50% {
-        transform: translate(50px, 100px);
-      }
-      75% {
-        transform: translate(-50px, 50px);
-      }
-      100% {
-        transform: translate(0, 0);
-      }
-    }
-  `;
+                @keyframes floatParticle {
+                    0% { transform: translate(0, 0); }
+                    25% { transform: translate(100px, 50px); }
+                    50% { transform: translate(50px, 100px); }
+                    75% { transform: translate(-50px, 50px); }
+                    100% { transform: translate(0, 0); }
+                }
+            `;
     document.head.appendChild(style);
 }
 
@@ -122,23 +105,20 @@ function animateProfileImage() {
     const gsap = window.gsap;
     if (!gsap) return;
 
-    const profileImages = document.querySelectorAll(".hero-image img, .about-image img");
-    profileImages.forEach((profileImage) => {
-        if (!profileImage) return;
+    // Modified: Only animate hero-image img, exclude about-image img
+    const heroProfileImage = document.querySelector(".hero-image img");
+    if (!heroProfileImage) return;
 
-        // Initial animation: fade in and slide from top
-        gsap.fromTo(
-            profileImage, { y: -50, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power2.out", delay: 0.5 }
-        );
+    gsap.fromTo(
+        heroProfileImage, { y: -50, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power2.out", delay: 0.5 }
+    );
 
-        // Continuous vertical animation (top to bottom)
-        gsap.to(profileImage, {
-            y: 20,
-            yoyo: true,
-            repeat: -1,
-            duration: 3,
-            ease: "sine.inOut"
-        });
+    gsap.to(heroProfileImage, {
+        y: 20,
+        yoyo: true,
+        repeat: -1,
+        duration: 3,
+        ease: "sine.inOut"
     });
 }
 
@@ -402,20 +382,17 @@ function initializeTrainerCarousel() {
     const cardWidth = trainerCards[0].offsetWidth + 20;
     let currentIndex = 0;
 
-    // Update slider position
     function updateSlider() {
         trainerProfiles.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         updateDots();
     }
 
-    // Update active dot
     function updateDots() {
         dots.forEach((dot, index) => {
             dot.classList.toggle("active", index === currentIndex);
         });
     }
 
-    // Next button click
     nextBtn.addEventListener("click", () => {
         currentIndex++;
         if (currentIndex > trainerCards.length - visibleCards) {
@@ -424,7 +401,6 @@ function initializeTrainerCarousel() {
         updateSlider();
     });
 
-    // Previous button click
     prevBtn.addEventListener("click", () => {
         currentIndex--;
         if (currentIndex < 0) {
@@ -433,7 +409,6 @@ function initializeTrainerCarousel() {
         updateSlider();
     });
 
-    // Dot click
     dots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
             currentIndex = index;
@@ -441,7 +416,6 @@ function initializeTrainerCarousel() {
         });
     });
 
-    // Auto slide
     let autoSlideInterval = setInterval(() => {
         currentIndex++;
         if (currentIndex > trainerCards.length - visibleCards) {
@@ -450,12 +424,10 @@ function initializeTrainerCarousel() {
         updateSlider();
     }, 5000);
 
-    // Pause auto slide on hover
     trainerProfiles.addEventListener("mouseenter", () => {
         clearInterval(autoSlideInterval);
     });
 
-    // Resume auto slide on mouse leave
     trainerProfiles.addEventListener("mouseleave", () => {
         autoSlideInterval = setInterval(() => {
             currentIndex++;
@@ -466,7 +438,6 @@ function initializeTrainerCarousel() {
         }, 5000);
     });
 
-    // Handle window resize
     window.addEventListener("resize", () => {
         const newVisibleCards = window.innerWidth > 768 ? 3 : window.innerWidth > 480 ? 2 : 1;
         if (currentIndex > trainerCards.length - newVisibleCards) {
@@ -475,17 +446,12 @@ function initializeTrainerCarousel() {
         updateSlider();
     });
 
-    // Initial setup
     updateSlider();
 }
 
 function initializeGoogleMap() {
-    // This function will be called by the Google Maps API callback
     window.initMap = () => {
-        // Coordinates for Phnom Penh, Cambodia
         const phnomPenh = { lat: 11.5564, lng: 104.9282 };
-
-        // Create the map
         const google = window.google;
         if (!google) return;
 
@@ -495,106 +461,30 @@ function initializeGoogleMap() {
         const map = new google.maps.Map(mapElement, {
             center: phnomPenh,
             zoom: 14,
-            styles: [{
-                    elementType: "geometry",
-                    stylers: [{ color: "#212121" }]
-                },
-                {
-                    elementType: "labels.icon",
-                    stylers: [{ visibility: "off" }]
-                },
-                {
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#757575" }]
-                },
-                {
-                    elementType: "labels.text.stroke",
-                    stylers: [{ color: "#212121" }]
-                },
-                {
-                    featureType: "administrative",
-                    elementType: "geometry",
-                    stylers: [{ color: "#757575" }]
-                },
-                {
-                    featureType: "administrative.country",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#9e9e9e" }]
-                },
-                {
-                    featureType: "administrative.locality",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#bdbdbd" }]
-                },
-                {
-                    featureType: "poi",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#757575" }]
-                },
-                {
-                    featureType: "poi.park",
-                    elementType: "geometry",
-                    stylers: [{ color: "#181818" }]
-                },
-                {
-                    featureType: "poi.park",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#616161" }]
-                },
-                {
-                    featureType: "poi.park",
-                    elementType: "labels.text.stroke",
-                    stylers: [{ color: "#1b1b1b" }]
-                },
-                {
-                    featureType: "road",
-                    elementType: "geometry.fill",
-                    stylers: [{ color: "#2c2c2c" }]
-                },
-                {
-                    featureType: "road",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#8a8a8a" }]
-                },
-                {
-                    featureType: "road.arterial",
-                    elementType: "geometry",
-                    stylers: [{ color: "#373737" }]
-                },
-                {
-                    featureType: "road.highway",
-                    elementType: "geometry",
-                    stylers: [{ color: "#3c3c3c" }]
-                },
-                {
-                    featureType: "road.highway.controlled_access",
-                    elementType: "geometry",
-                    stylers: [{ color: "#4e4e4e" }]
-                },
-                {
-                    featureType: "road.local",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#616161" }]
-                },
-                {
-                    featureType: "transit",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#757575" }]
-                },
-                {
-                    featureType: "water",
-                    elementType: "geometry",
-                    stylers: [{ color: "#000000" }]
-                },
-                {
-                    featureType: "water",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#3d3d3d" }]
-                }
+            styles: [
+                { elementType: "geometry", stylers: [{ color: "#212121" }] },
+                { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#212121" }] },
+                { featureType: "administrative", elementType: "geometry", stylers: [{ color: "#757575" }] },
+                { featureType: "administrative.country", elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] },
+                { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#bdbdbd" }] },
+                { featureType: "poi", elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+                { featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#181818" }] },
+                { featureType: "poi.park", elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
+                { featureType: "poi.park", elementType: "labels.text.stroke", stylers: [{ color: "#1b1b1b" }] },
+                { featureType: "road", elementType: "geometry.fill", stylers: [{ color: "#2c2c2c" }] },
+                { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#8a8a8a" }] },
+                { featureType: "road.arterial", elementType: "geometry", stylers: [{ color: "#373737" }] },
+                { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#3c3c3c" }] },
+                { featureType: "road.highway.controlled_access", elementType: "geometry", stylers: [{ color: "#4e4e4e" }] },
+                { featureType: "road.local", elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
+                { featureType: "transit", elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+                { featureType: "water", elementType: "geometry", stylers: [{ color: "#000000" }] },
+                { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#3d3d3d" }] }
             ]
         });
 
-        // Add a marker
         const marker = new google.maps.Marker({
             position: phnomPenh,
             map: map,
@@ -610,22 +500,21 @@ function initializeGoogleMap() {
             }
         });
 
-        // Add info window
         const infoWindow = new google.maps.InfoWindow({
             content: `
-        <div style="padding: 10px; text-align: center;">
-          <h3 style="margin: 0 0 5px; color: #00d1ff;">Vanda Leng</h3>
-          <p style="margin: 0;">Web Developer</p>
-          <p style="margin: 5px 0 0; font-size: 12px;">Phnom Penh, Cambodia</p>
-        </div>
-      `
+                        <div style="padding: 10px; text-align: center;">
+                            <h3 style="margin: 0 0 5px; color: #00d1ff;">Vanda Leng</h3>
+                            <p style="margin: 0;">Web Developer</p>
+                            <p style="margin: 5px 0 0; font-size: 12px;">Phnom Penh, Cambodia</p>
+                        </div>
+                    `
         });
 
         marker.addListener("click", () => {
             infoWindow.open(map, marker);
         });
 
-        // Open info window by default
         infoWindow.open(map, marker);
     };
 }
+AOS.init();
