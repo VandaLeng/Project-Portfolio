@@ -1,4 +1,3 @@
-// JavaScript for Main.js (consolidated)
 document.addEventListener("DOMContentLoaded", () => {
     createAnimatedBackground();
     typewriterAnimation();
@@ -11,10 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeTrainerCarousel();
     initializeGoogleMap();
 
-    const AOS = window.AOS;
-    if (typeof AOS !== "undefined" && typeof AOS.init === "function") {
-        AOS.init();
-    }
+    // Initialize AOS with global settings for scroll animations
+    AOS.init({
+        duration: 800, // Default duration for animations
+        easing: 'ease-in-out', // Smooth easing for natural feel
+        once: true, // Animations trigger only once
+        offset: 100, // Trigger animations when element is 100px from viewport
+        anchorPlacement: 'top-bottom' // Trigger when top of element hits bottom of viewport
+    });
 });
 
 function createAnimatedBackground() {
@@ -46,14 +49,14 @@ function createAnimatedBackground() {
 
     const style = document.createElement("style");
     style.textContent = `
-                @keyframes floatParticle {
-                    0% { transform: translate(0, 0); }
-                    25% { transform: translate(100px, 50px); }
-                    50% { transform: translate(50px, 100px); }
-                    75% { transform: translate(-50px, 50px); }
-                    100% { transform: translate(0, 0); }
-                }
-            `;
+        @keyframes floatParticle {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 50px); }
+            50% { transform: translate(50px, 100px); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(0, 0); }
+        }
+    `;
     document.head.appendChild(style);
 }
 
@@ -105,7 +108,6 @@ function animateProfileImage() {
     const gsap = window.gsap;
     if (!gsap) return;
 
-    // Modified: Only animate hero-image img, exclude about-image img
     const heroProfileImage = document.querySelector(".hero-image img");
     if (!heroProfileImage) return;
 
@@ -133,7 +135,6 @@ function setupThemeToggle() {
         applyLightTheme();
     } else {
         document.body.classList.remove("light-theme");
-        themeToggle.checked = false;
         applyDarkTheme();
     }
 
@@ -292,17 +293,11 @@ function initializeSkillsCards() {
     skillsContainer.className = "skills-container";
 
     originalCards.forEach((card, index) => {
-        card.setAttribute("data-aos", "fade-up");
-        card.setAttribute("data-aos-delay", (index * 100).toString());
-        card.setAttribute("data-aos-duration", "800");
         skillsContainer.appendChild(card);
     });
 
-    originalCards.forEach((card, index) => {
+    originalCards.forEach((card) => {
         const clone = card.cloneNode(true);
-        clone.setAttribute("data-aos", "fade-up");
-        clone.setAttribute("data-aos-delay", (index * 100).toString());
-        clone.setAttribute("data-aos-duration", "800");
         skillsContainer.appendChild(clone);
     });
 
@@ -502,12 +497,12 @@ function initializeGoogleMap() {
 
         const infoWindow = new google.maps.InfoWindow({
             content: `
-                        <div style="padding: 10px; text-align: center;">
-                            <h3 style="margin: 0 0 5px; color: #00d1ff;">Vanda Leng</h3>
-                            <p style="margin: 0;">Web Developer</p>
-                            <p style="margin: 5px 0 0; font-size: 12px;">Phnom Penh, Cambodia</p>
-                        </div>
-                    `
+                <div style="padding: 10px; text-align: center;">
+                    <h3 style="margin: 0; color: #00d1ff;">Vanda Leng</h3>
+                    <p style="margin: 0;">Web Developer</p>
+                    <p style="margin: 5px 0; font-size: 12px;">Phnom Penh, Cambodia</p>
+                </div>
+            `
         });
 
         marker.addListener("click", () => {
@@ -517,4 +512,3 @@ function initializeGoogleMap() {
         infoWindow.open(map, marker);
     };
 }
-AOS.init();
