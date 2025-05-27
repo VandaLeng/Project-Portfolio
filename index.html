@@ -24,7 +24,7 @@
             <div class="logo">VL</div>
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html" id="home-link" data-lang="nav-home">Home</a></li>
+                    <li><a href="/index.html" id="home-link" data-lang="nav-home">Home</a></li>
                     <li><a href="/pages/experience.html" id="experience-link" data-lang="nav-experience">Experience</a></li>
                     <li><a href="/pages/about_me.html" id="about-link" data-lang="nav-about">About Me</a></li>
                     <li><a href="/pages/Contact_me.html" id="contact-link" data-lang="nav-contact">Contact Me</a></li>
@@ -378,27 +378,47 @@
         // Navbar active state
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-links li a');
-            const currentPath = window.location.pathname;
+            // Normalize the current path to handle trailing slashes and base paths
+            let currentPath = window.location.pathname.toLowerCase();
+            // Remove trailing slash for consistency
+            if (currentPath.endsWith('/')) {
+                currentPath = currentPath.slice(0, -1);
+            }
+            // Remove leading slash for matching
+            currentPath = currentPath.replace(/^\//, '');
 
             // Define page mappings based on href and file names
             const pageMappings = {
-                '/index.html': 'home-link',
-                '/pages/experience.html': 'experience-link',
-                '/pages/about_me.html': 'about-link',
-                '/pages/Contact_me.html': 'contact-link',
-                '/': 'home-link' // Handle root path for home page
+                'index.html': 'home-link',
+                '': 'home-link', // Handle root path
+                'pages/experience.html': 'experience-link',
+                'pages/about_me.html': 'about-link',
+                'pages/Contact_me.html': 'contact-link'
             };
 
             // Remove active class from all links
             navLinks.forEach(link => link.classList.remove('active'));
 
-            // Add active class to the current page's link
+            // Find the matching link ID
+            let activeLinkId = null;
             for (const [path, linkId] of Object.entries(pageMappings)) {
-                if (currentPath === path || (path === '/index.html' && currentPath === '/')) {
-                    const activeLink = document.getElementById(linkId);
-                    if (activeLink) {
-                        activeLink.classList.add('active');
-                    }
+                if (currentPath === path || (path === 'index.html' && currentPath === '')) {
+                    activeLinkId = linkId;
+                    break;
+                }
+            }
+
+            // Add active class to the current page's link
+            if (activeLinkId) {
+                const activeLink = document.getElementById(activeLinkId);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            } else {
+                // Fallback: If no match, default to home
+                const homeLink = document.getElementById('home-link');
+                if (homeLink) {
+                    homeLink.classList.add('active');
                 }
             }
         });
