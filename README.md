@@ -52,15 +52,6 @@ It's **fully responsive**, clean, and easy to run on any device or server.
 
 ---
 
-## 💻 Built With
-
-- ⚙️ HTML5  
-- 🎨 CSS3 (Flexbox + Grid)  
-- 🧠 JavaScript (Vanilla JS)  
-- 💡 *(Future Option)* Bootstrap or Tailwind CSS  
-
----
-
 ## 🛠️ Tools Used
 
 - 🧰 **Git** + **GitHub** – version control  
