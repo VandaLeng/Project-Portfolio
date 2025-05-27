@@ -343,8 +343,8 @@ function handleResponsiveCircle() {
     const langLogos = document.querySelectorAll('.lang-logo');
     const glows = document.querySelectorAll('.glow');
 
-    // Recalculate positions based on current container size
-    const radius = containerWidth / 2 + 70; // Position OUTSIDE the circle with more space
+    // Adjust radius based on viewport size (smaller radius for 391px)
+    const radius = containerWidth / 2 + (window.innerWidth <= 391 ? 30 : 70); // Reduced radius for mobile
     const centerX = containerWidth / 2;
     const centerY = containerWidth / 2;
 
