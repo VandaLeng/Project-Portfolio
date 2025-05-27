@@ -1303,9 +1303,20 @@ body.light-theme .theme-toggle label:hover {
 }
 
 @media (max-width: 391px) {
+    .experience-section {
+        position: relative;
+        top: 30px;
+    }
+    .experience-section h1 {
+        font-size: var(--font-size-xxl);
+    }
     .experience-stats {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        position: relative;
+        left: 40px;
     }
     .stat-item {
         padding: 10px;
