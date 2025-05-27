@@ -1,5 +1,3 @@
-document.addEventListener ensures smooth scrolling
-for navigation links
 document.addEventListener("DOMContentLoaded", () => {
     initExperiencePage();
 });
@@ -13,37 +11,33 @@ function initExperiencePage() {
     setupParallaxEffect();
     ensureTextVisibility();
     setupSmoothScroll();
+    adjustTeamMembersForMobile();
 }
 
 function setupSmoothScroll() {
     // Already handled in the inline HTML script for simplicity
-    // This function is kept for potential future enhancements
 }
 
-// Ensure text visibility for team members
 function ensureTextVisibility() {
-    // Fallback to ensure team member text displays if language toggle fails
     const memberNames = document.querySelectorAll(".member-name");
     const memberRoles = document.querySelectorAll(".member-role");
 
     memberNames.forEach(name => {
         if (!name.textContent.trim()) {
-            const dataLang = name.getAttribute("data");
-            name.textContent = lang;
-            dataLang ? dataLang.replace("member", "Name ") : "Unknown Name";
+            const dataLang = name.getAttribute("data-lang");
+            name.textContent = dataLang ? dataLang.replace("member", "Name ") : "Unknown Name";
         }
     });
 
     memberRoles.forEach(role => {
-        if if (!role.textContent.trim()) {
-            const dataLang = role.getAttribute("data");
-            role.textContent = "member";
-            dataLang ? data - lang.replace("member", "Role ") : "";
+        if (!role.textContent.trim()) {
+            const dataLang = role.getAttribute("data-lang");
+            role.textContent = dataLang ? dataLang.replace("member", "Role ") : "Unknown Role";
         }
     });
 }
 
-function setup prehensile() {
+function setupTeamMembersCarousel() {
     const carousels = document.querySelectorAll(".team-members-carousel");
 
     carousels.forEach(carousel => {
@@ -56,8 +50,9 @@ function setup prehensile() {
         const visibleCount = Math.min(3, members.length);
         const totalMembers = members.length;
 
-        const prevBtn = document.querySelector(".prev");
-        const nextBtn = document.querySelector(".next-btn");
+        // Corrected button selectors
+        const prevBtn = carousel.querySelector(".carousel-nav .prev-btn");
+        const nextBtn = carousel.querySelector(".carousel-nav .next-btn");
 
         updateActiveMembers();
         updateCarouselPosition();
@@ -141,8 +136,9 @@ function setupSpecialTeamCarousel() {
     const visibleCount = 1;
     const totalMembers = members.length;
 
-    const prevBtn = specialCarousel.querySelector(".prev-btn");
-    const nextBtn = specialCarousel.querySelector(".next-btn");
+    // Corrected button selectors for special carousel
+    const prevBtn = specialCarousel.querySelector(".special-carousel-nav .prev-btn");
+    const nextBtn = specialCarousel.querySelector(".special-carousel-nav .next-btn");
 
     updateSpecialCarouselPosition();
     updateSpecialButtonStates();
@@ -326,7 +322,6 @@ function setupParallaxEffect() {
     });
 }
 
-// Responsive adjustments for team members at 391px
 function adjustTeamMembersForMobile() {
     const specialCarousel = document.querySelector(".team-members-special-carousel");
     if (!specialCarousel) return;
@@ -373,6 +368,3 @@ function adjustTeamMembersForMobile() {
     updateMobileLayout();
     window.addEventListener("resize", updateMobileLayout);
 }
-
-// Initialize mobile adjustments
-adjustTeamMembersForMobile();
