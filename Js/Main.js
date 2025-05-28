@@ -11,13 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeGoogleMap();
 
     // Initialize AOS with global settings for scroll animations
-    AOS.init({
-        duration: 800, // Default duration for animations
-        easing: 'ease-in-out', // Smooth easing for natural feel
-        once: true, // Animations trigger only once
-        offset: 100, // Trigger animations when element is 100px from viewport
-        anchorPlacement: 'top-bottom' // Trigger when top of element hits bottom of viewport
-    });
+    const AOS = window.AOS; // Declare the AOS variable
+    if (AOS) {
+        AOS.init({
+            duration: 800, // Default duration for animations
+            easing: 'ease-in-out', // Smooth easing for natural feel
+            once: true, // Animations trigger only once
+            offset: 100, // Trigger animations when element is 100px from viewport
+            anchorPlacement: 'top-bottom' // Trigger when top of element hits bottom of viewport
+        });
+    }
 });
 
 function createAnimatedBackground() {
@@ -108,20 +111,50 @@ function animateProfileImage() {
     const gsap = window.gsap;
     if (!gsap) return;
 
-    const heroProfileImage = document.querySelector(".hero-image img");
-    if (!heroProfileImage) return;
+    // Enhanced hero profile image animation
+    const heroProfileImage = document.querySelector(".profile-image");
+    if (heroProfileImage) {
+        gsap.fromTo(
+            heroProfileImage, { y: -50, opacity: 0, scale: 0.9, rotation: -5 }, { y: 0, opacity: 1, scale: 1, rotation: 0, duration: 2, ease: "power2.out", delay: 0.5 }
+        );
 
-    gsap.fromTo(
-        heroProfileImage, { y: -50, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power2.out", delay: 0.5 }
-    );
+        // Enhanced floating animation with more natural movement
+        gsap.to(heroProfileImage, {
+            y: 15,
+            rotation: 2,
+            yoyo: true,
+            repeat: -1,
+            duration: 4,
+            ease: "sine.inOut"
+        });
 
-    gsap.to(heroProfileImage, {
-        y: 20,
-        yoyo: true,
-        repeat: -1,
-        duration: 3,
-        ease: "sine.inOut"
-    });
+        // Add subtle scale animation
+        gsap.to(heroProfileImage, {
+            scale: 1.02,
+            yoyo: true,
+            repeat: -1,
+            duration: 6,
+            ease: "power1.inOut"
+        });
+    }
+
+    // Enhanced about profile image animation
+    const aboutProfileImage = document.querySelector(".about-profile-image");
+    if (aboutProfileImage) {
+        gsap.fromTo(
+            aboutProfileImage, { x: -30, opacity: 0, scale: 0.95 }, { x: 0, opacity: 1, scale: 1, duration: 1.8, ease: "power2.out", delay: 0.3 }
+        );
+
+        // Gentle floating animation for about image
+        gsap.to(aboutProfileImage, {
+            y: 10,
+            rotation: 1,
+            yoyo: true,
+            repeat: -1,
+            duration: 5,
+            ease: "sine.inOut"
+        });
+    }
 }
 
 function setupThemeToggle() {
