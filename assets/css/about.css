@@ -125,6 +125,7 @@
     margin-bottom: 120px;
     position: relative;
     top: 100px;
+    right: 200px;
 }
 
 
@@ -774,7 +775,6 @@
         align-items: center;
         margin-top: 30px;
         position: relative;
-        right: 14px;
     }
     .category {
         min-width: 100%;
