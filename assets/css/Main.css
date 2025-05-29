@@ -1642,16 +1642,15 @@ form button {
         display: none;
         opacity: 0;
     }
-    body.show-mobile-menu .nav-menu,
-    body.show-mobile-menu .language-toggle {
+    body.show-mobile-menu .nav-menu {
         display: flex;
         flex-direction: column;
         position: fixed;
         top: 80px;
-        left: 0;
-        width: 250px;
+        left: 20px;
+        width: 300px;
         height: calc(100vh - 80px);
-        background: rgba(26, 26, 26, 0.95);
+        background: rgba(25, 25, 25, 0.95);
         padding: 20px;
         z-index: 99;
         animation: slideInMenu 0.3s ease-out;
@@ -1837,6 +1836,7 @@ form button {
     }
     .contact-container {
         flex-direction: column;
+        height: 100vh;
         gap: 30px;
     }
     .map-container {
