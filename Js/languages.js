@@ -17,6 +17,7 @@ const translations = {
         "btn-hire": "HIRE ME",
         "btn-get-project": "Get Any Project",
         // Skills
+        "skills-title": "Languages & Tools",
         "skill-html": "HTML",
         "skill-css": "CSS",
         "skill-js": "JavaScript",

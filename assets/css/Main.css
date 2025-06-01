@@ -819,6 +819,27 @@ header:hover {
     }
 }
 
+h5 {
+    font-size: var(--font-size-xll);
+    color: var(--accent-cyan);
+    margin-bottom: 40px;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+    text-align: center;
+}
+
+h5::after {
+    content: "";
+    display: block;
+    width: 300px;
+    /* you can adjust width here */
+    height: 4px;
+    /* underline thickness */
+    background-color: var(--accent-cyan);
+    margin: 10px auto 0 auto;
+    /* top margin, center horizontally */
+}
+
 .skill-card[data-skill="html"] i {
     color: #e34c26;
 }
