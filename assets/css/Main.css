@@ -1919,6 +1919,27 @@ form button {
         padding: 10px;
         display: none;
     }
+    h5 {
+        font-size: var(--font-size-xl);
+        color: var(--accent-cyan);
+        margin-bottom: 40px;
+        position: relative;
+        animation: fadeIn 1s ease-out;
+        text-align: center;
+        position: relative;
+        top: 20px;
+    }
+    h5::after {
+        content: "";
+        display: block;
+        width: 220px;
+        /* you can adjust width here */
+        height: 4px;
+        /* underline thickness */
+        background-color: var(--accent-cyan);
+        margin: 10px auto 0 auto;
+        /* top margin, center horizontally */
+    }
     .about-details {
         display: none;
     }
@@ -1958,6 +1979,8 @@ form button {
     .hero-image img {
         width: 180px;
         height: 180px;
+        position: relative;
+        top: 50px;
     }
     .btn {
         padding: 6px 15px;

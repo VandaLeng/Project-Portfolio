@@ -258,9 +258,36 @@ html {
     z-index: 2;
     opacity: 0;
     transform: translateY(20px);
+    margin-left: 320px;
+}
+
+.view-btn-project {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 8px 20px;
+    border-radius: var(--border-radius-xs);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-ease);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    margin-left: 480px;
 }
 
 .project-container:hover .view-btn {
+    opacity: 1;
+    transform: translateY(0);
+    animation: pulseButton 2s infinite;
+}
+
+.project-container:hover .view-btn-project {
     opacity: 1;
     transform: translateY(0);
     animation: pulseButton 2s infinite;
@@ -284,11 +311,25 @@ html {
     box-shadow: var(--shadow-glow);
 }
 
+.view-btn-project:hover {
+    background: var(--accent-cyan);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
 .view-btn i {
     transition: transform 0.3s ease;
 }
 
+.view-btn-project i {
+    transition: transform 0.3s ease;
+}
+
 .view-btn:hover i {
+    transform: translateX(5px);
+}
+
+.view-btn-project:hover i {
     transform: translateX(5px);
 }
 
