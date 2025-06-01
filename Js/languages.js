@@ -116,7 +116,7 @@ const translations = {
         "footer-logo": "VL",
         "footer-description": "Hi! I’m Vanda Leng, a passionate web developer with experience in building modern, responsive websites using HTML, CSS, JavaScript, and frameworks like Vue.js. I enjoy creating user-friendly interfaces and solving complex coding challenges.",
         "footer-quick-links": "Quick Links",
-        "footer-services": "Services",
+        "footer-services": "My Project",
         "footer-newsletter": "Newsletter",
         "footer-newsletter-placeholder": "Enter your email",
         "footer-copyright": "©2025 | Made with Vanda Dev . All Rights Reserved.",
