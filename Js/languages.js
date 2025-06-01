@@ -5,7 +5,7 @@ const translations = {
         "nav-experience": "Experience",
         "nav-about": "About Me",
         "nav-contact": "Contact Me",
-        "language-label": "Language:",
+
         "lang-en": "English",
         "lang-kh": "Khmer",
         // Hero Section
@@ -113,7 +113,7 @@ const translations = {
         "contact-phone-value": "+855 10-591-065",
         // Footer
         "footer-logo": "VL",
-        "footer-description": "Follow my Facebook channel named Vanda_Leng to see more of such projects and other posts. Also Like and share these posts. Also follow me on GitHub and LinkedIn. I hope you will like my content.",
+        "footer-description": "Hi! I’m Vanda Leng, a passionate web developer with experience in building modern, responsive websites using HTML, CSS, JavaScript, and frameworks like Vue.js. I enjoy creating user-friendly interfaces and solving complex coding challenges.",
         "footer-quick-links": "Quick Links",
         "footer-services": "Services",
         "footer-newsletter": "Newsletter",
