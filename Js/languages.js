@@ -17,6 +17,7 @@ const translations = {
         "btn-hire": "HIRE ME",
         "btn-get-project": "Get Any Project",
         // Skills
+        "section-title": "Languages & Tools",
         "skills-title": "Languages & Tools",
         "skill-html": "HTML",
         "skill-css": "CSS",
@@ -171,7 +172,12 @@ const translations = {
         "member18-role": "Role: UI/UX Designer",
         "member18-name": "Name: Sophy Em",
         "member19-role": "Role: DevOps",
-        "member19-name": "Name: Rom Sreyneath"
+        "member19-name": "Name: Rom Sreyneath",
+        "project-webdesign": "Web Design",
+        "project-emailautomation": "Email Automation",
+        "project-notetaker": "Note Taker",
+        "project-vc1": "VC1"
+
     },
     kh: {
         // Navigation
@@ -191,6 +197,7 @@ const translations = {
         "btn-hire": "ជួលខ្ញុំ",
         "btn-get-project": "ទទួលបានគម្រោងណាមួយ",
         // Skills
+        "section-title": "ភាសា និងឧបករណ៍",
         "skill-html": "HTML",
         "skill-css": "CSS",
         "skill-js": "JavaScript",
@@ -287,7 +294,7 @@ const translations = {
         "contact-phone-value": "+៨៥៥ ១៦-៥៩១-០៦៥",
         // Footer
         "footer-logo": "VL",
-        "footer-description": "តាមដានឆានែល Facebook របស់ខ្ញុំឈ្មោះ Vanda_Leng ដើម្បីមើលគម្រោងបែបនេះបន្ថែមទៀត និងការបង្ហោះផ្សេងៗ។ សូមចូលចិត្ត និងចែករំលែកការបង្ហោះទាំងនេះ។ ក៏សូមតាមដានខ្ញុំនៅលើ GitHub និង LinkedIn ផងដែរ។ ខ្ញុំសង្ឃឹមថាអ្នកនឹងចូលចិត្តមាតិការបស់ខ្ញុំ។",
+        "footer-description": "សួស្តី! ខ្ញុំឈ្មោះ វ៉ាន់ដា ឡេង ជាអ្នកបង្កើតគេហទំព័រដែលពេញចិត្តជាមួយនឹងបទពិសោធន៍ក្នុងការបង្កើតគេហទំព័រទំនើប និងឆ្លើយតបដោយប្រើ HTML, CSS, JavaScript និងក្របខ័ណ្ឌដូចជា Vuejs ។ ខ្ញុំចូលចិត្តបង្កើតចំណុចប្រទាក់ដែលងាយស្រួលប្រើ និងដោះស្រាយការសរសេរកូដស្មុគស្មាញ បញ្ហាប្រឈម ",
         "footer-quick-links": "តំណភ្ជាប់រហ័ស",
         "footer-services": "សេវាកម្ម",
         "footer-newsletter": "ព្រឹត្តិបត្រ",
@@ -297,9 +304,9 @@ const translations = {
         "experience-title": "គម្រោងរបស់ខ្ញុំ",
         "experience-subtitle": "ព័ត៌មានលម្អិតអំពីបទពិសោធន៍",
         "stat-projects": "គម្រោង",
-        "stat-families": "គ្រួសារដែលបានជួយសង្គ្រោះ",
-        "stat-staff": "បុគ្គលិកដែលបានបណ្តុះបណ្តាល",
-        "stat-clients": "អតិថិជនដែលទុកចិត្ត",
+        "stat-technology": "បច្ចេកវិទ្យា",
+        "stat-managing": "ឧបករណ៍គ្រប់គ្រង",
+        "stat-timeline": "បន្ទាត់ពេលវេលា",
         "view-web": "មើលវែបសាយ",
         "team-members": "សមាជិកក្រុម",
         "languages-tools": "ភាសា និងឧបករណ៍",
@@ -344,7 +351,11 @@ const translations = {
         "member18-role": "តួនាទី៖ អ្នករចនា UI/UX",
         "member18-name": "ឈ្មោះ៖ សុភី អេម",
         "member19-role": "តួនាទី៖ អ្នក DevOps",
-        "member19-name": "ឈ្មោះ៖ រ៉ូម ស្រីនាថ"
+        "member19-name": "ឈ្មោះ៖ រ៉ូម ស្រីនាថ",
+        "project-webdesign": "រចនាគេហទំព័រ",
+        "project-emailautomation": "ស្វ័យប្រវត្តិកម្មអ៊ីមែល",
+        "project-notetaker": "អ្នកកត់ចំណាំ",
+        "project-vc1": "VC1"
     }
 };
 
