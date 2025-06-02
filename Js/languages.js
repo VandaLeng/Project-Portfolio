@@ -50,7 +50,7 @@ const translations = {
         "about-address": "Phnom Penh, Cambodia",
         // Skillset Section
         "skillset-title": "SKILLSET",
-        "skillset-subtitle": "Create and Professional Skills Experience on Few Area",
+        "skillset-subtitle": "My Professional Skills Experience on this Area",
         "skillset-description": "My name is Vanda Leng. Currently, I am a student who studied at <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>. Moreover, I study with the information technology department that focus on Web development. For my passionate is coding and learning.",
         // Hard Skills
         "learned-title": "What I Have Learned?",
@@ -86,6 +86,9 @@ const translations = {
         "soft-skill-critical-thinking-desc": "Analyzing situations logically and making informed decisions based on evidence and reasoning. Evaluating challenges objectively to identify the best solutions.",
         "soft-skill-creativity": "Creativity",
         "soft-skill-creativity-desc": "Thinking outside the box to develop innovative ideas and solutions. Applying imagination to design user-friendly interfaces and solve complex problems.",
+        "trainer-title": "trainer-title",
+        "footer-contact": "footer-contact",
+        "contact-street": "371, Phnom Penh City, Borey Sola",
         // Education
         "education-pnc-degree": "Web Development Program",
         "education-pnc-school": "Passerelles Numériques Cambodia (PNC)",
@@ -125,9 +128,9 @@ const translations = {
         "experience-title": "My Projects",
         "experience-subtitle": "Experience Details",
         "stat-projects": "Projects",
-        "stat-families": "Families Saved",
-        "stat-staff": "Trained Staff",
-        "stat-clients": "Trusted Clients",
+        "stat-technology": "Technologies",
+        "stat-managing": "Managing Tools",
+        "stat-timeline": "Timelines",
         "view-web": "View Web",
         "team-members": "Team Members",
         "languages-tools": "Languages & Tools",
@@ -229,7 +232,7 @@ const translations = {
         "about-address": "ភ្នំពេញ, កម្ពុជា",
         // Skillset Section
         "skillset-title": "ជំនាញ",
-        "skillset-subtitle": "បង្កើត និងបទពិសោធន៍ជំនាញវិជ្ជាជីវៈនៅលើផ្នែកមួយចំនួន",
+        "skillset-subtitle": "បទពិសោធន៍ជំនាញវិជ្ជាជីវៈរបស់ខ្ញុំលើផ្នែកនេះ។",
         "skillset-description": "ខ្ញុំឈ្មោះ វណ្ណដា ឡេង។ បច្ចុប្បន្ន ខ្ញុំជានិស្សិតដែលកំពុងសិក្សានៅ <span class='highlight_PNC'>Passerellesnumeriques Cambodia (PNC)</span>។ លើសពីនេះ ខ្ញុំសិក្សានៅផ្នែកបច្ចេកវិទ្យាព័ត៌មានដែលផ្តោតលើការអភិវឌ្ឍន៍វែប។ ចំណង់ចំណូលចិត្តរបស់ខ្ញុំគឺការសរសេរកូដ និងការរៀនសូត្រ។",
         // Hard Skills
         "learned-title": "អ្វីដែលខ្ញុំបានរៀន?",
@@ -265,6 +268,9 @@ const translations = {
         "soft-skill-critical-thinking-desc": "ការវិភាគស្ថានភាពដោយឡែក និងការសម្រេចចិត្តដោយផ្អែកលើភស្តុតាង និងហេតុផល។ ការវាយតម្លៃការប្រឈមដោយវ័យវ័យដើម្បីកំណត់អត្តសញ្ញាណដំណោះស្រាយដ៏ល្អបំផុត។",
         "soft-skill-creativity": "ការច្នៃប្រឌិត",
         "soft-skill-creativity-desc": "ការគិតខុសពីធម្មតា ដើម្បីអភិវឌ្ឍគំនិត និងដំណោះស្រាយថ្មីៗ។ ការអនុវត្តការស្រមៃដើម្បីរចនាចំណុចប្រទាក់ដែលងាយស្រួលប្រើ និងដោះស្រាយបញ្ហាស្មុគស្មាញ។",
+        "trainer-title": "ចំណងជើងគ្រូបង្វឹក",
+        "footer-contact": "បាតកថាទំនាក់ទំនង",
+        "contact-street": "ផ្ទះលេខ ៣៧១ ក្រុងភ្នំពេញ បុរីសូឡា",
         // Education
         "education-pnc-degree": "កម្មវិធីអភិវឌ្ឍន៍វែបសាយ",
         "education-pnc-school": "Passerelles Numériques Cambodia (PNC)",
