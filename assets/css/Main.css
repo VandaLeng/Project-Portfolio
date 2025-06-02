@@ -213,10 +213,11 @@ header:hover {
     position: relative;
     display: flex;
     align-items: center;
-    background: rgba(0, 209, 255, 0.1);
+    background: rgba(33, 33, 33, 0.1);
     padding: 5px 10px;
     border-radius: var(--border-radius-s);
     transition: all 0.3s ease;
+    width: 100px;
 }
 
 .language-wrapper:hover {
@@ -292,7 +293,7 @@ header:hover {
     font-weight: 900;
     position: absolute;
     right: 10px;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     color: var(--accent-cyan);
     pointer-events: none;
@@ -2165,4 +2166,9 @@ form button {
     .language-toggle {
         display: flex;
     }
+}
+
+
+}
+
 }
