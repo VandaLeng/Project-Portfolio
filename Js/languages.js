@@ -86,7 +86,11 @@ const translations = {
         "soft-skill-critical-thinking-desc": "Analyzing situations logically and making informed decisions based on evidence and reasoning. Evaluating challenges objectively to identify the best solutions.",
         "soft-skill-creativity": "Creativity",
         "soft-skill-creativity-desc": "Thinking outside the box to develop innovative ideas and solutions. Applying imagination to design user-friendly interfaces and solve complex problems.",
-        "trainer-title": "trainer-title",
+        "Trainer-title": "trainer-title",
+        "Trainer_Rady": "trainer_Rady Y",
+        "Trainer_Him": "trainer_Him",
+        "Trainer_Yon": "trainer_Yon",
+        "Trainer_Soveurn": "trainer_Soveurn",
         "footer-contact": "footer-contact",
         "contact-street": "371, Phnom Penh City, Borey Sola",
         // Education
@@ -165,7 +169,7 @@ const translations = {
         "member12-name": "Name: Chhin Sor",
         // Project 4
         "project4-title": "Virtual Company One (VC1) Management System Project",
-        "project4-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate the employee's team-related projects. The system allowed employees to submit, approve, or reject corporate events. We developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development. We supported our task tracking and communication through the entire development process. Our team was thorough throughout the entire process, to track and make sure the system worked as intended. We conducted extensive user testing and gathered feedback. This project taught us both technical and communication skills and gave us experience in delivering a functional product that met our client needs.",
+        "project4-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate the employee's team-related projects. The system allowed employees to submit, approve, or reject corporate events. We developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development. ",
         "member15-role": "Role: Scrum Master",
         "member15-name": "Name: Chab Charyna",
         "member16-role": "Role: Developer",
@@ -269,6 +273,12 @@ const translations = {
         "soft-skill-creativity": "ការច្នៃប្រឌិត",
         "soft-skill-creativity-desc": "ការគិតខុសពីធម្មតា ដើម្បីអភិវឌ្ឍគំនិត និងដំណោះស្រាយថ្មីៗ។ ការអនុវត្តការស្រមៃដើម្បីរចនាចំណុចប្រទាក់ដែលងាយស្រួលប្រើ និងដោះស្រាយបញ្ហាស្មុគស្មាញ។",
         "trainer-title": "ចំណងជើងគ្រូបង្វឹក",
+
+        "Trainer_Rady": "គ្រូបង្វឹក_Rady Y",
+        "Trainer_Him": "គ្រូបង្វឹក_Him",
+        "Trainer_Yon": "គ្រូបង្វឹក_យ៉ុន",
+        "Trainer_Soveurn": "គ្រូឧទ្ទេស_សុវឿន",
+
         "footer-contact": "បាតកថាទំនាក់ទំនង",
         "contact-street": "ផ្ទះលេខ ៣៧១ ក្រុងភ្នំពេញ បុរីសូឡា",
         // Education
@@ -347,7 +357,7 @@ const translations = {
         "member12-name": "ឈ្មោះ៖ ឈីន ស",
         // Project 4
         "project4-title": "គម្រោងប្រព័ន្ធគ្រប់គ្រង Virtual Company One (VC1)",
-        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។ យើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ�। ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។ យើងបានគាំទ្រការតាមដានភារកិច្ច និងការទំនាក់ទំនងពេញមួយដំណើរការអភិវឌ្ឍន៍។ ក្រុមរបស់យើងបានធ្វើការយ៉ាងហ្មត់ចត់ពេញមួយដំណើរការ ដើម្បីតាមដាននិងធ្វើឱ្យប្រាកដថាប្រព័ន្ធដំណើរការតាមការគ្រោងទុក។ យើងបានធ្វើការសាកល្បងអ្នកប្រើប្រាស់យ៉ាងទូលំទូលាយ និងប្រមូលមតិយោបល់។ គម្រោងនេះបានបង្រៀនយើងទាំងជំនាញបច្ចេកទេស និងជំនាញទំនាក់ទំនង និងបានផ្តល់បទពិសោធន៍ក្នុងការផ្តល់ផលិតផលដែលមានមុខងារដែលបំពេញតាមតម្រូវការអតិថិជន។",
+        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។ យើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ�। ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។",
         "member15-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
         "member15-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
         "member16-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍",
