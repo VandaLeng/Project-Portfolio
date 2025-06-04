@@ -117,7 +117,7 @@ const translations = {
         "contact-address-label": "Address:",
         "contact-address-value": "Street 371, Borey Sorla, Phnom Penh, Cambodia",
         "contact-email-label": "Email:",
-        "contact-email-value": "vanda.leng@student.passerellesnumeriques.org",
+        "contact-email-value": "vandaleng21@gmail.com",
         "contact-phone-label": "Phone:",
         "contact-phone-value": "+855 10-591-065",
         // Footer
@@ -305,7 +305,7 @@ const translations = {
         "contact-address-label": "អាសយដ្ឋាន:",
         "contact-address-value": "ផ្លូវ ៣៧១, បុរីសូឡា, ភ្នំពេញ, កម្ពុជា",
         "contact-email-label": "អ៊ីមែល:",
-        "contact-email-value": "vanda.leng@student.passerellesnumeriques.org",
+        "contact-email-value": "vanadleng21@gmail.com",
         "contact-phone-label": "ទូរស័ព្ទ:",
         "contact-phone-value": "+៨៥៥ ១៦-៥៩១-០៦៥",
         // Footer
