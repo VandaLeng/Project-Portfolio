@@ -19,7 +19,7 @@ const skills = [{
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     color: "#F7DF1E",
     category: "frontend",
-    level: 75
+    level: 60
 }, {
     id: "PHP",
     name: "PHP",
@@ -40,42 +40,42 @@ const skills = [{
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     color: "#68A063",
     category: "backend",
-    level: 65
+    level: 80
 }, {
     id: "Vue",
     name: "Vue.js",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
     color: "#4FC08D",
     category: "frontend",
-    level: 60
+    level: 80
 }, {
     id: "Laravel",
     name: "Laravel",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
     color: "#FF2D20",
     category: "backend",
-    level: 55
+    level: 65
 }, {
     id: "Bootstrap",
     name: "Bootstrap",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     color: "#563D7C",
     category: "frontend",
-    level: 78
+    level: 65
 }, {
     id: "VSCode",
     name: "VS Code",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
     color: "#007ACC",
     category: "frontend",
-    level: 85
+    level: 50
 }, {
     id: "GitHub",
     name: "GitHub",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     color: "#181717",
     category: "frontend",
-    level: 75
+    level: 60
 }];
 
 // Skill info data
