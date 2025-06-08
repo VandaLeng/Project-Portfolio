@@ -121,11 +121,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 150px;
+    gap: 250px;
     margin-bottom: 120px;
     position: relative;
     top: 100px;
-    right: 200px;
+    right: 250px;
 }
 
 
