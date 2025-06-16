@@ -127,7 +127,7 @@ const translations = {
         "footer-services": "My Project",
         "footer-newsletter": "Newsletter",
         "footer-newsletter-placeholder": "Enter your email",
-        "footer-copyright": "©2025 | Made with Vanda Dev . All Rights Reserved.",
+        "footer-copyright": "©2025 | Made with Vanda Dev. All Rights Reserved.",
         // Experience Page
         "experience-title": "My Projects",
         "experience-subtitle": "Experience Details",
@@ -167,24 +167,33 @@ const translations = {
         "member11-name": "Name: Sokleap Seng",
         "member12-role": "Role: Fix & GIT",
         "member12-name": "Name: Chhin Sor",
-        // Project 4
-        "project4-title": "Virtual Company One (VC1) Management System Project",
-        "project4-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate the employee's team-related projects. The system allowed employees to submit, approve, or reject corporate events. We developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development. ",
-        "member15-role": "Role: Scrum Master",
-        "member15-name": "Name: Chab Charyna",
+        // Project 4 (OOP Movie Booking)
+        "project4-title": "OOP Project (Movie Booking System)",
+        "project4-description": "This project demonstrates Object-Oriented Programming (OOP) principles through a console-based movie booking system. The application allows users to browse movies, select showtimes, book tickets, and manage bookings using OOP concepts like classes, inheritance, and polymorphism. Developed using TypeScript and managed with Git, the project focused on clean code practices and UML design for better system architecture.",
+        "member13-role": "Role: Managing Git",
+        "member13-name": "Name: Vanda Leng",
+        "member14-role": "Role: Develop",
+        "member14-name": "Name: Heng Horth",
+        "member15-role": "Role: Draw UML",
+        "member15-name": "Name: Seavmey Yem",
+        // Project 5 (VC1 Management System)
+        "project5-title": "Virtual Company One (VC1) Management System Project",
+        "project5-description": "This project focused on building an internal management system for Virtual Company One (VC1) to streamline and automate employee team-related projects. The system allowed employees to submit, approve, or reject corporate events. We developed the system using PHP with the MVC (Model-View-Controller) structure and used a MySQL database to store data. The frontend was developed using HTML, CSS, JavaScript, and Bootstrap to create a clean, intuitive interface, which helped us work efficiently and avoid conflicts during development.",
         "member16-role": "Role: Developer",
         "member16-name": "Name: Vanda Leng",
         "member17-role": "Role: QA",
         "member17-name": "Name: Bophy Khat",
-        "member18-role": "Role: UI/UX Designer",
+        "member18-role": "Role: Interface Designer",
         "member18-name": "Name: Sophy Em",
         "member19-role": "Role: DevOps",
         "member19-name": "Name: Rom Sreyneath",
+        "member20-role": "Role: Scrum Master",
+        "member20-name": "Name: Chab Charyna",
         "project-webdesign": "Web Design",
         "project-emailautomation": "Email Automation",
         "project-notetaker": "Note Taker",
+        "project-oop": "OOP Movie Booking",
         "project-vc1": "VC1"
-
     },
     kh: {
         // Navigation
@@ -273,12 +282,10 @@ const translations = {
         "soft-skill-creativity": "ការច្នៃប្រឌិត",
         "soft-skill-creativity-desc": "ការគិតខុសពីធម្មតា ដើម្បីអភិវឌ្ឍគំនិត និងដំណោះស្រាយថ្មីៗ។ ការអនុវត្តការស្រមៃដើម្បីរចនាចំណុចប្រទាក់ដែលងាយស្រួលប្រើ និងដោះស្រាយបញ្ហាស្មុគស្មាញ។",
         "trainer-title": "ចំណងជើងគ្រូបង្វឹក",
-
         "Trainer_Rady": "អ្នកសម្របសម្រួលគេហទំព័រ",
         "Trainer_Him": "គ្រូបណ្តុះបណ្តាលគេហទំព័រ",
         "Trainer_Yon": "អ្នកសម្របសម្រួលគេហទំព័រ",
         "Trainer_Soveurn": "អ្នកឯកទេសបណ្តាញ",
-
         "footer-contact": "បាតកថាទំនាក់ទំនង",
         "contact-street": "ផ្ទះលេខ ៣៧១ ក្រុងភ្នំពេញ បុរីសូឡា",
         // Education
@@ -299,7 +306,7 @@ const translations = {
         "education-highschool-desc": "បានបញ្ចប់ការសិក្សាអនុវិទ្យាល័យដោយផ្តោតលើគ្រឹះសិក្សា សកម្មភាពដឹកនាំ និងការចូលរួមសហគមន៍ ដើម្បីរៀបចំសម្រាប់ការសិក្សាកម្រិតខ្ពស់ក្នុងវិស័យបច្ចេកវិទ្យា។",
         // Contact Section
         "contact-title": "ទំនាក់ទំនងមកខ្ញុំ",
-        "contact-subtitle": "ទាក់ទងជាមួយខ្ញុំបានគ្រប់ពេល។ អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែល ឬហៅទូរស័ព្ទមកខ្ញុំប្រសិនបើវាកាន់តែងាយស្រួល។",
+        "contact-subtitle": "ទាក់ទងជាមួយខ្ញុំបានគ្រប់ពេល�। អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែល ឬហៅទូរស័ព្ទមកខ្ញុំប្រសិនបើវាកាន់តែងាយស្រួល។",
         "contact-title-Get": "ទំនាក់ទំនង",
         "contact-description": "ទាក់ទងមកខ្ញុំបានគ្រប់ពេល! អ្នកអាចប្រើទម្រង់ទំនាក់ទំនង ផ្ញើអ៊ីមែលមកខ្ញុំ ឬហៅទូរស័ព្ទប្រសិនបើវាកាន់តែងាយស្រួល។ ខ្ញុំតែងតែរីករាយក្នុងការទទួលស្តាប់ពីអ្នក។ មិនថាអ្នកមានសំណួរ គំនិតគម្រោង ឬគ្រាន់តែចង់ជំរាបសួរ កុំស្ទាក់ស្ទើកក្នុងការទាក់ទង!",
         "contact-address-label": "អាសយដ្ឋាន:",
@@ -328,7 +335,7 @@ const translations = {
         "languages-tools": "ភាសា និងឧបករណ៍",
         // Project 1
         "project1-title": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ)",
-        "project1-description": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ) ខ្ញុំបានធ្វើការចាប់ពីថ្ងៃទី ២១ ខែកញ្ញា ឆ្នាំ ២០២៤ ដល់ថ្ងៃទី ៤ ខែវិច្ឆិកា ឆ្នាំ ២០២៤។ ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានអភិវឌ្ឍគេហទំព័រស្ថិតិសម្រាប់បណ្ណាល័យ CSA។ យើងបានរៀបចំផ្នែកតាមតម្រូវការរបស់អ្នកប្រើប្រាស់នីមួយៗ និងបានអនុវត្តការរចនាដែលស្អាតនិងទំនើប។ យើងបានប្រើ HTML, CSS និង JavaScript ដើម្បីបង្កើតគេហទំព័រដែលមានការឆ្លើយតបសម្រាប់ឧបករណ៍ផ្សេងៗ។ ខ្ញុំទទួលខុសត្រូវក្នុងការគ្រប់គ្រងភារកិច្ចនិងចាត់តាំងមុខងារដោយប្រើ GitHub�। ពេញមួយគម្រោង ខ្ញុំបានសហការយ៉ាងជិតស្និទ្ធជាមួយអតិថិជន (គ្រូបង្រៀន) និងគ្រូបង្វឹកដើម្បីធានាថាគេហទំព័របំពេញតាមតម្រូវការទាំងអស់។",
+        "project1-description": "គម្រោងបណ្ណាល័យ (ចំណុចប្រទាក់គេហទំព័រស្ថិតិ) ខ្ញុំបានធ្វើការចាប់ពីថ្ងៃទី ២១ ខែកញ្ញា ឆ្នាំ ២០២៤ ដល់ថ្ងៃទី ៤ ខែវិច្ឆិកា ឆ្នាំ ២០២៤។ ក្រុមរបស់ខ្ញុំនិងខ្ញុំបានអភិវឌ្ឍគេហទំព័រស្ថិតិសម្រាប់បណ្ណាល័យ CSA។ យើងបានរៀបចំផ្នែកតាមតម្រូវការរបស់អ្នកប្រើប្រាស់នីមួយៗ និងបានអនុវត្តការរចនាដែលស្អាតនិងទំនើប។ យើងបានប្រើ HTML, CSS និង JavaScript ដើម្បីបង្កើតគេហទំព័រដែលមានការឆ្លើយតបសម្រាប់ឧបករណ៍ផ្សេងៗ�। ខ្ញុំទទួលខុសត្រូវក្នុងការគ្រប់គ្រងភារកិច្ចនិងចាត់តាំងមុខងារដោយប្រើ GitHub។ ពេញមួយគម្រោង ខ្ញុំបានសហការយ៉ាងជិតស្និទ្ធជាមួយអតិថិជន (គ្រូបង្រៀន) និងគ្រូបង្វឹកដើម្បីធានាថាគេហទំព័របំពេញតាមតម្រូវការទាំងអស់។",
         "member1-role": "តួនាទី៖ ជួសជុល និងគាំទ្រ",
         "member1-name": "ឈ្មោះ៖ កុសល ប៉ូយ",
         "member2-role": "តួនាទី៖ អ្នកដឹកនាំក្រុម",
@@ -339,7 +346,7 @@ const translations = {
         "member4-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         // Project 2
         "project2-title": "គម្រោង Python (ប្រព័ន្ធស្វ័យប្រវត្តិកម្មអ៊ីមែល)",
-        "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន។ ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
+        "project2-description": "ប្រព័ន្ធអ៊ីមែលស្វ័យប្រវត្តិដែលបានបង្កើតឡើងដោយប្រើ Python ដែលកំណត់ពេលវេលានិងផ្ញើអ៊ីមែលផ្ទាល់ខ្លួនទៅអតិថិជន�। ប្រព័ន្ធនេះរួមបញ្ចូលផ្ទាំងគ្រប់គ្រងការវិភាគសម្រាប់តាមដានដំណើរការអ៊ីមែល និងមុខងារគ្រប់គ្រងគំរូសម្រាប់បង្កើតនិងរក្សាទុកគំរូអ៊ីមែល។ យើងបានអនុវត្តការផ្ទៀងផ្ទាត់និងការអនុញ្ញាតដែលមានសុវត្ថិភាពដើម្បីការពារទិន្នន័យរសើប។ គម្រោងនេះត្រូវបានបញ្ចប់ក្នុងកិច្ចសហការជាមួយក្រុមអ្នកអភិវឌ្ឍន៍និងអ្នករចនា។",
         "member6-role": "តួនាទី៖ អ្នកដឹកនាំក្រុម",
         "member6-name": "ឈ្មោះ៖ ឌីន លីដឺ",
         "member7-role": "តួនាទី៖ ជួសជុល និងរចនាចំណុចប្រទាក់",
@@ -355,22 +362,32 @@ const translations = {
         "member11-name": "ឈ្មោះ៖ សុខលាភ សេង",
         "member12-role": "តួនាទី៖ ជួសជុល និង Git",
         "member12-name": "ឈ្មោះ៖ ឈីន ស",
-        // Project 4
-        "project4-title": "គម្រោងប្រព័ន្ធគ្រប់គ្រង Virtual Company One (VC1)",
-        "project4-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក។ ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។ យើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ�। ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។",
-        "member15-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
-        "member15-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
+        // Project 4 (OOP Movie Booking)
+        "project4-title": "គម្រោង OOP (ប្រព័ន្ធកក់សំបុត្រកុន)",
+        "project4-description": "គម្រោងនេះបង្ហាញពីគោលការណ៍នៃការសរសេរកម្មវិធីតម្រង់ទិសវត្ថុ (OOP) តាមរយៈប្រព័ន្ធកក់សំបុត្រកុនដែលប្រើកុងសូល។ កម្មវិធីនេះអនុញ្ញាតឱ្យអ្នកប្រើរកមើលខ្សែភាពយន្ត ជ្រើសរើសម៉ោងបញ្ចាំង កក់សំបុត្រ និងគ្រប់គ្រងការកក់ដោយប្រើគោលគំនិត OOP ដូចជាថ្នាក់ ការបន្តពូជ និងពហុរូបភាព។ បានអភិវឌ្ឍដោយប្រើ TypeScript និងគ្រប់គ្រងជាមួយ Git គម្រោងនេះផ្តោតលើការអនុវត្តកូដស្អាត និងការរចនា UML សម្រាប់ស្ថាបត្យកម្មប្រព័ន្ធកាន់តែប្រសើរ។",
+        "member13-role": "តួនាទី៖ គ្រប់គ្រង Git",
+        "member13-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
+        "member14-role": "តួនាទី៖ អភិវឌ្ឍន៍",
+        "member14-name": "ឈ្មោះ៖ ហេង ហួត",
+        "member15-role": "តួនាទី៖ គូរគំនូសតាង UML",
+        "member15-name": "ឈ្មោះ៖ សៀវម៉ី យ៉េម",
+        // Project 5 (VC1 Management System)
+        "project5-title": "គម្រោងប្រព័ន្ធគ្រប់គ្រង Virtual Company One (VC1)",
+        "project5-description": "គម្រោងនេះផ្តោតលើការបង្កើតប្រព័ន្ធគ្រប់គ្រងផ្ទៃក្នុងសម្រាប់ Virtual Company One (VC1) ដើម្បីសម្រួល និងធ្វើឱ្យស្វ័យប្រវត្តិកម្មនូវគម្រោងទាក់ទងនឹងក្រុមបុគ្គលិក�। ប្រព័ន្ធនេះអនុញ្ញាតឱ្យបុគ្គលិកដាក់ស្នើ អនុម័ត ឬបដិសេធព្រឹត្តិការណ៍សាជីវកម្ម។ យើងបានអភិវឌ្ឍប្រព័ន្ធនេះដោយប្រើ PHP ជាមួយនឹងរចនាសម្ព័ន្ធ MVC (Model-View-Controller) និងប្រើមូលដ្ឋានទិន្នន័យ MySQL ដើម្បីរក្សាទុកទិន្នន័យ។ ផ្នែកខាងមុខត្រូវបានអភិវឌ្ឍដោយប្រើ HTML, CSS, JavaScript, និង Bootstrap ដើម្បីបង្កើតចំណុចប្រទាក់ដែលស្អាត និងវិចារណញាណ ដែលជួយឱ្យយើងធ្វើការប្រកបដោយប្រសិទ្ធភាព និងជៀសវាងការប៉ះទង្គិចក្នុងអំឡុងពេលអភិវឌ្ឍន៍។",
         "member16-role": "តួនាទី៖ អ្នកអភិវឌ្ឍន៍",
         "member16-name": "ឈ្មោះ៖ វណ្ណដា ឡេង",
         "member17-role": "តួនាទី៖ អ្នកធ្វើតេស្តគុណភាព",
         "member17-name": "ឈ្មោះ៖ បូភី ខាត់",
-        "member18-role": "តួនាទី៖ អ្នករចនា UI/UX",
+        "member18-role": "តួនាទី៖ អ្នករចនាចំណុចប្រទាក់",
         "member18-name": "ឈ្មោះ៖ សុភី អេម",
         "member19-role": "តួនាទី៖ អ្នក DevOps",
         "member19-name": "ឈ្មោះ៖ រ៉ូម ស្រីនាថ",
+        "member20-role": "តួនាទី៖ ស្ក្រាមមាស្ទ័រ",
+        "member20-name": "ឈ្មោះ៖ ចាប់ ចរិយា",
         "project-webdesign": "រចនាគេហទំព័រ",
         "project-emailautomation": "ស្វ័យប្រវត្តិកម្មអ៊ីមែល",
         "project-notetaker": "អ្នកកត់ចំណាំ",
+        "project-oop": "កក់សំបុត្រកុន OOP",
         "project-vc1": "VC1"
     }
 };
@@ -392,7 +409,7 @@ function updateLanguage(lang) {
             const key = element.getAttribute("data-lang");
             if (translations[lang] && translations[lang][key]) {
                 // Handle HTML content for specific keys
-                if (key === "hero-subtitle" || key === "skillset-description" || key === "project4-description") {
+                if (key === "hero-subtitle" || key === "skillset-description" || key === "project4-description" || key === "project5-description") {
                     element.innerHTML = translations[lang][key];
                 } else if (key === "footer-newsletter-placeholder") {
                     element.placeholder = translations[lang][key];
