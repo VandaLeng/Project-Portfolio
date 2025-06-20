@@ -62,6 +62,21 @@ function createAnimatedBackground() {
     `;
     document.head.appendChild(style);
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const logos = document.querySelectorAll(".logo");
+
+    logos.forEach(function(logo) {
+        logo.style.cursor = "pointer"; // make it look clickable
+
+        logo.addEventListener("click", function() {
+            window.location.href = "/index.html";
+        });
+
+        logo.addEventListener("touchstart", function() {
+            window.location.href = "/index.html";
+        });
+    });
+});
 
 function typewriterAnimation() {
     const heroTitle = document.querySelector(".hero-content h1");

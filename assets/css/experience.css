@@ -224,14 +224,12 @@ html {
     width: 100%;
     padding: 10px;
     max-height: 400px;
-    /* Adjusted to allow larger images */
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Changed to contain to show full image */
     transition: transform 0.5s ease;
     filter: brightness(0.9);
 }
@@ -258,7 +256,7 @@ html {
     z-index: 2;
     opacity: 0;
     transform: translateY(20px);
-    margin-left: 320px;
+    /* Removed margin-left to fix positioning */
 }
 
 .view-btn-project {
@@ -278,7 +276,7 @@ html {
     z-index: 2;
     opacity: 0;
     transform: translateY(20px);
-    margin-left: 480px;
+    /* Removed margin-left to fix positioning */
 }
 
 .project-container:hover .view-btn {
@@ -652,7 +650,6 @@ html {
     width: 100%;
     padding: 10px;
     max-height: 400px;
-    /* Adjusted to allow larger images */
 }
 
 .project-tech-icons {
@@ -1166,7 +1163,6 @@ body.light-theme .theme-toggle label:hover {
     }
     .project-image {
         max-height: 300px;
-        /* Adjusted for smaller screens */
     }
 }
 
@@ -1429,6 +1425,33 @@ body.light-theme .theme-toggle label:hover {
     }
     .special-carousel-btn i {
         font-size: 0.7rem;
+    }
+    /* Fix for View Web and View Git buttons */
+    .view-btn,
+    .view-btn-project {
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        bottom: 20px;
+        padding: 6px 15px;
+        font-size: 0.8rem;
+        opacity: 1;
+    }
+    .project-container:hover .view-btn,
+    .project-container:hover .view-btn-project {
+        transform: translateX(-50%) translateY(0);
+    }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .tool-item {
+        padding: 6px;
+    }
+    .tool-item i {
+        font-size: 1rem;
+    }
+    .tool-item span {
+        font-size: 0.8rem;
     }
 }
 
