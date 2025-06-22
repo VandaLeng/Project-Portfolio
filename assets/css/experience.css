@@ -242,7 +242,8 @@ html {
 .view-btn {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
     background: var(--secondary-color);
     color: var(--dark-color);
     padding: 8px 20px;
@@ -255,14 +256,13 @@ html {
     gap: 10px;
     z-index: 2;
     opacity: 0;
-    transform: translateY(20px);
-    /* Removed margin-left to fix positioning */
 }
 
 .view-btn-project {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
     background: var(--secondary-color);
     color: var(--dark-color);
     padding: 8px 20px;
@@ -275,19 +275,17 @@ html {
     gap: 10px;
     z-index: 2;
     opacity: 0;
-    transform: translateY(20px);
-    /* Removed margin-left to fix positioning */
 }
 
 .project-container:hover .view-btn {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     animation: pulseButton 2s infinite;
 }
 
 .project-container:hover .view-btn-project {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     animation: pulseButton 2s infinite;
 }
 
@@ -305,13 +303,13 @@ html {
 
 .view-btn:hover {
     background: var(--accent-cyan);
-    transform: translateY(-2px);
+    transform: translateX(-50%) translateY(-2px);
     box-shadow: var(--shadow-glow);
 }
 
 .view-btn-project:hover {
     background: var(--accent-cyan);
-    transform: translateY(-2px);
+    transform: translateX(-50%) translateY(-2px);
     box-shadow: var(--shadow-glow);
 }
 
