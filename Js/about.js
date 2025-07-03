@@ -1,133 +1,203 @@
-// Skills data with logo URLs
 const skills = [{
-    id: "HTML",
-    name: "HTML",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    color: "#E44D26",
-    category: "frontend",
-    level: 85
-}, {
-    id: "CSS",
-    name: "CSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    color: "#264DE4",
-    category: "frontend",
-    level: 80
-}, {
-    id: "JS",
-    name: "JavaScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    color: "#F7DF1E",
-    category: "frontend",
-    level: 60
-}, {
-    id: "PHP",
-    name: "PHP",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    color: "#777BB4",
-    category: "backend",
-    level: 67
-}, {
-    id: "MySQL",
-    name: "MySQL",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    color: "#00758F",
-    category: "database",
-    level: 70
-}, {
-    id: "Node",
-    name: "Node.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    color: "#68A063",
-    category: "backend",
-    level: 80
-}, {
-    id: "Vue",
-    name: "Vue.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-    color: "#4FC08D",
-    category: "frontend",
-    level: 80
-}, {
-    id: "Laravel",
-    name: "Laravel",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
-    color: "#FF2D20",
-    category: "backend",
-    level: 65
-}, {
-    id: "Bootstrap",
-    name: "Bootstrap",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    color: "#563D7C",
-    category: "frontend",
-    level: 65
-}, {
-    id: "VSCode",
-    name: "VS Code",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-    color: "#007ACC",
-    category: "frontend",
-    level: 50
-}, {
-    id: "GitHub",
-    name: "GitHub",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    color: "#181717",
-    category: "frontend",
-    level: 60
-}];
+        id: "HTML",
+        name: "HTML",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        color: "#E44D26",
+        category: "frontend",
+        level: 90
+    },
+    {
+        id: "CSS",
+        name: "CSS",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        color: "#264DE4",
+        category: "frontend",
+        level: 85
+    },
+    {
+        id: "JS",
+        name: "JavaScript",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        color: "#F7DF1E",
+        category: "frontend",
+        level: 80
+    },
+    {
+        id: "Vue",
+        name: "Vue.js",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        color: "#4FC08D",
+        category: "frontend",
+        level: 75
+    },
+    {
+        id: "Angular",
+        name: "Angular",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        color: "#DD0031",
+        category: "frontend",
+        level: 70
+    },
+    {
+        id: "React",
+        name: "React",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        color: "#61DAFB",
+        category: "frontend",
+        level: 65
+    },
+    {
+        id: "Bootstrap",
+        name: "Bootstrap",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        color: "#563D7C",
+        category: "frontend",
+        level: 70
+    },
+    {
+        id: "PHP",
+        name: "PHP",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        color: "#777BB4",
+        category: "backend",
+        level: 67
+    },
+    {
+        id: "Node",
+        name: "Node.js",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        color: "#68A063",
+        category: "backend",
+        level: 70
+    },
+    {
+        id: "Laravel",
+        name: "Laravel",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+        color: "#FF2D20",
+        category: "backend",
+        level: 65
+    },
+    {
+        id: "Python",
+        name: "Python",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        color: "#3776AB",
+        category: "backend",
+        level: 60
+    },
+    {
+        id: "Express",
+        name: "Express.js",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        color: "#000000",
+        category: "backend",
+        level: 60
+    },
+    {
+        id: "MySQL",
+        name: "MySQL",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        color: "#00758F",
+        category: "database",
+        level: 70
+    },
+    {
+        id: "MongoDB",
+        name: "MongoDB",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        color: "#47A248",
+        category: "database",
+        level: 60
+    },
+    {
+        id: "PostgreSQL",
+        name: "PostgreSQL",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        color: "#336791",
+        category: "database",
+        level: 55
+    }
+];
 
-// Skill info data
 const skillInfo = {
     HTML: {
         description: "HTML is the standard markup language for creating web pages and web applications.",
-        level: 85
+        level: 90,
+        subtitle: "Structure"
     },
     CSS: {
         description: "CSS is a style sheet language used for describing the presentation of a document written in HTML.",
-        level: 80
+        level: 85,
+        subtitle: "Styling"
     },
     JS: {
         description: "JavaScript is a versatile programming language used to create interactive effects within web browsers.",
-        level: 63
-    },
-    PHP: {
-        description: "PHP is a server-side language used to create dynamic websites and connect to databases.",
-        level: 60,
-        subtitle: "MVC Structure"
-    },
-    MySQL: {
-        description: "MySQL is an open-source relational database management system.",
-        level: 65
-    },
-    Node: {
-        description: "Node.js is a runtime environment that allows you to run JavaScript on the server side.",
-        level: 65
+        level: 80,
+        subtitle: "Interactivity"
     },
     Vue: {
         description: "Vue.js is a progressive JavaScript framework for building user interfaces.",
-        level: 60
+        level: 75,
+        subtitle: "Component-Based"
     },
-    Laravel: {
-        description: "Laravel is a PHP web application framework with expressive, elegant syntax.",
-        level: 55
+    Angular: {
+        description: "Angular is a platform and framework for building single-page client applications using HTML and TypeScript.",
+        level: 70,
+        subtitle: "Framework"
+    },
+    React: {
+        description: "React is a JavaScript library for building user interfaces, particularly single-page applications.",
+        level: 65,
+        subtitle: "Component-Based"
     },
     Bootstrap: {
         description: "Bootstrap is a popular CSS framework for building responsive and mobile-first websites.",
-        level: 78
+        level: 70,
+        subtitle: "Responsive Design"
     },
-    VSCode: {
-        description: "Visual Studio Code is a lightweight but powerful source code editor with support for many programming languages.",
-        level: 85
+    PHP: {
+        description: "PHP is a server-side language used to create dynamic websites and connect to databases.",
+        level: 67,
+        subtitle: "MVC Structure"
     },
-    GitHub: {
-        description: "GitHub is a platform and cloud-based service for software development and version control using Git.",
-        level: 75
+    Node: {
+        description: "Node.js is a runtime environment that allows you to run JavaScript on the server side.",
+        level: 70,
+        subtitle: "Server-Side"
+    },
+    Laravel: {
+        description: "Laravel is a PHP web application framework with expressive, elegant syntax.",
+        level: 65,
+        subtitle: "Framework"
+    },
+    Python: {
+        description: "Python is a versatile programming language used for web development, data science, and automation.",
+        level: 60,
+        subtitle: "Versatility"
+    },
+    Express: {
+        description: "Express.js is a minimal and flexible Node.js web application framework.",
+        level: 60,
+        subtitle: "API Development"
+    },
+    MySQL: {
+        description: "MySQL is an open-source relational database management system.",
+        level: 70,
+        subtitle: "Database Management"
+    },
+    MongoDB: {
+        description: "MongoDB is a NoSQL database for modern applications, storing data in JSON-like documents.",
+        level: 60,
+        subtitle: "NoSQL"
+    },
+    PostgreSQL: {
+        description: "PostgreSQL is a powerful, open-source object-relational database system.",
+        level: 55,
+        subtitle: "Relational DB"
     }
 };
 
-// DOM elements
 const skillsCircleContainer = document.querySelector('.skills-circle-container');
 const skillsCircle = document.querySelector('.skills-circle');
 const skillInfoElement = document.getElementById('skillInfo');
@@ -135,7 +205,6 @@ const frontendSkillsList = document.getElementById('frontendSkills');
 const backendSkillsList = document.getElementById('backendSkills');
 const databaseSkillsList = document.getElementById('databaseSkills');
 
-// Function to create animated background
 function createAnimatedBackground() {
     const animatedBg = document.createElement("div");
     animatedBg.id = "animated-bg";
@@ -147,19 +216,12 @@ function createAnimatedBackground() {
     animatedBg.style.zIndex = "-1";
     document.body.appendChild(animatedBg);
 
-    // Create particles
     for (let i = 0; i < 50; i++) {
         const particle = document.createElement("div");
         particle.className = "bg-particle";
-
-        // Random position
         const posX = Math.random() * window.innerWidth;
         const posY = Math.random() * window.innerHeight;
-
-        // Random size
         const size = Math.random() * 5 + 2;
-
-        // Style the particle
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
         particle.style.left = `${posX}px`;
@@ -168,54 +230,36 @@ function createAnimatedBackground() {
         particle.style.borderRadius = "50%";
         particle.style.position = "absolute";
         particle.style.boxShadow = "0 0 10px rgba(0, 209, 255, 0.8)";
-
-        // Add animation with random duration
         const duration = Math.random() * 20 + 10;
         particle.style.animation = `floatParticle ${duration}s infinite linear`;
-
-        // Add to background
         animatedBg.appendChild(particle);
     }
 
-    // Add CSS animation
     const style = document.createElement("style");
     style.textContent = `
         @keyframes floatParticle {
-            0% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(100px, 50px);
-            }
-            50% {
-                transform: translate(50px, 100px);
-            }
-            75% {
-                transform: translate(-50px, 50px);
-            }
-            100% {
-                transform: translate(0, 0);
-            }
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 50px); }
+            50% { transform: translate(50px, 100px); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(0, 0); }
         }
     `;
     document.head.appendChild(style);
 }
 
-// Function to create language logos around the circle
 function createLanguageLogos() {
     if (!skillsCircleContainer) return;
 
-    const radius = skillsCircleContainer.offsetWidth / 2 + 70; // Position OUTSIDE the circle with more space
+    const radius = skillsCircleContainer.offsetWidth / 2 + 80;
     const centerX = skillsCircleContainer.offsetWidth / 2;
     const centerY = skillsCircleContainer.offsetHeight / 2;
 
     skills.forEach((skill, index) => {
-        // Calculate position in circle
         const angle = (index / skills.length) * 2 * Math.PI;
-        const x = centerX + radius * Math.cos(angle) - 30; // 30 is half the logo size
+        const x = centerX + radius * Math.cos(angle) - 30;
         const y = centerY + radius * Math.sin(angle) - 30;
 
-        // Create language logo
         const langLogo = document.createElement('div');
         langLogo.className = 'lang-logo';
         langLogo.style.backgroundColor = skill.color;
@@ -223,13 +267,11 @@ function createLanguageLogos() {
         langLogo.style.top = `${y}px`;
         langLogo.dataset.id = skill.id;
 
-        // Create logo image
         const logoImg = document.createElement('img');
         logoImg.src = skill.logo;
         logoImg.alt = skill.name;
         langLogo.appendChild(logoImg);
 
-        // Create glow effect
         const glow = document.createElement('div');
         glow.className = 'glow';
         glow.style.width = '80px';
@@ -238,14 +280,11 @@ function createLanguageLogos() {
         glow.style.left = `${x - 10}px`;
         glow.style.top = `${y - 10}px`;
 
-        // Add click event
         langLogo.addEventListener('click', () => showSkillInfo(skill.id));
 
-        // Append to container
         skillsCircleContainer.appendChild(glow);
         skillsCircleContainer.appendChild(langLogo);
 
-        // Animate glow
         gsap.to(glow, {
             opacity: 0.2,
             duration: 1.5 + Math.random(),
@@ -254,7 +293,6 @@ function createLanguageLogos() {
             ease: "sine.inOut"
         });
 
-        // Animate language logo with floating effect
         gsap.to(langLogo, {
             y: `+=${5 + Math.random() * 10}`,
             duration: 2 + Math.random(),
@@ -265,13 +303,10 @@ function createLanguageLogos() {
     });
 }
 
-// Function to show skill info
 function showSkillInfo(skillId) {
     if (!skillInfoElement) return;
 
     const skill = skillInfo[skillId];
-
-    // Update skill info content
     skillInfoElement.innerHTML = `
         <h3>${skillId}</h3>
         <p>${skill.description}</p>
@@ -281,7 +316,6 @@ function showSkillInfo(skillId) {
         <p class="progress-text">${skill.subtitle ? skill.subtitle + ': ' : ''}${skill.level}%</p>
     `;
 
-    // Animate progress bar
     gsap.to(skillInfoElement.querySelector('.progress'), {
         width: `${skill.level}%`,
         duration: 0.8,
@@ -289,41 +323,36 @@ function showSkillInfo(skillId) {
     });
 }
 
-// Function to populate skill categories
 function populateSkillCategories() {
     if (!frontendSkillsList || !backendSkillsList || !databaseSkillsList) return;
 
-    // Filter skills by category
     const frontendSkills = skills.filter(skill => skill.category === 'frontend');
     const backendSkills = skills.filter(skill => skill.category === 'backend');
     const databaseSkills = skills.filter(skill => skill.category === 'database');
 
-    // Create HTML for each category
     frontendSkillsList.innerHTML = createSkillListHTML(frontendSkills);
     backendSkillsList.innerHTML = createSkillListHTML(backendSkills);
     databaseSkillsList.innerHTML = createSkillListHTML(databaseSkills);
 }
 
-// Helper function to create skill list HTML
 function createSkillListHTML(skills) {
     return skills.map(skill => `
         <li>
-            <span>${skill.name}</span>
+            <span class="skill-label">${skill.name}</span>
             <div class="mini-bar">
-                <div class="mini-progress" style="width: 0%"></div>
+                <div class="mini-progress" style="width: 0%" data-level="${skill.level}"></div>
             </div>
+            <span>${skill.level}%</span>
         </li>
     `).join('');
 }
 
-// Function to animate skill progress bars
 function animateSkillBars() {
-    // Animate mini progress bars
     const miniProgressBars = document.querySelectorAll('.mini-progress');
-    miniProgressBars.forEach((bar, index) => {
-        const skill = skills[index % skills.length]; // In case there are more bars than skills
+    miniProgressBars.forEach(bar => {
+        const level = bar.dataset.level;
         gsap.to(bar, {
-            width: `${skill.level}%`,
+            width: `${level}%`,
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -334,30 +363,24 @@ function animateSkillBars() {
     });
 }
 
-// Function to handle responsive adjustments for the skills circle
 function handleResponsiveCircle() {
     if (!skillsCircleContainer) return;
 
-    const container = skillsCircleContainer;
-    const containerWidth = container.offsetWidth;
-    const langLogos = document.querySelectorAll('.lang-logo');
-    const glows = document.querySelectorAll('.glow');
-
-    // Adjust radius based on viewport size (smaller radius for 391px)
-    const radius = containerWidth / 2 + (window.innerWidth <= 391 ? 30 : 70); // Reduced radius for mobile
+    const containerWidth = skillsCircleContainer.offsetWidth;
+    const radius = containerWidth / 2 + (window.innerWidth <= 391 ? 40 : 80);
     const centerX = containerWidth / 2;
     const centerY = containerWidth / 2;
+    const langLogos = document.querySelectorAll('.lang-logo');
+    const glows = document.querySelectorAll('.glow');
 
     langLogos.forEach((logo, index) => {
         const angle = (index / langLogos.length) * 2 * Math.PI;
         const x = centerX + radius * Math.cos(angle) - logo.offsetWidth / 2;
         const y = centerY + radius * Math.sin(angle) - logo.offsetHeight / 2;
 
-        // Update logo position
         logo.style.left = `${x}px`;
         logo.style.top = `${y}px`;
 
-        // Update glow position if it exists
         if (glows[index]) {
             glows[index].style.left = `${x - 10}px`;
             glows[index].style.top = `${y - 10}px`;
@@ -365,18 +388,13 @@ function handleResponsiveCircle() {
     });
 }
 
-// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     createAnimatedBackground();
     createLanguageLogos();
     populateSkillCategories();
-
-    // Set initial skill info
     if (skillInfoElement && skills.length > 0) {
-        showSkillInfo(skills[3].id); // Show PHP by default (index 3)
+        showSkillInfo('React');
     }
-
-    // Animate the skills circle
     if (skillsCircle) {
         gsap.from('.skills-circle', {
             opacity: 0,
@@ -389,8 +407,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    // Animate the language logos
     gsap.from('.lang-logo', {
         opacity: 0,
         scale: 0,
@@ -399,17 +415,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "back.out(1.7)",
         delay: 0.5
     });
-
-    // Animate skill bars
     animateSkillBars();
-
-    // Handle window resize for responsive adjustments
     window.addEventListener('resize', handleResponsiveCircle);
-
-    // Initial call to position elements correctly
     handleResponsiveCircle();
 
-    // Add hover effects to education cards
     const educationCards = document.querySelectorAll('.education-card');
     educationCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -419,7 +428,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.3
             });
         });
-
         card.addEventListener('mouseleave', () => {
             gsap.to(card, {
                 y: 0,
@@ -429,7 +437,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add hover effects to soft skill cards
     const softSkillCards = document.querySelectorAll('.soft-skill-card');
     softSkillCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -438,7 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.3
             });
         });
-
         card.addEventListener('mouseleave', () => {
             gsap.to(card.querySelector('.soft-skill-icon'), {
                 scale: 1,

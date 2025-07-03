@@ -121,11 +121,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 250px;
+    gap: 230px;
     margin-bottom: 120px;
     position: relative;
     top: 100px;
-    right: 240px;
+    left: 50px;
 }
 
 
@@ -371,7 +371,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.category .skill-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 14px;
     transition: transform 0.2s ease;
 }
 
